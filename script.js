@@ -18,8 +18,8 @@ let pointO = 0;
 let pointX = 0;
 let powerO = false;
 let powerX = false;
-let powerOAlloted = false;
-let powerXAlloted = false;
+let powerONotAlloted = true;
+let powerXNotAlloted = true;
 let num1 = 0;
 let num2 = 0;
 let patterns = [
@@ -95,6 +95,23 @@ resetBtn.addEventListener("mouseout", () => {
     resetBtn.style.borderColor = "#E0E1DD";
 });
 
+//implementing power button of player-O 
+powerOBtn.addEventListener("click",()=>{
+    powerONotAlloted=true;
+    powerOName.innerText="";
+    powerOSymbol.innerText = "Score a point to gain a power-up";
+    powerOSymbol.style.margin = "0px";
+    powerOSymbol.style.fontSize = "32px";
+});
+
+//implementing power button of player-X
+powerXBtn.addEventListener("click",()=>{
+    powerXNotAlloted=true;
+    powerXName.innerText="";
+    powerXSymbol.innerText = "Score a point to gain a power-up";
+    powerXSymbol.style.margin = "0px";
+    powerXSymbol.style.fontSize = "32px";
+});
 
 //impementing reset button functionality
 resetBtn.addEventListener("click", () => {
@@ -104,20 +121,20 @@ resetBtn.addEventListener("click", () => {
     num2 = 0;
     powerO = false;
     powerX = false;
-    powerOAlloted = false;
-    powerXAlloted = false;
+    powerONotAlloted = true;
+    powerXNotAlloted = true;
     powerOSymbol.innerText = "Score a point to gain a power-up";
     powerXSymbol.innerText = "Score a point to gain a power-up";
     powerOSymbol.style.margin = "0px";
     powerXSymbol.style.margin = "0px";
     powerOSymbol.style.fontSize = "32px";
     powerXSymbol.style.fontSize = "32px";
-    if (powerOName != "") {
+    // if (powerOName != "") {
         powerOName.innerText = "";
-    }
-    if (powerXName != "") {
+    // }
+    // if (powerXName != "") {
         powerXName.innerText = "";
-    }
+    // }
     turnO = true;
     for (let btn of allBtn) {
         btn.innerText = "";
@@ -131,7 +148,11 @@ resetBtn.addEventListener("click", () => {
 
 //initializing power when player scores a point
 function powerStore() {
-    if (powerO) {
+    
+    if (powerO && powerONotAlloted) {
+        console.log("hiii from O");
+        console.log(`powerO=${powerO} && powerONotAlloted=${powerONotAlloted}`);
+        powerONotAlloted=false;
         let randomPower = Math.floor(Math.random() * 3);
         while (num1 == randomPower && num2 == randomPower) {
             randomPower = Math.floor(Math.random() * 3);
@@ -144,7 +165,10 @@ function powerStore() {
         powerOSymbol.style.marginRight = "80px";
         powerOName.innerText = powerNames[randomPower];
         powerO = false;
-    } else if (powerX) {
+    } else if (powerX && powerXNotAlloted) {
+        console.log("hiii from X");
+        powerXNotAlloted=false;
+        console.log(`powerX=${powerX} && powerXNotAlloted=${powerXNotAlloted}`);
         let randomPower = Math.floor(Math.random() * 3);
         while (num2 == randomPower && num2 == randomPower) {
             randomPower = Math.floor(Math.random() * 3);
