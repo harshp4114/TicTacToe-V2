@@ -22,6 +22,18 @@ let powerONotAlloted = true;
 let powerXNotAlloted = true;
 let num1 = 0;
 let num2 = 0;
+let playerOSkipInterval=0;
+let playerXSkipInterval=0;
+let skipRedPlayerO=true;
+let skipRedPlayerX=true;
+let shieldBluePlayerO=true;
+let shieldBluePlayerX=true;
+let playerOShieldInterval=0;
+let playerXShieldInterval=0;
+let deleteYellowPlayerO=true;
+let deleteYellowPlayerX=true;
+let playerODeleteInterval=0;
+let playerXDeleteInterval=0;
 let patterns = [
     [0, 8, 16, 24], [7, 15, 23, 31], [14, 22, 30, 38], [21, 29, 37, 45], [2, 10, 18, 26], [1, 9, 17, 25], [3, 11, 19, 27], [0, 1, 2, 3],
     [7, 8, 9, 10], [14, 15, 16, 17], [21, 22, 23, 24], [28, 29, 30, 31], [35, 36, 37, 38], [42, 43, 44, 45], [1, 2, 3, 4], [8, 9, 10, 11],
@@ -96,21 +108,29 @@ resetBtn.addEventListener("mouseout", () => {
 });
 
 //implementing power button of player-O 
-powerOBtn.addEventListener("click",()=>{
-    powerONotAlloted=true;
-    powerOName.innerText="";
+powerOBtn.addEventListener("click", () => {
+    powerONotAlloted = true;
+    powerOName.innerText = "";
     powerOSymbol.innerText = "Score a point to gain a power-up";
     powerOSymbol.style.margin = "0px";
     powerOSymbol.style.fontSize = "32px";
+    powerPlayerO.style.backgroundColor="#778DA9";
+    clearInterval(playerOSkipInterval);
+    clearInterval(playerOShieldInterval);
+    clearInterval(playerODeleteInterval);
 });
 
 //implementing power button of player-X
-powerXBtn.addEventListener("click",()=>{
-    powerXNotAlloted=true;
-    powerXName.innerText="";
+powerXBtn.addEventListener("click", () => {
+    powerXNotAlloted = true;
+    powerXName.innerText = "";
     powerXSymbol.innerText = "Score a point to gain a power-up";
     powerXSymbol.style.margin = "0px";
     powerXSymbol.style.fontSize = "32px";
+    powerPlayerX.style.backgroundColor="#778DA9";
+    clearInterval(playerXSkipInterval);
+    clearInterval(playerXShieldInterval);
+    clearInterval(playerXDeleteInterval);
 });
 
 //impementing reset button functionality
@@ -129,12 +149,16 @@ resetBtn.addEventListener("click", () => {
     powerXSymbol.style.margin = "0px";
     powerOSymbol.style.fontSize = "32px";
     powerXSymbol.style.fontSize = "32px";
-    // if (powerOName != "") {
-        powerOName.innerText = "";
-    // }
-    // if (powerXName != "") {
-        powerXName.innerText = "";
-    // }
+    powerOName.innerText = "";
+    powerXName.innerText = "";
+    powerPlayerX.style.backgroundColor="#778DA9";
+    powerPlayerO.style.backgroundColor="#778DA9";
+    clearInterval(playerOSkipInterval);
+    clearInterval(playerOShieldInterval);
+    clearInterval(playerODeleteInterval);
+    clearInterval(playerXSkipInterval);
+    clearInterval(playerXShieldInterval);
+    clearInterval(playerXDeleteInterval);
     turnO = true;
     for (let btn of allBtn) {
         btn.innerText = "";
@@ -145,14 +169,77 @@ resetBtn.addEventListener("click", () => {
     }
 });
 
+//function to change background color when skip power is obtained player-O
+function callSkipRedPlayerO(){
+    if(skipRedPlayerO){
+        skipRedPlayerO=false;
+        powerPlayerO.style.backgroundColor="rgb(255, 57, 57)";
+    }else{
+        skipRedPlayerO=true;
+        powerPlayerO.style.backgroundColor="#778DA9";
+    }
+}
+
+//function to change background color when skip power is obtained player-X
+function callSkipRedPlayerX(){
+    if(skipRedPlayerX){
+        skipRedPlayerX=false;
+        powerPlayerX.style.backgroundColor="rgb(255, 57, 57)";
+    }else{
+        skipRedPlayerX=true;
+        powerPlayerX.style.backgroundColor="#778DA9";
+    }
+}
+
+//function to change background color when shield power is obtained player-O
+function callShieldBluePlayerO(){
+    if(shieldBluePlayerO){
+        shieldBluePlayerO=false;
+        powerPlayerO.style.backgroundColor="#00eeff"
+    }else{
+        shieldBluePlayerO=true;
+        powerPlayerO.style.backgroundColor="#778DA9";
+    }
+}
+
+//function to change background color when shield power is obtained player-X
+function callShieldBluePlayerX(){
+    if(shieldBluePlayerX){
+        shieldBluePlayerX=false;
+        powerPlayerX.style.backgroundColor="#00eeff"
+    }else{
+        shieldBluePlayerX=true;
+        powerPlayerX.style.backgroundColor="#778DA9";
+    }
+}
+
+//function to change background color when delete power is obtained player-O
+function callDeleteYellowPlayerO(){
+    if(deleteYellowPlayerO){
+        deleteYellowPlayerO=false;
+        powerPlayerO.style.backgroundColor="rgb(251, 255, 0)"
+    }else{
+        deleteYellowPlayerO=true;
+        powerPlayerO.style.backgroundColor="#778DA9";
+    }
+}
+
+//function to change background color when delete power is obtained player-X
+function callDeleteYellowPlayerX(){
+    if(deleteYellowPlayerX){
+        deleteYellowPlayerX=false;
+        powerPlayerX.style.backgroundColor="rgb(251, 255, 0)"
+    }else{
+        deleteYellowPlayerX=true;
+        powerPlayerX.style.backgroundColor="#778DA9";
+    }
+}
 
 //initializing power when player scores a point
 function powerStore() {
-    
+
     if (powerO && powerONotAlloted) {
-        console.log("hiii from O");
-        console.log(`powerO=${powerO} && powerONotAlloted=${powerONotAlloted}`);
-        powerONotAlloted=false;
+        powerONotAlloted = false;
         let randomPower = Math.floor(Math.random() * 3);
         while (num1 == randomPower && num2 == randomPower) {
             randomPower = Math.floor(Math.random() * 3);
@@ -165,10 +252,18 @@ function powerStore() {
         powerOSymbol.style.marginRight = "80px";
         powerOName.innerText = powerNames[randomPower];
         powerO = false;
+        if(powerOName.innerText=="SKIP"){
+            callSkipRedPlayerO();
+            playerOSkipInterval=setInterval(callSkipRedPlayerO,1000);
+        }else if(powerOName.innerText=="SHIELD"){
+            callShieldBluePlayerO();
+            playerOShieldInterval=setInterval(callShieldBluePlayerO,1000);
+        }else if(powerOName.innerText=="DELETE"){
+            callDeleteYellowPlayerO();
+            playerODeleteInterval=setInterval(callDeleteYellowPlayerO,1000);
+        }
     } else if (powerX && powerXNotAlloted) {
-        console.log("hiii from X");
-        powerXNotAlloted=false;
-        console.log(`powerX=${powerX} && powerXNotAlloted=${powerXNotAlloted}`);
+        powerXNotAlloted = false;
         let randomPower = Math.floor(Math.random() * 3);
         while (num2 == randomPower && num2 == randomPower) {
             randomPower = Math.floor(Math.random() * 3);
@@ -181,6 +276,16 @@ function powerStore() {
         powerXSymbol.style.marginRight = "80px";
         powerXName.innerText = powerNames[randomPower];
         powerX = false;
+        if(powerXName.innerText=="SKIP"){
+            callSkipRedPlayerX();
+            playerXSkipInterval=setInterval(callSkipRedPlayerX,1000);
+        }else if(powerXName.innerText=="SHIELD"){
+            callShieldBluePlayerX();
+            playerXShieldInterval=setInterval(callShieldBluePlayerX,1000);
+        }else if(powerXName.innerText=="DELETE"){
+            callDeleteYellowPlayerX();
+            playerXDeleteInterval=setInterval(callDeleteYellowPlayerX,1000);
+        }
     }
 }
 

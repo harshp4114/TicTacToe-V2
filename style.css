@@ -110,6 +110,9 @@ body {
     align-items: center;
     text-align: center;
     align-content: center;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
 }
 
 /* div containing the power symbol and background of player-X */
@@ -123,6 +126,9 @@ body {
     align-items: center;
     text-align: center;
     align-content: center;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
 }
 
 /* class for p tag for power symbol of player-O */
@@ -188,5 +194,3 @@ body {
     transition-timing-function: ease-in;
     margin-top: 40px;
 }
-
-
