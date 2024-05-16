@@ -1,3 +1,5 @@
+
+//teleport,timetravel
 let allBtn = document.querySelectorAll(".game-button");     //selecting all the buttons of game
 let resetBtn = document.querySelector(".reset-btn");        //selecting the reset button
 let powerPlayerO = document.querySelector(".playerO-power");        //selecting the power div element containing symbol and background for player-O
@@ -36,6 +38,8 @@ let playerODeleteInterval = 0;
 let playerXDeleteInterval = 0;
 let playerOSkipUse = false;
 let playerXSkipUse = false;
+let playerODeleteUse = false;
+let playerXDeleteUse = false;
 
 let patterns = [
     [0, 8, 16, 24], [7, 15, 23, 31], [14, 22, 30, 38], [21, 29, 37, 45], [2, 10, 18, 26], [1, 9, 17, 25], [3, 11, 19, 27], [0, 1, 2, 3],
@@ -123,10 +127,12 @@ powerOBtn.addEventListener("click", () => {
     clearInterval(playerOShieldInterval);
     clearInterval(playerODeleteInterval);
     if (currentPower == "SKIP") {
-        // console.log("skip is used");
         playerOSkipUse = true;
     } else if (currentPower == "DELETE") {
-        console.log("delete is used");
+        playerODeleteUse = true;
+        for (let singleBtn of allBtn) {
+            singleBtn.disabled = false;
+        }
     } else if (currentPower == "SHIELD") {
         console.log("shield is used");
     }
@@ -145,10 +151,12 @@ powerXBtn.addEventListener("click", () => {
     clearInterval(playerXShieldInterval);
     clearInterval(playerXDeleteInterval);
     if (currentPower == "SKIP") {
-        // console.log("skip is used");
-        playerXSkipUse=true;
+        playerXSkipUse = true;
     } else if (currentPower == "DELETE") {
-        console.log("delete is used");
+        for (let singleBtn of allBtn) {
+            singleBtn.disabled = false;
+        }
+        playerXDeleteUse=true;
     } else if (currentPower == "SHIELD") {
         console.log("shield is used");
     }
@@ -370,51 +378,122 @@ function gameLogic() {
     }
 }
 
-function playerTurn(){
-    if(turnO && playerXSkipUse){
-        powerPlayerX.style.border="10px solid white";
-        powerPlayerX.style.borderRadius="5px";
-        powerPlayerO.style.border="none";
-        powerPlayerO.style.borderRadius="0px";
-    }else if(turnO && !playerXSkipUse){
-        powerPlayerX.style.border="none";
-        powerPlayerX.style.borderRadius="0px";
-        powerPlayerO.style.border="10px solid white";
-        powerPlayerO.style.borderRadius="5px";
-    }else if(!turnO && playerOSkipUse){
-        powerPlayerX.style.border="none";
-        powerPlayerX.style.borderRadius="0px";
-        powerPlayerO.style.border="10px solid white";
-        powerPlayerO.style.borderRadius="5px";
-    }else if(!turnO && !playerOSkipUse){
-        powerPlayerX.style.border="10px solid white";
-        powerPlayerX.style.borderRadius="5px";
-        powerPlayerO.style.border="none";
-        powerPlayerO.style.borderRadius="0px";
+function playerTurn() {
+    if (turnO && playerXSkipUse) {
+        powerPlayerX.style.border = "10px solid white";
+        powerPlayerX.style.borderRadius = "5px";
+        powerPlayerO.style.border = "none";
+        powerPlayerO.style.borderRadius = "0px";
+        powerOBtn.disabled = true;
+        powerXBtn.disabled = false;
+    } else if (turnO && !playerXSkipUse) {
+        powerPlayerX.style.border = "none";
+        powerPlayerX.style.borderRadius = "0px";
+        powerPlayerO.style.border = "10px solid white";
+        powerPlayerO.style.borderRadius = "5px";
+        powerOBtn.disabled = false;
+        powerXBtn.disabled = true;
+    } else if (!turnO && playerOSkipUse) {
+        powerPlayerX.style.border = "none";
+        powerPlayerX.style.borderRadius = "0px";
+        powerPlayerO.style.border = "10px solid white";
+        powerPlayerO.style.borderRadius = "5px";
+        powerOBtn.disabled = false;
+        powerXBtn.disabled = true;
+    } else if (!turnO && !playerOSkipUse) {
+        powerPlayerX.style.border = "10px solid white";
+        powerPlayerX.style.borderRadius = "5px";
+        powerPlayerO.style.border = "none";
+        powerPlayerO.style.borderRadius = "0px";
+        powerOBtn.disabled = true;
+        powerXBtn.disabled = false;
     }
 }
 
-setInterval(playerTurn,1);
+//setting interval to change the border indication player's turn
+setInterval(playerTurn, 1);
+
+
+function redAlert(btn) {
+    btn.style.transition = "all 0.4s ease-in-out";
+    let bordr = btn.style.border;
+    let clr = btn.style.backgroundColor;
+    btn.style.borderColor = "red";
+    btn.style.backgroundColor = "red";
+    let temp = btn.innerText;
+    btn.innerText = "";
+    setTimeout(() => {
+        btn.innerText = temp;
+        btn.style.border = bordr;
+        btn.style.backgroundColor = clr;
+        btn.style.transition = "none";
+    }, 500);
+}
+
 //displaying O and X when a button is clicked
 for (let btn of allBtn) {
     btn.addEventListener("click", () => {
         if (turnO) {
-            if (playerXSkipUse) {   //adding skip functionality
+            if (playerODeleteUse) {
+                // console.log("inside delete");
+                if (btn.innerText != "X") {
+                    // console.log("false");
+                    redAlert(btn);
+                } else if (btn.innerText == "X") {
+                    // console.log("true");
+                    playerODeleteUse = false;
+                    btn.style.transition = "all 0.5s ease-in-out";
+                    btn.style.color = "#E0E1DD";
+                    setTimeout(() => {
+                        btn.style.color = "black";
+                        btn.style.transition = "none";
+                        btn.innerText = "";
+                        btn.disabled = false;
+                    }, 500);
+                    for (let singleBtn of allBtn) {
+                        if (singleBtn.innerText != "") {
+                            singleBtn.disabled = true;
+                        }
+                    }
+                }
+            } else if (playerXSkipUse) {   //adding skip functionality
                 turnO = true;
-                btn.innerText="X";
-                playerXSkipUse=false;
-                btn.disabled=true;
+                btn.innerText = "X";
+                playerXSkipUse = false;
+                btn.disabled = true;
             } else {
                 btn.innerText = "O";
                 turnO = false;
                 btn.disabled = true;
             }
         } else {
-            if (playerOSkipUse) {   //adding skip functionality
+            if (playerXDeleteUse) {
+                // console.log("inside delete");
+                if (btn.innerText != "O") {
+                    // console.log("false");
+                    redAlert(btn);
+                } else if (btn.innerText == "O") {
+                    // console.log("true");
+                    playerXDeleteUse = false;
+                    btn.style.transition = "all 0.5s ease-in-out";
+                    btn.style.color = "#E0E1DD";
+                    setTimeout(() => {
+                        btn.style.color = "black";
+                        btn.style.transition = "none";
+                        btn.innerText = "";
+                        btn.disabled = false;
+                    }, 500);
+                    for (let singleBtn of allBtn) {
+                        if (singleBtn.innerText != "") {
+                            singleBtn.disabled = true;
+                        }
+                    }
+                }
+            } else if (playerOSkipUse) {   //adding skip functionality
                 turnO = false;
                 btn.innerText = "O";
-                playerOSkipUse=false;
-                btn.disabled=true;
+                playerOSkipUse = false;
+                btn.disabled = true;
             } else {
                 btn.innerText = "X";
                 turnO = true;
