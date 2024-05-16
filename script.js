@@ -22,18 +22,21 @@ let powerONotAlloted = true;
 let powerXNotAlloted = true;
 let num1 = 0;
 let num2 = 0;
-let playerOSkipInterval=0;
-let playerXSkipInterval=0;
-let skipRedPlayerO=true;
-let skipRedPlayerX=true;
-let shieldBluePlayerO=true;
-let shieldBluePlayerX=true;
-let playerOShieldInterval=0;
-let playerXShieldInterval=0;
-let deleteYellowPlayerO=true;
-let deleteYellowPlayerX=true;
-let playerODeleteInterval=0;
-let playerXDeleteInterval=0;
+let playerOSkipInterval = 0;
+let playerXSkipInterval = 0;
+let skipRedPlayerO = true;
+let skipRedPlayerX = true;
+let shieldBluePlayerO = true;
+let shieldBluePlayerX = true;
+let playerOShieldInterval = 0;
+let playerXShieldInterval = 0;
+let deleteYellowPlayerO = true;
+let deleteYellowPlayerX = true;
+let playerODeleteInterval = 0;
+let playerXDeleteInterval = 0;
+let playerOSkipUse = false;
+let playerXSkipUse = false;
+
 let patterns = [
     [0, 8, 16, 24], [7, 15, 23, 31], [14, 22, 30, 38], [21, 29, 37, 45], [2, 10, 18, 26], [1, 9, 17, 25], [3, 11, 19, 27], [0, 1, 2, 3],
     [7, 8, 9, 10], [14, 15, 16, 17], [21, 22, 23, 24], [28, 29, 30, 31], [35, 36, 37, 38], [42, 43, 44, 45], [1, 2, 3, 4], [8, 9, 10, 11],
@@ -109,28 +112,46 @@ resetBtn.addEventListener("mouseout", () => {
 
 //implementing power button of player-O 
 powerOBtn.addEventListener("click", () => {
-    powerONotAlloted = true;
+    powerONotAlloted = true;    //to prevent new power allocation when previous one is not used
+    let currentPower = powerOName.innerText;
     powerOName.innerText = "";
     powerOSymbol.innerText = "Score a point to gain a power-up";
     powerOSymbol.style.margin = "0px";
     powerOSymbol.style.fontSize = "32px";
-    powerPlayerO.style.backgroundColor="#778DA9";
+    powerPlayerO.style.backgroundColor = "#778DA9";
     clearInterval(playerOSkipInterval);
     clearInterval(playerOShieldInterval);
     clearInterval(playerODeleteInterval);
+    if (currentPower == "SKIP") {
+        // console.log("skip is used");
+        playerOSkipUse = true;
+    } else if (currentPower == "DELETE") {
+        console.log("delete is used");
+    } else if (currentPower == "SHIELD") {
+        console.log("shield is used");
+    }
 });
 
 //implementing power button of player-X
 powerXBtn.addEventListener("click", () => {
-    powerXNotAlloted = true;
+    powerXNotAlloted = true;    //to prevent new power allocation when previous one is not used
+    let currentPower = powerXName.innerText;
     powerXName.innerText = "";
     powerXSymbol.innerText = "Score a point to gain a power-up";
     powerXSymbol.style.margin = "0px";
     powerXSymbol.style.fontSize = "32px";
-    powerPlayerX.style.backgroundColor="#778DA9";
+    powerPlayerX.style.backgroundColor = "#778DA9";
     clearInterval(playerXSkipInterval);
     clearInterval(playerXShieldInterval);
     clearInterval(playerXDeleteInterval);
+    if (currentPower == "SKIP") {
+        // console.log("skip is used");
+        playerXSkipUse=true;
+    } else if (currentPower == "DELETE") {
+        console.log("delete is used");
+    } else if (currentPower == "SHIELD") {
+        console.log("shield is used");
+    }
 });
 
 //impementing reset button functionality
@@ -151,8 +172,8 @@ resetBtn.addEventListener("click", () => {
     powerXSymbol.style.fontSize = "32px";
     powerOName.innerText = "";
     powerXName.innerText = "";
-    powerPlayerX.style.backgroundColor="#778DA9";
-    powerPlayerO.style.backgroundColor="#778DA9";
+    powerPlayerX.style.backgroundColor = "#778DA9";
+    powerPlayerO.style.backgroundColor = "#778DA9";
     clearInterval(playerOSkipInterval);
     clearInterval(playerOShieldInterval);
     clearInterval(playerODeleteInterval);
@@ -170,68 +191,68 @@ resetBtn.addEventListener("click", () => {
 });
 
 //function to change background color when skip power is obtained player-O
-function callSkipRedPlayerO(){
-    if(skipRedPlayerO){
-        skipRedPlayerO=false;
-        powerPlayerO.style.backgroundColor="rgb(255, 57, 57)";
-    }else{
-        skipRedPlayerO=true;
-        powerPlayerO.style.backgroundColor="#778DA9";
+function callSkipRedPlayerO() {
+    if (skipRedPlayerO) {
+        skipRedPlayerO = false;
+        powerPlayerO.style.backgroundColor = "rgb(255, 57, 57)";
+    } else {
+        skipRedPlayerO = true;
+        powerPlayerO.style.backgroundColor = "#778DA9";
     }
 }
 
 //function to change background color when skip power is obtained player-X
-function callSkipRedPlayerX(){
-    if(skipRedPlayerX){
-        skipRedPlayerX=false;
-        powerPlayerX.style.backgroundColor="rgb(255, 57, 57)";
-    }else{
-        skipRedPlayerX=true;
-        powerPlayerX.style.backgroundColor="#778DA9";
+function callSkipRedPlayerX() {
+    if (skipRedPlayerX) {
+        skipRedPlayerX = false;
+        powerPlayerX.style.backgroundColor = "rgb(255, 57, 57)";
+    } else {
+        skipRedPlayerX = true;
+        powerPlayerX.style.backgroundColor = "#778DA9";
     }
 }
 
 //function to change background color when shield power is obtained player-O
-function callShieldBluePlayerO(){
-    if(shieldBluePlayerO){
-        shieldBluePlayerO=false;
-        powerPlayerO.style.backgroundColor="#00eeff"
-    }else{
-        shieldBluePlayerO=true;
-        powerPlayerO.style.backgroundColor="#778DA9";
+function callShieldBluePlayerO() {
+    if (shieldBluePlayerO) {
+        shieldBluePlayerO = false;
+        powerPlayerO.style.backgroundColor = "#00eeff"
+    } else {
+        shieldBluePlayerO = true;
+        powerPlayerO.style.backgroundColor = "#778DA9";
     }
 }
 
 //function to change background color when shield power is obtained player-X
-function callShieldBluePlayerX(){
-    if(shieldBluePlayerX){
-        shieldBluePlayerX=false;
-        powerPlayerX.style.backgroundColor="#00eeff"
-    }else{
-        shieldBluePlayerX=true;
-        powerPlayerX.style.backgroundColor="#778DA9";
+function callShieldBluePlayerX() {
+    if (shieldBluePlayerX) {
+        shieldBluePlayerX = false;
+        powerPlayerX.style.backgroundColor = "#00eeff"
+    } else {
+        shieldBluePlayerX = true;
+        powerPlayerX.style.backgroundColor = "#778DA9";
     }
 }
 
 //function to change background color when delete power is obtained player-O
-function callDeleteYellowPlayerO(){
-    if(deleteYellowPlayerO){
-        deleteYellowPlayerO=false;
-        powerPlayerO.style.backgroundColor="rgb(251, 255, 0)"
-    }else{
-        deleteYellowPlayerO=true;
-        powerPlayerO.style.backgroundColor="#778DA9";
+function callDeleteYellowPlayerO() {
+    if (deleteYellowPlayerO) {
+        deleteYellowPlayerO = false;
+        powerPlayerO.style.backgroundColor = "rgb(251, 255, 0)"
+    } else {
+        deleteYellowPlayerO = true;
+        powerPlayerO.style.backgroundColor = "#778DA9";
     }
 }
 
 //function to change background color when delete power is obtained player-X
-function callDeleteYellowPlayerX(){
-    if(deleteYellowPlayerX){
-        deleteYellowPlayerX=false;
-        powerPlayerX.style.backgroundColor="rgb(251, 255, 0)"
-    }else{
-        deleteYellowPlayerX=true;
-        powerPlayerX.style.backgroundColor="#778DA9";
+function callDeleteYellowPlayerX() {
+    if (deleteYellowPlayerX) {
+        deleteYellowPlayerX = false;
+        powerPlayerX.style.backgroundColor = "rgb(251, 255, 0)"
+    } else {
+        deleteYellowPlayerX = true;
+        powerPlayerX.style.backgroundColor = "#778DA9";
     }
 }
 
@@ -252,15 +273,15 @@ function powerStore() {
         powerOSymbol.style.marginRight = "80px";
         powerOName.innerText = powerNames[randomPower];
         powerO = false;
-        if(powerOName.innerText=="SKIP"){
+        if (powerOName.innerText == "SKIP") {
             callSkipRedPlayerO();
-            playerOSkipInterval=setInterval(callSkipRedPlayerO,1000);
-        }else if(powerOName.innerText=="SHIELD"){
+            playerOSkipInterval = setInterval(callSkipRedPlayerO, 1000);
+        } else if (powerOName.innerText == "SHIELD") {
             callShieldBluePlayerO();
-            playerOShieldInterval=setInterval(callShieldBluePlayerO,1000);
-        }else if(powerOName.innerText=="DELETE"){
+            playerOShieldInterval = setInterval(callShieldBluePlayerO, 1000);
+        } else if (powerOName.innerText == "DELETE") {
             callDeleteYellowPlayerO();
-            playerODeleteInterval=setInterval(callDeleteYellowPlayerO,1000);
+            playerODeleteInterval = setInterval(callDeleteYellowPlayerO, 1000);
         }
     } else if (powerX && powerXNotAlloted) {
         powerXNotAlloted = false;
@@ -276,15 +297,15 @@ function powerStore() {
         powerXSymbol.style.marginRight = "80px";
         powerXName.innerText = powerNames[randomPower];
         powerX = false;
-        if(powerXName.innerText=="SKIP"){
+        if (powerXName.innerText == "SKIP") {
             callSkipRedPlayerX();
-            playerXSkipInterval=setInterval(callSkipRedPlayerX,1000);
-        }else if(powerXName.innerText=="SHIELD"){
+            playerXSkipInterval = setInterval(callSkipRedPlayerX, 1000);
+        } else if (powerXName.innerText == "SHIELD") {
             callShieldBluePlayerX();
-            playerXShieldInterval=setInterval(callShieldBluePlayerX,1000);
-        }else if(powerXName.innerText=="DELETE"){
+            playerXShieldInterval = setInterval(callShieldBluePlayerX, 1000);
+        } else if (powerXName.innerText == "DELETE") {
             callDeleteYellowPlayerX();
-            playerXDeleteInterval=setInterval(callDeleteYellowPlayerX,1000);
+            playerXDeleteInterval = setInterval(callDeleteYellowPlayerX, 1000);
         }
     }
 }
@@ -349,18 +370,56 @@ function gameLogic() {
     }
 }
 
+function playerTurn(){
+    if(turnO && playerXSkipUse){
+        powerPlayerX.style.border="10px solid white";
+        powerPlayerX.style.borderRadius="5px";
+        powerPlayerO.style.border="none";
+        powerPlayerO.style.borderRadius="0px";
+    }else if(turnO && !playerXSkipUse){
+        powerPlayerX.style.border="none";
+        powerPlayerX.style.borderRadius="0px";
+        powerPlayerO.style.border="10px solid white";
+        powerPlayerO.style.borderRadius="5px";
+    }else if(!turnO && playerOSkipUse){
+        powerPlayerX.style.border="none";
+        powerPlayerX.style.borderRadius="0px";
+        powerPlayerO.style.border="10px solid white";
+        powerPlayerO.style.borderRadius="5px";
+    }else if(!turnO && !playerOSkipUse){
+        powerPlayerX.style.border="10px solid white";
+        powerPlayerX.style.borderRadius="5px";
+        powerPlayerO.style.border="none";
+        powerPlayerO.style.borderRadius="0px";
+    }
+}
 
+setInterval(playerTurn,1);
 //displaying O and X when a button is clicked
 for (let btn of allBtn) {
     btn.addEventListener("click", () => {
         if (turnO) {
-            btn.innerText = "O";
-            turnO = false;
-            btn.disabled = true;
+            if (playerXSkipUse) {   //adding skip functionality
+                turnO = true;
+                btn.innerText="X";
+                playerXSkipUse=false;
+                btn.disabled=true;
+            } else {
+                btn.innerText = "O";
+                turnO = false;
+                btn.disabled = true;
+            }
         } else {
-            btn.innerText = "X";
-            turnO = true;
-            btn.disabled = true;
+            if (playerOSkipUse) {   //adding skip functionality
+                turnO = false;
+                btn.innerText = "O";
+                playerOSkipUse=false;
+                btn.disabled=true;
+            } else {
+                btn.innerText = "X";
+                turnO = true;
+                btn.disabled = true;
+            }
         }
         gameLogic();
     })
