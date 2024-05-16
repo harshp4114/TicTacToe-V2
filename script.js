@@ -40,6 +40,9 @@ let playerOSkipUse = false;
 let playerXSkipUse = false;
 let playerODeleteUse = false;
 let playerXDeleteUse = false;
+let playerOShieldUse = false;
+let playerXShieldUse = false;
+
 
 let patterns = [
     [0, 8, 16, 24], [7, 15, 23, 31], [14, 22, 30, 38], [21, 29, 37, 45], [2, 10, 18, 26], [1, 9, 17, 25], [3, 11, 19, 27], [0, 1, 2, 3],
@@ -114,90 +117,6 @@ resetBtn.addEventListener("mouseout", () => {
     resetBtn.style.borderColor = "#E0E1DD";
 });
 
-//implementing power button of player-O 
-powerOBtn.addEventListener("click", () => {
-    powerONotAlloted = true;    //to prevent new power allocation when previous one is not used
-    let currentPower = powerOName.innerText;
-    powerOName.innerText = "";
-    powerOSymbol.innerText = "Score a point to gain a power-up";
-    powerOSymbol.style.margin = "0px";
-    powerOSymbol.style.fontSize = "32px";
-    powerPlayerO.style.backgroundColor = "#778DA9";
-    clearInterval(playerOSkipInterval);
-    clearInterval(playerOShieldInterval);
-    clearInterval(playerODeleteInterval);
-    if (currentPower == "SKIP") {
-        playerOSkipUse = true;
-    } else if (currentPower == "DELETE") {
-        playerODeleteUse = true;
-        for (let singleBtn of allBtn) {
-            singleBtn.disabled = false;
-        }
-    } else if (currentPower == "SHIELD") {
-        console.log("shield is used");
-    }
-});
-
-//implementing power button of player-X
-powerXBtn.addEventListener("click", () => {
-    powerXNotAlloted = true;    //to prevent new power allocation when previous one is not used
-    let currentPower = powerXName.innerText;
-    powerXName.innerText = "";
-    powerXSymbol.innerText = "Score a point to gain a power-up";
-    powerXSymbol.style.margin = "0px";
-    powerXSymbol.style.fontSize = "32px";
-    powerPlayerX.style.backgroundColor = "#778DA9";
-    clearInterval(playerXSkipInterval);
-    clearInterval(playerXShieldInterval);
-    clearInterval(playerXDeleteInterval);
-    if (currentPower == "SKIP") {
-        playerXSkipUse = true;
-    } else if (currentPower == "DELETE") {
-        for (let singleBtn of allBtn) {
-            singleBtn.disabled = false;
-        }
-        playerXDeleteUse=true;
-    } else if (currentPower == "SHIELD") {
-        console.log("shield is used");
-    }
-});
-
-//impementing reset button functionality
-resetBtn.addEventListener("click", () => {
-    pointO = 0;
-    pointX = 0;
-    num1 = 0;
-    num2 = 0;
-    powerO = false;
-    powerX = false;
-    powerONotAlloted = true;
-    powerXNotAlloted = true;
-    powerOSymbol.innerText = "Score a point to gain a power-up";
-    powerXSymbol.innerText = "Score a point to gain a power-up";
-    powerOSymbol.style.margin = "0px";
-    powerXSymbol.style.margin = "0px";
-    powerOSymbol.style.fontSize = "32px";
-    powerXSymbol.style.fontSize = "32px";
-    powerOName.innerText = "";
-    powerXName.innerText = "";
-    powerPlayerX.style.backgroundColor = "#778DA9";
-    powerPlayerO.style.backgroundColor = "#778DA9";
-    clearInterval(playerOSkipInterval);
-    clearInterval(playerOShieldInterval);
-    clearInterval(playerODeleteInterval);
-    clearInterval(playerXSkipInterval);
-    clearInterval(playerXShieldInterval);
-    clearInterval(playerXDeleteInterval);
-    turnO = true;
-    for (let btn of allBtn) {
-        btn.innerText = "";
-        btn.style.backgroundColor = "#E0E1DD";
-        btn.style.color = "black";
-        btn.style.border = "2px solid black";
-        btn.disabled = false;
-    }
-});
-
 //function to change background color when skip power is obtained player-O
 function callSkipRedPlayerO() {
     if (skipRedPlayerO) {
@@ -263,6 +182,329 @@ function callDeleteYellowPlayerX() {
         powerPlayerX.style.backgroundColor = "#778DA9";
     }
 }
+
+//impementing reset button functionality
+resetBtn.addEventListener("click", () => {
+    pointO = 0;
+    pointX = 0;
+    num1 = 0;
+    num2 = 0;
+    powerO = false;
+    powerX = false;
+    powerONotAlloted = true;
+    powerXNotAlloted = true;
+    powerOSymbol.innerText = "Score a point to gain a power-up";
+    powerXSymbol.innerText = "Score a point to gain a power-up";
+    powerOSymbol.style.margin = "0px";
+    powerXSymbol.style.margin = "0px";
+    powerOSymbol.style.fontSize = "32px";
+    powerXSymbol.style.fontSize = "32px";
+    powerOName.innerText = "";
+    powerXName.innerText = "";
+    powerPlayerX.style.backgroundColor = "#778DA9";
+    powerPlayerO.style.backgroundColor = "#778DA9";
+    clearInterval(playerOSkipInterval);
+    clearInterval(playerOShieldInterval);
+    clearInterval(playerODeleteInterval);
+    clearInterval(playerXSkipInterval);
+    clearInterval(playerXShieldInterval);
+    clearInterval(playerXDeleteInterval);
+    turnO = true;
+    for (let btn of allBtn) {
+        btn.innerText = "";
+        btn.style.backgroundColor = "#E0E1DD";
+        btn.style.color = "black";
+        btn.style.border = "2px solid black";
+        btn.disabled = false;
+    }
+});
+
+//implementing power button of player-O 
+powerOBtn.addEventListener("click", () => {
+    powerONotAlloted = true;    //to prevent new power allocation when previous one is not used
+    let currentPower = powerOName.innerText;
+
+    if (currentPower == "SKIP") {
+        clearInterval(playerOSkipInterval);
+        playerOSkipUse = true;
+        powerOName.innerText = "";
+        powerOSymbol.innerText = "Score a point to gain a power-up";
+        powerOSymbol.style.margin = "0px";
+        powerOSymbol.style.fontSize = "32px";
+        powerPlayerO.style.backgroundColor = "#778DA9";
+    } else if (currentPower == "DELETE") {
+        let num = 0;
+        for (let a of allBtn) {
+            if (a.innerText == "X") {
+                num++;
+            }
+        }
+        if (num) {
+            clearInterval(playerODeleteInterval);
+            playerODeleteUse = true;
+            powerOName.innerText = "";
+            powerOSymbol.innerText = "Score a point to gain a power-up";
+            powerOSymbol.style.margin = "0px";
+            powerOSymbol.style.fontSize = "32px";
+            powerPlayerO.style.backgroundColor = "#778DA9";
+            for (let singleBtn of allBtn) {
+                singleBtn.disabled = false;
+            }
+        } else {
+            for (let all of allBtn) {
+                if (all.innerText == "" || all.innerText == "O") {
+                    all.style.transition = "all 1s ease-in-out";
+                    all.style.backgroundColor = "red";
+                }
+            }
+            setTimeout(() => {
+                for (let all of allBtn) {
+                    if (all.innerText == "" || all.innerText == "O") {
+                        all.style.transition = "none";
+                        all.style.backgroundColor = "#E0E1DD";
+                    }
+                }
+            }, 1000);
+        }
+
+    } else if (currentPower == "SHIELD") {
+        let num = 0;
+        for (let all of allBtn) {
+            if (all.innerText == "O") {
+                num++;
+            }
+        }
+        if (num) {
+            clearInterval(playerOShieldInterval);
+            playerOShieldUse = true;
+            powerOName.innerText = "";
+            powerOSymbol.innerText = "Score a point to gain a power-up";
+            powerOSymbol.style.margin = "0px";
+            powerOSymbol.style.fontSize = "32px";
+            powerPlayerO.style.backgroundColor = "#778DA9";
+            for (let singleBtn of allBtn) {
+                singleBtn.disabled = false;
+            }
+        } else {
+            for (let all of allBtn) {
+                if (all.innerText == "" || all.innerText == "X") {
+                    all.style.transition = "all 1s ease-in-out";
+                    all.style.backgroundColor = "red";
+                }
+            }
+            setTimeout(() => {
+                for (let all of allBtn) {
+                    if (all.innerText == "" || all.innerText == "X") {
+                        all.style.transition = "none";
+                        all.style.backgroundColor = "#E0E1DD";
+                    }
+                }
+            }, 1000);
+        }
+
+    }
+
+});
+
+//implementing power button of player-X
+powerXBtn.addEventListener("click", () => {
+    powerXNotAlloted = true;    //to prevent new power allocation when previous one is not used
+    let currentPower = powerXName.innerText;
+
+    if (currentPower == "SKIP") {
+        clearInterval(playerXSkipInterval);
+        playerXSkipUse = true;
+        powerXName.innerText = "";
+        powerXSymbol.innerText = "Score a point to gain a power-up";
+        powerXSymbol.style.margin = "0px";
+        powerXSymbol.style.fontSize = "32px";
+        powerPlayerX.style.backgroundColor = "#778DA9";
+    } else if (currentPower == "DELETE") {
+        let num = 0;
+        for (let a of allBtn) {
+            if (a.innerText == "O") {
+                num++;
+            }
+        }
+        if (num) {
+            clearInterval(playerXDeleteInterval);
+            playerXDeleteUse = true;
+            powerXName.innerText = "";
+            powerXSymbol.innerText = "Score a point to gain a power-up";
+            powerXSymbol.style.margin = "0px";
+            powerXSymbol.style.fontSize = "32px";
+            powerPlayerX.style.backgroundColor = "#778DA9";
+            for (let singleBtn of allBtn) {
+                singleBtn.disabled = false;
+            }
+        } else {
+            for (let all of allBtn) {
+                if (all.innerText == "" || all.innerText == "X") {
+                    all.style.transition = "all 1s ease-in-out";
+                    all.style.backgroundColor = "red";
+                }
+            }
+            setTimeout(() => {
+                for (let all of allBtn) {
+                    if (all.innerText == "" || all.innerText == "X") {
+                        all.style.transition = "none";
+                        all.style.backgroundColor = "#E0E1DD";
+                    }
+                }
+            }, 1000);
+        }
+
+    } else if (currentPower == "SHIELD") {
+        let num = 0;
+        for (let all of allBtn) {
+            if (all.innerText == "X") {
+                num++;
+            }
+        }
+        if (num) {
+            clearInterval(playerXShieldInterval);
+            playerXShieldUse = true;
+            powerXName.innerText = "";
+            powerXSymbol.innerText = "Score a point to gain a power-up";
+            powerXSymbol.style.margin = "0px";
+            powerXSymbol.style.fontSize = "32px";
+            powerPlayerX.style.backgroundColor = "#778DA9";
+            for (let singleBtn of allBtn) {
+                singleBtn.disabled = false;
+            }
+        } else {
+            for (let all of allBtn) {
+                if (all.innerText == "" || all.innerText == "O") {
+                    all.style.transition = "all 1s ease-in-out";
+                    all.style.backgroundColor = "red";
+                }
+            }
+            setTimeout(() => {
+                for (let all of allBtn) {
+                    if (all.innerText == "" || all.innerText == "O") {
+                        all.style.transition = "none";
+                        all.style.backgroundColor = "#E0E1DD";
+                    }
+                }
+            }, 1000); 
+        }
+
+    }
+});
+
+
+function shieldAlert(btn){
+    btn.style.transition="all 1s ease-in-out";
+    btn.style.backgroundColor="#00eeff";
+    setTimeout(() => {
+        btn.style.backgroundColor="#E0E1DD";
+        btn.style.transition="none";
+    }, 1000);
+}
+
+
+//displaying O and X when a button is clicked
+for (let btn of allBtn) {
+    btn.addEventListener("click", () => {
+        if (turnO) {
+            if (playerODeleteUse) {
+                let txt = btn.innerText;
+                if (btn.innerHTML == `<span class="shield">${txt}</span>`) {
+                    shieldAlert(btn);
+                } else if (btn.innerText != "X") {
+                    redAlert(btn);
+                } else if (btn.innerText == "X") {
+                    playerODeleteUse = false;
+                    btn.style.transition = "all 0.5s ease-in-out";
+                    btn.style.color = "#E0E1DD";
+                    setTimeout(() => {
+                        btn.style.color = "black";
+                        btn.style.transition = "none";
+                        btn.innerText = "";
+                        btn.disabled = false;
+                    }, 500);
+                    for (let singleBtn of allBtn) {
+                        if (singleBtn.innerText != "") {
+                            singleBtn.disabled = true;
+                        }
+                    }
+                }
+            } else if (playerXSkipUse) {   //adding skip functionality
+                turnO = true;
+                btn.innerText = "X";
+                playerXSkipUse = false;
+                btn.disabled = true;
+            } else if (playerOShieldUse) {
+                if (btn.innerText != "O") {
+                    redAlert(btn);
+                } else if (btn.innerText == "O") {
+                    let html = btn.innerHTML;
+                    btn.innerHTML = `<span class="shield">${html}</span>`;
+                    btn.disabled = true;
+                    playerOShieldUse = false;
+                    for (let singleBtn of allBtn) {
+                        if (singleBtn.innerText != "") {
+                            singleBtn.disabled = true;
+                        }
+                    }
+                }
+            } else {
+                btn.innerText = "O";
+                turnO = false;
+                btn.disabled = true;
+            }
+        } else {
+            if (playerXDeleteUse) {
+                let txt = btn.innerText;
+                if (btn.innerHTML == `<span class="shield">${txt}</span>`) {
+                    shieldAlert(btn);
+                } else if (btn.innerText != "O") {
+                    redAlert(btn);
+                } else if (btn.innerText == "O") {
+                    playerXDeleteUse = false;
+                    btn.style.transition = "all 0.5s ease-in-out";
+                    btn.style.color = "#E0E1DD";
+                    setTimeout(() => {
+                        btn.style.color = "black";
+                        btn.style.transition = "none";
+                        btn.innerText = "";
+                        btn.disabled = false;
+                    }, 500);
+                    for (let singleBtn of allBtn) {
+                        if (singleBtn.innerText != "") {
+                            singleBtn.disabled = true;
+                        }
+                    }
+                }
+            } else if (playerOSkipUse) {   //adding skip functionality
+                turnO = false;
+                btn.innerText = "O";
+                playerOSkipUse = false;
+                btn.disabled = true;
+            } else if (playerXShieldUse) {
+                if (btn.innerText != "X") {
+                    redAlert(btn);
+                } else if (btn.innerText == "X") {
+                    let html = btn.innerHTML;
+                    btn.innerHTML = `<span class="shield">${html}</span>`;
+                    btn.disabled = true;
+                    playerXShieldUse = false;
+                    for (let singleBtn of allBtn) {
+                        if (singleBtn.innerText != "") {
+                            singleBtn.disabled = true;
+                        }
+                    }
+                }
+            } else {
+                btn.innerText = "X";
+                turnO = true;
+                btn.disabled = true;
+            }
+        }
+        gameLogic();
+    })
+}
+
 
 //initializing power when player scores a point
 function powerStore() {
@@ -413,7 +655,7 @@ function playerTurn() {
 //setting interval to change the border indication player's turn
 setInterval(playerTurn, 1);
 
-
+//function to show red alert tiles for delete and update powers
 function redAlert(btn) {
     btn.style.transition = "all 0.4s ease-in-out";
     let bordr = btn.style.border;
@@ -430,76 +672,3 @@ function redAlert(btn) {
     }, 500);
 }
 
-//displaying O and X when a button is clicked
-for (let btn of allBtn) {
-    btn.addEventListener("click", () => {
-        if (turnO) {
-            if (playerODeleteUse) {
-                // console.log("inside delete");
-                if (btn.innerText != "X") {
-                    // console.log("false");
-                    redAlert(btn);
-                } else if (btn.innerText == "X") {
-                    // console.log("true");
-                    playerODeleteUse = false;
-                    btn.style.transition = "all 0.5s ease-in-out";
-                    btn.style.color = "#E0E1DD";
-                    setTimeout(() => {
-                        btn.style.color = "black";
-                        btn.style.transition = "none";
-                        btn.innerText = "";
-                        btn.disabled = false;
-                    }, 500);
-                    for (let singleBtn of allBtn) {
-                        if (singleBtn.innerText != "") {
-                            singleBtn.disabled = true;
-                        }
-                    }
-                }
-            } else if (playerXSkipUse) {   //adding skip functionality
-                turnO = true;
-                btn.innerText = "X";
-                playerXSkipUse = false;
-                btn.disabled = true;
-            } else {
-                btn.innerText = "O";
-                turnO = false;
-                btn.disabled = true;
-            }
-        } else {
-            if (playerXDeleteUse) {
-                // console.log("inside delete");
-                if (btn.innerText != "O") {
-                    // console.log("false");
-                    redAlert(btn);
-                } else if (btn.innerText == "O") {
-                    // console.log("true");
-                    playerXDeleteUse = false;
-                    btn.style.transition = "all 0.5s ease-in-out";
-                    btn.style.color = "#E0E1DD";
-                    setTimeout(() => {
-                        btn.style.color = "black";
-                        btn.style.transition = "none";
-                        btn.innerText = "";
-                        btn.disabled = false;
-                    }, 500);
-                    for (let singleBtn of allBtn) {
-                        if (singleBtn.innerText != "") {
-                            singleBtn.disabled = true;
-                        }
-                    }
-                }
-            } else if (playerOSkipUse) {   //adding skip functionality
-                turnO = false;
-                btn.innerText = "O";
-                playerOSkipUse = false;
-                btn.disabled = true;
-            } else {
-                btn.innerText = "X";
-                turnO = true;
-                btn.disabled = true;
-            }
-        }
-        gameLogic();
-    })
-}

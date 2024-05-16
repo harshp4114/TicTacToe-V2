@@ -33,6 +33,9 @@ body {
     width: 80px;
     border-radius: 5px;
     border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* div for the reset button */
@@ -189,4 +192,15 @@ body {
     transition-duration: 0.3s;
     transition-timing-function: ease-in;
     margin-top: 40px;
+}
+
+/* class for span tag implementing shield */
+.shield{
+    background-color: #00eeff;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
