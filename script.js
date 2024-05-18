@@ -10,6 +10,8 @@ let powerOSymbol = document.querySelector(".powerO-symbol");        //selecting 
 let powerXSymbol = document.querySelector(".powerX-symbol");        //selecting the p tag for power symbol of player-X
 let powerOName = document.querySelector(".powerO-Name");      //selecting power name p tag of player-O
 let powerXName = document.querySelector(".powerX-Name");      //selecting power name p tag of player-X
+let drawCountdown = document.querySelector(".draw-countdown"); //selecting p tag countdown heading
+let result = document.querySelector(".result");       //selecting p tag for result 
 let turnO = true;
 let first = 0, second = 1, third = 2, fourth = 3;
 let powers = ['<i class="fa-solid fa-shield-halved"></i>', '<i class="fa-solid fa-ban"></i>', '<i class="fa-solid fa-circle-minus"></i>'];
@@ -18,12 +20,12 @@ let colours = ["rgb(255, 193, 7)", "rgb(255, 87, 34)", "rgb(3, 169, 244)", "rgb(
 let allNeighbours = [-1, -7, 7, 1, -8, -6, 6, 8];
 let pointO = 0;
 let pointX = 0;
+let num1 = 0;
+let num2 = 0;
 let powerO = false;
 let powerX = false;
 let powerONotAlloted = true;
 let powerXNotAlloted = true;
-let num1 = 0;
-let num2 = 0;
 let playerOSkipInterval = 0;
 let playerXSkipInterval = 0;
 let skipRedPlayerO = true;
@@ -42,8 +44,10 @@ let playerODeleteUse = false;
 let playerXDeleteUse = false;
 let playerOShieldUse = false;
 let playerXShieldUse = false;
-
-
+let time = 0;
+const startingSec = 19;
+let countDownIntervalID = 0;
+let checkResultIntervalID = 0;
 let patterns = [
     [0, 8, 16, 24], [7, 15, 23, 31], [14, 22, 30, 38], [21, 29, 37, 45], [2, 10, 18, 26], [1, 9, 17, 25], [3, 11, 19, 27], [0, 1, 2, 3],
     [7, 8, 9, 10], [14, 15, 16, 17], [21, 22, 23, 24], [28, 29, 30, 31], [35, 36, 37, 38], [42, 43, 44, 45], [1, 2, 3, 4], [8, 9, 10, 11],
@@ -193,6 +197,27 @@ resetBtn.addEventListener("click", () => {
     powerX = false;
     powerONotAlloted = true;
     powerXNotAlloted = true;
+    playerOSkipInterval = 0;
+    playerXSkipInterval = 0;
+    skipRedPlayerO = true;
+    skipRedPlayerX = true;
+    shieldBluePlayerO = true;
+    shieldBluePlayerX = true;
+    playerOShieldInterval = 0;
+    playerXShieldInterval = 0;
+    deleteYellowPlayerO = true;
+    deleteYellowPlayerX = true;
+    playerODeleteInterval = 0;
+    playerXDeleteInterval = 0;
+    playerOSkipUse = false;
+    playerXSkipUse = false;
+    playerODeleteUse = false;
+    playerXDeleteUse = false;
+    playerOShieldUse = false;
+    playerXShieldUse = false;
+    time = 0;
+    countDownIntervalID = 0;
+    checkResultIntervalID = 0;
     powerOSymbol.innerText = "Score a point to gain a power-up";
     powerXSymbol.innerText = "Score a point to gain a power-up";
     powerOSymbol.style.margin = "0px";
@@ -210,6 +235,7 @@ resetBtn.addEventListener("click", () => {
     clearInterval(playerXShieldInterval);
     clearInterval(playerXDeleteInterval);
     turnO = true;
+
     for (let btn of allBtn) {
         btn.innerText = "";
         btn.style.backgroundColor = "#E0E1DD";
@@ -386,26 +412,125 @@ powerXBtn.addEventListener("click", () => {
                         all.style.backgroundColor = "#E0E1DD";
                     }
                 }
-            }, 1000); 
+            }, 1000);
         }
 
     }
 });
 
-
-function shieldAlert(btn){
-    btn.style.transition="all 1s ease-in-out";
-    btn.style.backgroundColor="#00eeff";
+//function to implement alert when a shielded element is tried to remove
+function shieldAlert(btn) {
+    btn.style.transition = "all 1s ease-in-out";
+    btn.style.backgroundColor = "#00eeff";
     setTimeout(() => {
-        btn.style.backgroundColor="#E0E1DD";
-        btn.style.transition="none";
+        btn.style.backgroundColor = "#E0E1DD";
+        btn.style.transition = "none";
     }, 1000);
+}
+
+//function to implement countdown timer
+function countDown() {
+    if (time <= 0) {
+        clearInterval(countDownIntervalID);
+        clearInterval(playerOSkipInterval);
+        clearInterval(playerOShieldInterval);
+        clearInterval(playerODeleteInterval);
+        clearInterval(playerXSkipInterval);
+        clearInterval(playerXShieldInterval);
+        clearInterval(playerXDeleteInterval);
+        pointO = 0;
+        pointX = 0;
+        num1 = 0;
+        num2 = 0;
+        powerO = false;
+        powerX = false;
+        powerONotAlloted = true;
+        powerXNotAlloted = true;
+        playerOSkipInterval = 0;
+        playerXSkipInterval = 0;
+        skipRedPlayerO = true;
+        skipRedPlayerX = true;
+        shieldBluePlayerO = true;
+        shieldBluePlayerX = true;
+        playerOShieldInterval = 0;
+        playerXShieldInterval = 0;
+        deleteYellowPlayerO = true;
+        deleteYellowPlayerX = true;
+        playerODeleteInterval = 0;
+        playerXDeleteInterval = 0;
+        playerOSkipUse = false;
+        playerXSkipUse = false;
+        playerODeleteUse = false;
+        playerXDeleteUse = false;
+        playerOShieldUse = false;
+        playerXShieldUse = false;
+        time = 0;
+        countDownIntervalID = 0;
+        checkResultIntervalID = 0;
+        powerOSymbol.innerText = "Score a point to gain a power-up";
+        powerXSymbol.innerText = "Score a point to gain a power-up";
+        powerOSymbol.style.margin = "0px";
+        powerXSymbol.style.margin = "0px";
+        powerOSymbol.style.fontSize = "32px";
+        powerXSymbol.style.fontSize = "32px";
+        powerOName.innerText = "";
+        powerXName.innerText = "";
+        powerPlayerX.style.backgroundColor = "#778DA9";
+        powerPlayerO.style.backgroundColor = "#778DA9";
+        turnO = true;
+        result.innerText = "";
+        drawCountdown.innerText = "";
+        result.style.display = "none";
+        drawCountdown.style.display = "none";
+        resetBtn.style.display="inline-block";
+        for (let btn of allBtn) {
+            btn.innerText = "";
+            btn.style.backgroundColor = "#E0E1DD";
+            btn.style.color = "black";
+            btn.style.border = "2px solid black";
+            btn.disabled = false;
+        }
+    } else {
+        time--;
+        drawCountdown.innerText = `Game restarts in ${time} seconds`;
+    }
+}
+
+//function for checking the result of the game and restarting the game in 15 seconds
+function checkDraw() {
+
+    if (pointO == pointX) {
+        time = startingSec;
+        countDownIntervalID = setInterval(countDown, 1000);
+        resetBtn.style.display = "none";
+        result.style.display = "inline-block";
+        drawCountdown.style.display = "inline-block";
+        result.innerText = "Game resulted in a draw";
+        drawCountdown.innerText = `Game restarts in 20 seconds`;
+    } else if (pointO > pointX) {
+        time = startingSec;
+        countDownIntervalID = setInterval(countDown, 1000);
+        resetBtn.style.display = "none";
+        result.style.display = "inline-block";
+        drawCountdown.style.display = "inline-block";
+        result.innerText = `Player-1 wins the game by ${pointO - pointX} points`;
+        drawCountdown.innerText = `Game restarts in 20 seconds`;
+    } else if (pointX > pointO) {
+        time = startingSec;
+        countDownIntervalID = setInterval(countDown, 1000);
+        resetBtn.style.display = "none";
+        result.style.display = "inline-block";
+        drawCountdown.style.display = "inline-block";
+        result.innerText = `Player-2 wins the game by ${pointX - pointO} points`;
+        drawCountdown.innerText = `Game restarts in 20 seconds`;
+    }
 }
 
 
 //displaying O and X when a button is clicked
 for (let btn of allBtn) {
     btn.addEventListener("click", () => {
+
         if (turnO) {
             if (playerODeleteUse) {
                 let txt = btn.innerText;
@@ -502,6 +627,17 @@ for (let btn of allBtn) {
             }
         }
         gameLogic();
+        let emptyBtn = 0;
+        for (let ab of allBtn) {
+            if (ab.innerText == "") {
+                emptyBtn++;
+            }
+        }
+        if (emptyBtn) {
+
+        } else {
+            checkDraw();
+        }
     })
 }
 
@@ -620,6 +756,7 @@ function gameLogic() {
     }
 }
 
+//function to show particular player's turn using borders around power grid
 function playerTurn() {
     if (turnO && playerXSkipUse) {
         powerPlayerX.style.border = "10px solid white";
