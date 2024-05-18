@@ -193,6 +193,12 @@ resetBtn.addEventListener("click", () => {
     pointX = 0;
     num1 = 0;
     num2 = 0;
+    clearInterval(playerOSkipInterval);
+    clearInterval(playerOShieldInterval);
+    clearInterval(playerODeleteInterval);
+    clearInterval(playerXSkipInterval);
+    clearInterval(playerXShieldInterval);
+    clearInterval(playerXDeleteInterval);
     powerO = false;
     powerX = false;
     powerONotAlloted = true;
@@ -228,14 +234,7 @@ resetBtn.addEventListener("click", () => {
     powerXName.innerText = "";
     powerPlayerX.style.backgroundColor = "#778DA9";
     powerPlayerO.style.backgroundColor = "#778DA9";
-    clearInterval(playerOSkipInterval);
-    clearInterval(playerOShieldInterval);
-    clearInterval(playerODeleteInterval);
-    clearInterval(playerXSkipInterval);
-    clearInterval(playerXShieldInterval);
-    clearInterval(playerXDeleteInterval);
     turnO = true;
-
     for (let btn of allBtn) {
         btn.innerText = "";
         btn.style.backgroundColor = "#E0E1DD";
