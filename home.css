@@ -1,0 +1,269 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0D1B2A;
+}
+
+/* class for the outermost div of the page */
+.main-layout{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* class fot he div containing both headings */
+.heading-layout{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 2px solid #E0E1DD;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* class for p tag of first heading */
+.game-heading1{
+    font-size: 6.5rem;
+    color: #E0E1DD;
+    display: inline-block;
+}
+
+/* class for p tag of second heading */
+.game-heading2{
+    font-size: 3rem;
+    color: #E0E1DD;
+    display: inline-block;
+    align-self: flex-end;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+/* class for div containing play and info buttons */
+.button-layout{
+    display: flex;
+    position: absolute;
+    /* margin-bottom: 100px; */
+    margin-top: 13.4%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 190px;
+    width: 100vw;
+    z-index: 2;
+}
+
+/* class for div of play button */
+.play-div{
+    display:flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* class for play button tag */
+.play-button{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60px;
+    background-color: #E0E1DD;
+    border: 8px solid #0D1B2A;
+    /* padding: 5px; */
+    width: 500px;
+    height: 100px;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;    
+}
+
+/* class for div of info button */
+.info-div{
+    margin-top: 15px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.howToPlay-button{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+    background-color: #E0E1DD;
+    border: 8px solid #0D1B2A;
+    width: 400px;
+    height: 70px;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;    
+}
+
+.background-div{
+    height: 80vh;
+    width: 100%;
+}
+
+.upper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
+
+.first-upper{
+    background-image: url("skip.png");
+    background-size: contain;
+    height: 100%;
+    width: 12rem;
+    border: 3px solid #E0E1DD;
+    opacity: 0.7;
+    transition: background-image 1s ease;
+}
+
+.second-upper{
+    background-image: url("delete.png");
+    background-size: contain;
+    height: 100%;
+    width: 12rem;
+    border: 3px solid #E0E1DD;
+    opacity: 0.7;
+}
+
+.third-upper{
+    background-image: url("shield.png");
+    background-size: contain;
+    height: 100%;
+    width: 12rem;
+    border: 3px solid #E0E1DD;
+    opacity: 0.8;
+}
+
+.fourth-upper{
+    background-image: url("skip.png");
+    background-size: contain;
+    height: 100%;
+    width: 12rem;
+    border: 3px solid #E0E1DD;
+    opacity: 0.8;
+}
+
+.fifth-upper{
+    background-image: url("delete.png");
+    background-size: contain;
+    height: 100%;
+    width: 12rem;
+    border: 3px solid #E0E1DD;
+    opacity: 0.8;
+}
+
+.sixth-upper{
+    background-image: url("shield.png");
+    background-size: contain;
+    height: 100%;
+    width: 12rem;
+    border: 3px solid #E0E1DD;
+    opacity: 0.8;
+}
+
+.seventh-upper{
+    background-image: url("skip.png");
+    background-size: contain;
+    height: 100%;
+    width: 12rem;
+    border: 3px solid #E0E1DD;
+    opacity: 0.8;
+}
+
+.eigth-upper{
+    background-image: url("delete.png");
+    background-size: contain;
+    height: 100%;
+    width: 12rem;
+    border: 3px solid #E0E1DD;
+    opacity: 0.8;
+}
+
+.lower{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
+
+.first-lower{
+    background-image: url("delete.png");
+    background-size: contain;
+    height: 100%;
+    width: 12rem;
+    border: 3px solid #E0E1DD;
+    opacity: 0.8;
+}
+
+.second-lower{
+    background-image: url("skip.png");
+    background-size: contain;
+    height: 100%;
+    width: 12rem;
+    border: 3px solid #E0E1DD;
+    opacity: 0.8;
+}
+
+.third-lower{
+    background-image: url("shield.png");
+    background-size: contain;
+    height: 100%;
+    width: 12rem;
+    border: 3px solid #E0E1DD;
+    opacity: 0.8;
+}
+
+.fourth-lower{
+    background-image: url("delete.png");
+    background-size: contain;
+    height: 100%;
+    width: 12rem;
+    border: 3px solid #E0E1DD;
+    opacity: 0.8;
+}
+
+.fifth-lower{
+    background-image: url("skip.png");
+    background-size: contain;
+    height: 100%;
+    width: 12rem;
+    border: 3px solid #E0E1DD;
+    opacity: 0.8;
+}
+
+.sixth-lower{
+    background-image: url("shield.png");
+    background-size: contain;
+    height: 100%;
+    width: 12rem;
+    border: 3px solid #E0E1DD;
+    opacity: 0.8;
+}
+
+.seventh-lower{
+    background-image: url("delete.png");
+    background-size: contain;
+    height: 100%;
+    width: 12rem;
+    border: 3px solid #E0E1DD;
+    opacity: 0.8;
+}
+
+.eigth-lower{
+    background-image: url("skip.png");
+    background-size: contain;
+    height: 100%;
+    width: 12rem;
+    border: 3px solid #E0E1DD;
+    opacity: 0.;
+}
