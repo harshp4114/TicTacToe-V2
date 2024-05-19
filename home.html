@@ -6,43 +6,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TicTacToe-V2</title>
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <div class="main-layout">
         <div class="heading-layout">
             <p class="game-heading1">TIC-TAC-TOE</p>
-            <p class="game-heading2">but with powers</p>
+            <p class="game-heading2">with powers</p>
         </div>
         <div class="background-div">
             <div class="button-layout">
                 <div class="play-div">
-                    <button class="play-button">START GAME</button>
+                    <button class="play-button"><a href="index.html">START GAME</a></button>
                 </div>
                 <div class="info-div">
                     <button class="howToPlay-button">HOW TO PLAY?!</button>
                 </div>
             </div>
             <div class="upper">
-                <div class="first-upper"></div>
-                <div class="second-upper"></div>
-                <div class="third-upper"></div>
-                <div class="fourth-upper"></div>
-                <div class="fifth-upper"></div>
-                <div class="sixth-upper"></div>
-                <div class="seventh-upper"></div>
-                <div class="eigth-upper"></div>
+                <div class="first-upper">
+                    <div class="firstup-symbol">
+                        <i class="fa-solid fa-ban symbol"></i>
+                    </div>
+                    <div class="firstup-name">
+                        <p>SKIP</p>
+                    </div>
+                </div>
+                <div class="second-upper">
+                    <div class="secondup-symbol">
+                        <i class="fa-solid fa-circle-minus"></i>
+                    </div>
+                    <div class="secondup-name">
+                        <p>DELETE</p>
+                    </div>
+                </div>
+                <div class="third-upper">
+                    <div class="thirdup-symbol">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div class="thirdup-name">
+                        <p>SHIELD</p>
+                    </div>
+                </div>
+                <div class="fourth-upper">
+                    <div class="fourthup-symbol">
+                        <i class="fa-solid fa-ban symbol"></i>
+                    </div>
+                    <div class="fourthup-name">
+                        <p>SKIP</p>
+                    </div>
+                </div>
+                <div class="fifth-upper">
+                    <div class="fifthup-symbol">
+                        <i class="fa-solid fa-circle-minus"></i>
+                    </div>
+                    <div class="fifthup-name">
+                        <p>DELETE</p>
+                    </div>
+                </div>
+                <div class="sixth-upper">
+                    <div class="sixthup-symbol">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div class="sixthup-name">
+                        <p>SHIELD</p>
+                    </div>
+                </div>
+                <div class="seventh-upper">
+                    <div class="seventhup-symbol">
+                        <i class="fa-solid fa-ban symbol"></i>
+                    </div>
+                    <div class="seventhup-name">
+                        <p>SKIP</p>
+                    </div>
+                </div>
+                <div class="eigth-upper">
+                    <div class="eigthup-symbol">
+                        <i class="fa-solid fa-circle-minus"></i>
+                    </div>
+                    <div class="eigthup-name">
+                        <p>DELETE</p>
+                    </div>
+                </div>
             </div>
-            
+
             <div class="lower">
-                <div class="first-lower"></div>
-                <div class="second-lower"></div>
-                <div class="third-lower"></div>
-                <div class="fourth-lower"></div>
-                <div class="fifth-lower"></div>
-                <div class="sixth-lower"></div>
-                <div class="seventh-lower"></div>
-                <div class="eigth-lower"></div>
+                <div class="first-lower">
+                    <div class="firstlw-symbol">
+                        <i class="fa-solid fa-circle-minus"></i>
+                    </div>
+                    <div class="firstlw-name">
+                        <p>DELETE</p>
+                    </div>
+                </div>
+                <div class="second-lower">
+                    <div class="secondlw-symbol">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div class="secondlw-name">
+                        <p>SHIELD</p>
+                    </div>
+                </div>
+                <div class="third-lower">
+                    <div class="thirdlw-symbol">
+                        <i class="fa-solid fa-ban symbol"></i>
+                    </div>
+                    <div class="thirdlw-name">
+                        <p>SKIP</p>
+                    </div>
+                </div>
+                <div class="fourth-lower">
+                    <div class="fourthlw-symbol">
+                        <i class="fa-solid fa-circle-minus"></i>
+                    </div>
+                    <div class="fourthlw-name">
+                        <p>DELETE</p>
+                    </div>
+                </div>
+                <div class="fifth-lower">
+                    <div class="fifthlw-symbol">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div class="fifthlw-name">
+                        <p>SHIELD</p>
+                    </div>
+                </div>
+                <div class="sixth-lower">
+                    <div class="sixthlw-symbol">
+                        <i class="fa-solid fa-ban symbol"></i>
+                    </div>
+                    <div class="sixthlw-name">
+                        <p>SKIP</p>
+                    </div>
+                </div>
+                <div class="seventh-lower">
+                    <div class="seventhlw-symbol">
+                        <i class="fa-solid fa-circle-minus"></i>
+                    </div>
+                    <div class="seventhlw-name">
+                        <p>DELETE</p>
+                    </div>
+                </div>
+                <div class="eigth-lower">
+                    <div class="eigthlw-symbol">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div class="eigthlw-name">
+                        <p>SHIELD</p>
+                    </div>
+                </div>
             </div>
         </div>
 
