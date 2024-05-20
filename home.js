@@ -1,5 +1,8 @@
 let playBtn=document.querySelector(".play-button");
 let infoBtn=document.querySelector(".howToPlay-button");
+let closeBtn=document.querySelector(".close-btn");
+let information=document.querySelector(".information");
+let allInfoTxt=document.querySelector(".all-info-text");
 let powers=["skip.png","delete.png","shield.png"];
 let a=document.querySelector("a");
 let up1=0;
@@ -79,6 +82,18 @@ playBtn.addEventListener("mouseout",()=>{
     a.style.color="#0D1B2A";
 });
 
+closeBtn.addEventListener("mouseover",()=>{
+    closeBtn.style.backgroundColor="#0D1B2A";
+    closeBtn.style.border="8px solid #E0E1DD";
+    closeBtn.style.color="#E0E1DD";
+});
+
+closeBtn.addEventListener("mouseout",()=>{
+    closeBtn.style.backgroundColor="#E0E1DD";
+    closeBtn.style.border="8px solid #0D1B2A";
+    closeBtn.style.color="#0D1B2A";
+});
+
 infoBtn.addEventListener("mouseover",()=>{
     infoBtn.style.backgroundColor="#0D1B2A";
     infoBtn.style.border="8px solid #E0E1DD";
@@ -89,6 +104,20 @@ infoBtn.addEventListener("mouseout",()=>{
     infoBtn.style.backgroundColor="#E0E1DD";
     infoBtn.style.border="8px solid #0D1B2A";
     infoBtn.style.color="#0D1B2A";
+});
+
+infoBtn.addEventListener("click",()=>{
+    information.style.visibility="visible";
+    allInfoTxt.style.visibility="visible";
+    information.style.opacity="0.9";
+    allInfoTxt.style.opacity="1";
+});
+
+closeBtn.addEventListener("click",()=>{
+    information.style.visibility="hidden";
+    allInfoTxt.style.visibility="hidden";
+    information.style.opacity="0";
+    allInfoTxt.style.opacity="0";
 });
 
 //changing image of first upper
