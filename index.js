@@ -12,7 +12,9 @@ let powerOName = document.querySelector(".powerO-Name");      //selecting power 
 let powerXName = document.querySelector(".powerX-Name");      //selecting power name p tag of player-X
 let drawCountdown = document.querySelector(".draw-countdown"); //selecting p tag countdown heading
 let result = document.querySelector(".result");       //selecting p tag for result 
-let gameDraw = document.querySelector(".game-draw");
+let gameDraw = document.querySelector(".game-draw");    //selecting div containg all the game buttons
+let overlay=document.querySelector(".overlay");         //selecting div responsible for overlay in result
+let gameHeading=document.querySelector(".game-heading");       //selecting div containg result and countdown headings
 let turnO = true;
 let first = 0, second = 1, third = 2, fourth = 3;
 let powers = ['<i class="fa-solid fa-shield-halved"></i>', '<i class="fa-solid fa-ban"></i>', '<i class="fa-solid fa-circle-minus"></i>'];
@@ -46,7 +48,7 @@ let playerXDeleteUse = false;
 let playerOShieldUse = false;
 let playerXShieldUse = false;
 let time = 0;
-const startingSec = 9;
+const startingSec = 10;
 let countDownIntervalID = 0;
 let checkResultIntervalID = 0;
 let patterns = [
@@ -194,12 +196,12 @@ resetBtn.addEventListener("click", () => {
     pointX = 0;
     num1 = 0;
     num2 = 0;
-    clearInterval(playerOSkipInterval);
-    clearInterval(playerOShieldInterval);
-    clearInterval(playerODeleteInterval);
-    clearInterval(playerXSkipInterval);
-    clearInterval(playerXShieldInterval);
-    clearInterval(playerXDeleteInterval);
+    clearInterval(playerOSkipInterval);         //stopping the blinking red, yellow, blue color shown for power-ups
+    clearInterval(playerOShieldInterval);       //stopping the blinking red, yellow, blue color shown for power-ups
+    clearInterval(playerODeleteInterval);       //stopping the blinking red, yellow, blue color shown for power-ups
+    clearInterval(playerXSkipInterval);         //stopping the blinking red, yellow, blue color shown for power-ups
+    clearInterval(playerXShieldInterval);       //stopping the blinking red, yellow, blue color shown for power-ups
+    clearInterval(playerXDeleteInterval);       //stopping the blinking red, yellow, blue color shown for power-ups
     powerO = false;
     powerX = false;
     powerONotAlloted = true;
@@ -236,7 +238,7 @@ resetBtn.addEventListener("click", () => {
     powerPlayerX.style.backgroundColor = "#778DA9";
     powerPlayerO.style.backgroundColor = "#778DA9";
     turnO = true;
-    for (let btn of allBtn) {
+    for (let btn of allBtn) {       //reserting all the game buttons
         btn.innerText = "";
         btn.style.backgroundColor = "#E0E1DD";
         btn.style.color = "black";
@@ -484,9 +486,15 @@ function countDown() {
         turnO = true;
         result.innerText = "";
         drawCountdown.innerText = "";
-        result.style.display = "none";
-        drawCountdown.style.display = "none";
         resetBtn.style.display = "inline-block";
+        overlay.style.visibility="hidden";
+        gameHeading.style.visibility="hidden";
+        drawCountdown.style.visibility="hidden";
+        result.style.visibility="hidden";
+        overlay.style.opacity="0";
+        gameHeading.style.opacity="0";
+        drawCountdown.style.opacity="0";
+        result.style.opacity="0";
         for (let btn of allBtn) {
             btn.innerText = "";
             btn.style.backgroundColor = "#E0E1DD";
@@ -502,35 +510,52 @@ function countDown() {
 
 //function for checking the result of the game and restarting the game in 15 seconds
 function checkDraw() {
-
     if (pointO == pointX) {
         time = startingSec;
         countDownIntervalID = setInterval(countDown, 1000);
         resetBtn.style.display = "none";
-        result.style.display = "inline-block";
         gameDraw.style.marginTop = "10px";
         gameDraw.style.marginBottom = "0%";
-        drawCountdown.style.display = "inline-block";
+        overlay.style.visibility="visible";
+        gameHeading.style.visibility="visible";
+        drawCountdown.style.visibility="visible";
+        result.style.visibility="visible";
+        overlay.style.opacity="0.7";
+        gameHeading.style.opacity="1";
+        drawCountdown.style.opacity="1";
+        result.style.opacity="1";
         result.innerText = "Game resulted in a draw";
         drawCountdown.innerText = `Game restarts in 10 seconds`;
     } else if (pointO > pointX) {
         time = startingSec;
         countDownIntervalID = setInterval(countDown, 1000);
         resetBtn.style.display = "none";
-        result.style.display = "inline-block";
         gameDraw.style.marginTop = "10px";
+        overlay.style.visibility="visible";
+        gameHeading.style.visibility="visible";
+        drawCountdown.style.visibility="visible";
+        result.style.visibility="visible";
+        overlay.style.opacity="0.7";
+        gameHeading.style.opacity="1";
+        drawCountdown.style.opacity="1";
+        result.style.opacity="1";
         gameDraw.style.marginBottom = "0%";
-        drawCountdown.style.display = "inline-block";
         result.innerText = `Player-1 wins the game by ${pointO - pointX} points`;
         drawCountdown.innerText = `Game restarts in 10 seconds`;
     } else if (pointX > pointO) {
         time = startingSec;
         countDownIntervalID = setInterval(countDown, 1000);
         resetBtn.style.display = "none";
-        result.style.display = "inline-block";
         gameDraw.style.marginBottom = "0%";
+        overlay.style.visibility="visible";
+        gameHeading.style.visibility="visible";
+        drawCountdown.style.visibility="visible";
+        result.style.visibility="visible";
+        overlay.style.opacity="0.7";
+        gameHeading.style.opacity="1";
+        drawCountdown.style.opacity="1";
+        result.style.opacity="1";
         gameDraw.style.marginTop = "10px";
-        drawCountdown.style.display = "inline-block";
         result.innerText = `Player-2 wins the game by ${pointX - pointO} points`;
         drawCountdown.innerText = `Game restarts in 10 seconds`;
     }
@@ -648,6 +673,7 @@ for (let btn of allBtn) {
         } else {
             powerOBtn.disabled = true;
             powerXBtn.disabled = true;
+            
             checkDraw();
         }
     })
