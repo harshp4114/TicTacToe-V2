@@ -4,7 +4,7 @@ let closeBtn=document.querySelector(".close-btn");
 let information=document.querySelector(".information");
 let allInfoTxt=document.querySelector(".all-info-text");
 let powers=["skip.png","delete.png","shield.png"];
-let a=document.querySelector("a");
+// let a=document.querySelector("a");
 let up1=0;
 let firstupSymbol=document.querySelector(".firstup-symbol");
 let firstupName=document.querySelector(".firstup-name");
@@ -73,13 +73,17 @@ let eigthlw=document.querySelector(".eigth-lower");
 playBtn.addEventListener("mouseover",()=>{
     playBtn.style.backgroundColor="#0D1B2A";
     playBtn.style.border="8px solid #E0E1DD";
-    a.style.color="#E0E1DD";
+    playBtn.style.color="#E0E1DD";
+});
+
+playBtn.addEventListener("click",()=>{
+    window.location.href="index.html";
 });
 
 playBtn.addEventListener("mouseout",()=>{
     playBtn.style.backgroundColor="#E0E1DD";
     playBtn.style.border="8px solid #0D1B2A";
-    a.style.color="#0D1B2A";
+    playBtn.style.color="#0D1B2A";
 });
 
 closeBtn.addEventListener("mouseover",()=>{

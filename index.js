@@ -1,4 +1,3 @@
-
 //teleport,timetravel
 let allBtn = document.querySelectorAll(".game-button");     //selecting all the buttons of game
 let resetBtn = document.querySelector(".reset-btn");        //selecting the reset button
@@ -15,6 +14,7 @@ let result = document.querySelector(".result");       //selecting p tag for resu
 let gameDraw = document.querySelector(".game-draw");    //selecting div containg all the game buttons
 let overlay=document.querySelector(".overlay");         //selecting div responsible for overlay in result
 let gameHeading=document.querySelector(".game-heading");       //selecting div containg result and countdown headings
+let homeBtn=document.querySelector(".home-btn");
 let turnO = true;
 let first = 0, second = 1, third = 2, fourth = 3;
 let powers = ['<i class="fa-solid fa-shield-halved"></i>', '<i class="fa-solid fa-ban"></i>', '<i class="fa-solid fa-circle-minus"></i>'];
@@ -124,6 +124,22 @@ resetBtn.addEventListener("mouseout", () => {
     resetBtn.style.borderColor = "#E0E1DD";
 });
 
+homeBtn.addEventListener("mouseover", () => {
+    homeBtn.style.backgroundColor = "#E0E1DD";
+    homeBtn.style.color = "black";
+    homeBtn.style.borderColor = "black";
+});
+
+homeBtn.addEventListener("mouseout", () => {
+    homeBtn.style.backgroundColor = "#334057";
+    homeBtn.style.color = "#E0E1DD";
+    homeBtn.style.borderColor = "#E0E1DD";
+});
+
+homeBtn.addEventListener("click",()=>{
+    window.location.href="home.html";
+});
+
 //function to change background color when skip power is obtained player-O
 function callSkipRedPlayerO() {
     if (skipRedPlayerO) {
@@ -227,6 +243,7 @@ resetBtn.addEventListener("click", () => {
     time = 0;
     countDownIntervalID = 0;
     checkResultIntervalID = 0;
+    homeBtn.style.display="inline-block";
     powerOSymbol.innerText = "Score a point to gain a power-up";
     powerXSymbol.innerText = "Score a point to gain a power-up";
     powerOSymbol.style.margin = "0px";
@@ -495,6 +512,7 @@ function countDown() {
         gameHeading.style.opacity="0";
         drawCountdown.style.opacity="0";
         result.style.opacity="0";
+        homeBtn.style.display="inline-block";
         for (let btn of allBtn) {
             btn.innerText = "";
             btn.style.backgroundColor = "#E0E1DD";
@@ -565,7 +583,7 @@ function checkDraw() {
 //displaying O and X when a button is clicked
 for (let btn of allBtn) {
     btn.addEventListener("click", () => {
-
+        homeBtn.style.display="none";
         if (turnO) {
             if (playerODeleteUse) {
                 let txt = btn.innerText;

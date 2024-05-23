@@ -70,6 +70,23 @@ body {
     display: inline-block;
 }
 
+/* class for home button */
+.home-btn {
+    height: 50px;
+    width: 200px;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: #334057;
+    color: #E0E1DD;
+    border: 3px solid #E0E1DD;
+    border-radius: 5px;
+    transition: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    display: inline-block;
+    margin-left: 30px;
+}
+
 /* class for overlay for result of the game */
 .overlay{
     height: 110vh;
