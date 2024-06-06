@@ -1,6 +1,7 @@
 let playBtn=document.querySelector(".play-button");
 let infoBtn=document.querySelector(".howToPlay-button");
 let closeBtn=document.querySelector(".close-btn");
+let closeBtnMedia=document.querySelector(".close-btn-media");
 let information=document.querySelector(".information");
 let allInfoTxt=document.querySelector(".all-info-text");
 let powers=["skip.png","delete.png","shield.png"];
@@ -118,6 +119,13 @@ infoBtn.addEventListener("click",()=>{
 });
 
 closeBtn.addEventListener("click",()=>{
+    information.style.visibility="hidden";
+    allInfoTxt.style.visibility="hidden";
+    information.style.opacity="0";
+    allInfoTxt.style.opacity="0";
+});
+
+closeBtnMedia.addEventListener("click",()=>{
     information.style.visibility="hidden";
     allInfoTxt.style.visibility="hidden";
     information.style.opacity="0";
