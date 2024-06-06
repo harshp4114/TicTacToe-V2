@@ -8,8 +8,8 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0D1B2A;
     height: 100vh;
+    width: 100vw;
 }
-
 
 
 /* class for the outermost div of the page */
@@ -22,6 +22,7 @@ body {
     height: 100%;
 }
 
+@media (min-width:1025px){
 /* class fot he div containing both headings */
 .heading-layout {
     display: flex;
@@ -32,13 +33,14 @@ body {
     padding-bottom: 8px;
     padding-top: 8px;
     width: 100%;
+    height: 20%;
     margin-left: auto;
     margin-right: auto;
 }
 
 /* class for p tag of first heading */
 .game-heading1 {
-    font-size: 6.5rem;
+    font-size: 500%;
     color: #E0E1DD;
     display: inline-block;
 }
@@ -773,9 +775,10 @@ body {
     margin-right: 17.495px;
 }
 
-/* //////////////////////////////////////////////////////////////// */
-
-@media (min-width:300px) and (max-width:500px) {
+}
+ 
+/* media query for mobile phones */
+@media (min-width:300px) and (max-width:700px) {
 
     /* class fot he div containing both headings */
     .heading-layout {
@@ -796,6 +799,8 @@ body {
     /* class for p tag of first heading */
     .game-heading1 {
         font-size: 300%;
+        width: 100%;
+        text-align: center;
         color: #E0E1DD;
         display: inline-block;
         margin-right: auto;
@@ -817,7 +822,7 @@ body {
     .button-layout {
         display: flex;
         position: absolute;
-        top: 40%;
+        top: 48%;
         justify-content: center;
         align-items: center;
         align-content: center;
@@ -910,6 +915,8 @@ body {
     }
 
     .firstup-name {
+        width: 100%;
+        text-align: center;
         margin-top: 5px;
         font-size: 45%;
         font-weight: 600;
@@ -933,6 +940,8 @@ body {
     }
 
     .secondup-name {
+        width: 100%;
+        text-align: center;
         margin-top: 5px;
         font-size: 45%;
         font-weight: 600;
@@ -956,6 +965,8 @@ body {
     }
 
     .thirdup-name {
+        width: 100%;
+        text-align: center;
         margin-top: 5px;
         font-size: 45%;
         font-weight: 600;
@@ -980,6 +991,8 @@ body {
     }
 
     .fourthup-name {
+        width: 100%;
+        text-align: center;
         margin-top: 5px;
         font-size: 45%;
         font-weight: 600;
@@ -1003,6 +1016,8 @@ body {
     }
 
     .fifthup-name {
+        width: 100%;
+        text-align: center;
         margin-top: 5px;
         font-size: 45%;
         font-weight: 600;
@@ -1025,6 +1040,8 @@ body {
     }
 
     .sixthup-name {
+        width: 100%;
+        text-align: center;
         margin-top: 5px;
         font-size: 45%;
         font-weight: 600;
@@ -1047,6 +1064,8 @@ body {
     }
 
     .seventhup-name {
+        width: 100%;
+        text-align: center;
         margin-top: 5px;
         font-size: 45%;
         font-weight: 600;
@@ -1070,6 +1089,8 @@ body {
     }
 
     .eigthup-name {
+        width: 100%;
+        text-align: center;
         margin-top: 5px;
         font-size: 45%;
         font-weight: 600;
@@ -1093,6 +1114,8 @@ body {
     }
 
     .firstlw-name {
+        width: 100%;
+        text-align: center;
         margin-top: 5px;
         font-size: 45%;
         font-weight: 600;
@@ -1115,6 +1138,8 @@ body {
     }
 
     .secondlw-name {
+        width: 100%;
+        text-align: center;
         margin-top: 5px;
         font-size: 45%;
         font-weight: 600;
@@ -1137,6 +1162,8 @@ body {
     }
 
     .thirdlw-name {
+        width: 100%;
+        text-align: center;
         margin-top: 5px;
         font-size: 45%;
         font-weight: 600;
@@ -1160,6 +1187,8 @@ body {
     }
 
     .fourthlw-name {
+        width: 100%;
+        text-align: center;
         margin-top: 5px;
         font-size: 45%;
         font-weight: 600;
@@ -1184,6 +1213,8 @@ body {
     }
 
     .fifthlw-name {
+        width: 100%;
+        text-align: center;
         margin-top: 5px;
         font-size: 45%;
         font-weight: 600;
@@ -1207,6 +1238,8 @@ body {
     }
 
     .sixthlw-name {
+        width: 100%;
+        text-align: center;
         margin-top: 5px;
         font-size: 45%;
         font-weight: 600;
@@ -1230,6 +1263,8 @@ body {
     }
 
     .seventhlw-name {
+        width: 100%;
+        text-align: center;
         margin-top: 5px;
         font-size: 45%;
         font-weight: 600;
@@ -1254,6 +1289,8 @@ body {
     }
 
     .eigthlw-name {
+        width: 100%;
+        text-align: center;
         margin-top: 5px;
         font-size: 45%;
         font-weight: 600;
@@ -1514,4 +1551,782 @@ body {
         width: 100%;
         margin-top: 3px;
     }
+}
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* media query for ipad */
+@media (min-width:701px) and (max-width:1024px){
+    
+/* class fot he div containing both headings */
+.heading-layout {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    border-bottom: 4px solid #E0E1DD;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    height: 30%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.background-div {
+    height: 70%;
+    width: 100%;
+    opacity: 1;
+}
+
+/* class for p tag of first heading */
+.game-heading1 {
+    width: 100%;
+    text-align: center;
+    font-size: 700%;
+    color: #E0E1DD;
+    display: inline-block;
+}
+
+/* class for p tag of second heading */
+.game-heading2 {
+    font-size: 400%;
+    color: #E0E1DD;
+    display: inline-block;
+    align-self: flex-end;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+/* class for div containing play and info buttons */
+.button-layout {
+    display: flex;
+    position: absolute;
+    margin-top: 0;
+    top: 57%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 18%;
+    width: 100%;
+    z-index: 2;
+}
+
+/* class for div of play button */
+.play-div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+/* class for play button tag */
+.play-button {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 370%;
+    background-color: #E0E1DD;
+    border: 8px solid #0D1B2A;
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+/* class for div of info button */
+.info-div {
+    margin-top: 1%;
+    display: flex;
+    width: 100%;
+    height: 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+.howToPlay-button {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 200%;
+    background-color: #E0E1DD;
+    border: 8px solid #0D1B2A;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.upper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+/* first upper image */
+.first-upper {
+    background-color: rgb(255, 57, 57);
+    font-size: 410%;
+    height: 100%;
+    width: 20%;
+    border: 3px solid black;
+    border-top: 6px solid black;
+    border-left: 6px solid black;
+    opacity: 0.7;
+    transition: all 0.8s ease;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstup-name {
+    width: 100%;
+    margin-top: 5px;
+    font-size: 45%;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* second upper image */
+.second-upper {
+    background-color: rgb(251, 255, 0);
+    font-size: 410%;
+    height: 100%;
+    width: 20%;
+    border: 3px solid black;
+    border-top: 6px solid black;
+    opacity: 0.7;
+    transition: all 0.8s ease;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.secondup-name {
+    width: 100%;
+    margin-top: 5px;
+    font-size: 45%;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* third upper image */
+.third-upper {
+    background-color: #00eeff;
+    font-size: 410%;
+    height: 100%;
+    width: 20%;
+    border: 3px solid black;
+    border-top: 6px solid black;
+    opacity: 0.7;
+    transition: all 0.8s ease;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.thirdup-name {
+    width: 100%;
+    margin-top: 5px;
+    font-size: 45%;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* fourth upper image */
+.fourth-upper {
+    background-color: rgb(255, 57, 57);
+    font-size: 410%;
+    height: 100%;
+    width: 20%;
+    border: 3px solid black;
+    border-top: 6px solid black;
+    opacity: 0.7;
+    transition: all 0.8s ease;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.fourthup-name {
+    width: 100%;
+    margin-top: 5px;
+    font-size: 45%;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* fifth upper image */
+.fifth-upper {
+    background-color: rgb(251, 255, 0);
+    font-size: 410%;
+    height: 100%;
+    width: 20%;
+    border: 3px solid black;
+    border-top: 6px solid black;
+    opacity: 0.7;
+    transition: all 0.8s ease;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.fifthup-name {
+    width: 100%;
+    margin-top: 5px;
+    font-size: 45%;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* sixth upper image */
+.sixth-upper {
+    background-color: #00eeff;
+    font-size: 65px;
+    height: 100%;
+    width: 12.5%;
+    border: 3px solid black;
+    border-top: 6px solid black;
+    opacity: 0.7;
+    transition: all 0.8s ease;
+    display: none;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.sixthup-name {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 5px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/* seventh upper image */
+.seventh-upper {
+    background-color: rgb(255, 57, 57);
+    font-size: 65px;
+    height: 100%;
+    width: 12.5%;
+    border: 3px solid black;
+    border-top: 6px solid black;
+    opacity: 0.7;
+    transition: all 0.8s ease;
+    display: none;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.seventhup-name {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 5px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/* eight upper image */
+.eigth-upper {
+    background-color: rgb(251, 255, 0);
+    font-size: 65px;
+    height: 100%;
+    width: 12.5%;
+    border: 3px solid black;
+    border-top: 6px solid black;
+    border-right: 6px solid black;
+    opacity: 0.7;
+    transition: all 0.8s ease;
+    display: none;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.eigthup-name {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 5px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.lower {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+/* lower first image */
+.first-lower {
+    background-color: rgb(251, 255, 0);
+    font-size: 410%;
+    height: 100%;
+    width: 20%;
+    border: 3px solid black;
+    border-bottom: 6px solid black;
+    border-left: 6px solid black;
+    opacity: 0.7;
+    transition: all 0.8s ease;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstlw-name {
+    width: 100%;
+    margin-top: 5px;
+    font-size: 45%;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* lower second image */
+.second-lower {
+    background-color: #00eeff;
+    font-size: 410%;
+    height: 100%;
+    width: 20%;
+    border: 3px solid black;
+    border-bottom: 6px solid black;
+    opacity: 0.7;
+    transition: all 0.8s ease;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.secondlw-name {
+    width: 100%;
+    margin-top: 5px;
+    font-size: 45%;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* third lower image */
+.third-lower {
+    background-color: rgb(255, 57, 57);
+    font-size: 410%;
+    height: 100%;
+    width: 20%;
+    border: 3px solid black;
+    border-bottom: 6px solid black;
+    opacity: 0.7;
+    transition: all 0.8s ease;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.thirdlw-name {
+    width: 100%;
+    margin-top: 5px;
+    font-size: 45%;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* fourth lower image */
+.fourth-lower {
+    background-color: rgb(251, 255, 0);
+    font-size: 410%;
+    height: 100%;
+    width: 20%;
+    border: 3px solid black;
+    border-bottom: 6px solid black;
+    opacity: 0.7;
+    transition: all 0.8s ease;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.fourthlw-name {
+    width: 100%;
+    margin-top: 5px;
+    font-size: 45%;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* lower fifth image */
+.fifth-lower {
+    background-color: #00eeff;
+    font-size: 410%;
+    height: 100%;
+    width: 20%;
+    border: 3px solid black;
+    border-bottom: 6px solid black;
+    opacity: 0.7;
+    transition: all 0.8s ease;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.fifthlw-name {
+    width: 100%;
+    margin-top: 5px;
+    font-size: 45%;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* lower sixth image */
+.sixth-lower {
+    background-color: rgb(255, 57, 57);
+    font-size: 65px;
+    height: 100%;
+    width: 12rem;
+    border: 3px solid black;
+    border-bottom: 6px solid black;
+    opacity: 0.7;
+    transition: all 0.8s ease;
+    display: none;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.sixthlw-name {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 5px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/* lower seventh image */
+.seventh-lower {
+    background-color: rgb(251, 255, 0);
+    font-size: 65px;
+    height: 100%;
+    width: 12rem;
+    border: 3px solid black;
+    border-bottom: 6px solid black;
+    opacity: 0.7;
+    transition: all 0.8s ease;
+    display: none;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.seventhlw-name {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 5px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/* lower eigth image */
+.eigth-lower {
+    background-color: #00eeff;
+    font-size: 65px;
+    height: 100%;
+    width: 12rem;
+    border: 3px solid black;
+    border-bottom: 6px solid black;
+    border-right: 6px solid black;
+    opacity: 0.7;
+    transition: all 0.8s ease;
+    display: none;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.eigthlw-name {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 5px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.information {
+    background-color: #0D1B2A;
+    opacity: 0.9;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    visibility: hidden;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+    opacity: 0;
+}
+
+.all-info-text {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* first info image */
+.first-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #415A77;
+    color: black;
+    font-size: 60%;
+    height: 16%;
+    left: 2.5%;
+    width: 95%;
+    position: relative;
+    margin-top: 3%;
+    text-align: left;
+    padding: 2%;
+    border: 5px solid lightgrey;
+    border-radius: 20px;
+}
+
+/* second info image */
+.second-info {
+    display: flex;
+    align-items: center;
+    background-color: #415A77;
+    color: black;
+    font-size: 60%;
+    height: 13%;
+    width: 95%;
+    position: relative;
+    left: 2.5%;
+    margin-top:2%;
+    text-align: center;
+    padding: 1.5%;
+    border: 5px solid lightgrey;
+    border-radius: 20px;
+}
+
+.second-info-content {
+    display: flex;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+}
+
+.second-info-txt {
+    width: 88.5%;
+    text-align: left;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.second-info-img {
+    height: 100%;
+    width: 11%;
+    background-color: rgb(255, 57, 57);
+    margin-right: 3%;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.second-info-img-symbol {
+    font-size: 310%;
+}
+
+.second-info-img-name {
+    font-size: 170%;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 2%;
+}
+
+.third-info {
+    display: flex;
+    align-items: center;
+    background-color: #415A77;
+    color: black;
+    font-size: 60%;
+    height: 13%;
+    width: 95%;
+    position: relative;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:2%;
+    text-align: center;
+    padding: 1.5%;
+    border: 5px solid lightgrey;
+    border-radius: 20px;
+}
+
+.third-info-content {
+    display: flex;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+}
+
+.third-info-txt {
+    width: 88.5%;
+    text-align: left;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.third-info-img {
+    background-color: rgb(251, 255, 0);
+    height: 100%;
+    width: 11%;
+    margin-right: 3%;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.third-info-img-symbol {
+    font-size: 310%;
+}
+
+.third-info-img-name {
+    font-size: 170%;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 2%;
+}
+
+
+/* fourth info button  */
+.button-fourth-info {
+    height: 20%;
+    width: 100%;
+    margin-top: 2%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.close-btn {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    background-color: #E0E1DD;
+    border: 8px solid #0D1B2A;
+    width: 250px;
+    display: none;
+    height: 70px;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.close-btn-media{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 170%;
+    background-color: #E0E1DD;
+    border: 8px solid #0D1B2A;
+    width: 50%;
+    height: 30%;
+    margin-top: 1%;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+/* fourth info image */
+.fourth-info {
+    display: flex;
+    align-items: center;
+    background-color: #415A77;
+    color: black;
+    font-size: 60%;
+    height: 65%;
+    width: 95%;
+    position: relative;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 1.5%;
+    border: 5px solid lightgrey;
+    border-radius: 20px;
+}
+
+.fourth-info-content {
+    display: flex;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+}
+
+.fourth-info-txt {
+    width: 88.5%;
+    text-align: left;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.fourth-info-img {
+    background-color: #00eeff;
+    height: 100%;
+    width: 11%;
+    margin-right: 3%;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.fourth-info-img-symbol {
+    font-size: 310%;
+}
+
+.fourth-info-img-name {
+    font-size: 170%;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 2%;
+}
+
 }

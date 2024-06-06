@@ -5,7 +5,6 @@ let closeBtnMedia=document.querySelector(".close-btn-media");
 let information=document.querySelector(".information");
 let allInfoTxt=document.querySelector(".all-info-text");
 let powers=["skip.png","delete.png","shield.png"];
-// let a=document.querySelector("a");
 let up1=0;
 let firstupSymbol=document.querySelector(".firstup-symbol");
 let firstupName=document.querySelector(".firstup-name");
@@ -97,6 +96,18 @@ closeBtn.addEventListener("mouseout",()=>{
     closeBtn.style.backgroundColor="#E0E1DD";
     closeBtn.style.border="8px solid #0D1B2A";
     closeBtn.style.color="#0D1B2A";
+});
+
+closeBtnMedia.addEventListener("mouseover",()=>{
+    closeBtnMedia.style.backgroundColor="#0D1B2A";
+    closeBtnMedia.style.border="8px solid #E0E1DD";
+    closeBtnMedia.style.color="#E0E1DD";
+});
+
+closeBtnMedia.addEventListener("mouseout",()=>{
+    closeBtnMedia.style.backgroundColor="#E0E1DD";
+    closeBtnMedia.style.border="8px solid #0D1B2A";
+    closeBtnMedia.style.color="#0D1B2A";
 });
 
 infoBtn.addEventListener("mouseover",()=>{
