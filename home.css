@@ -9,6 +9,7 @@ body {
     background-color: #0D1B2A;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 }
 
 
@@ -23,7 +24,7 @@ body {
 }
 
 /* media query for mobile phones */
-@media (min-width:300px) and (max-width:700px) {
+@media (min-width:300px) and (max-width:475px) {
 
     /* class fot he div containing both headings */
     .heading-layout {
@@ -43,7 +44,7 @@ body {
 
     /* class for p tag of first heading */
     .game-heading1 {
-        font-size: 300%;
+        font-size: 45px;
         width: 100%;
         text-align: center;
         color: #E0E1DD;
@@ -54,7 +55,7 @@ body {
 
     /* class for p tag of second heading */
     .game-heading2 {
-        font-size: 200%;
+        font-size: 32px;
         color: #E0E1DD;
         display: inline-block;
         align-self: flex-end;
@@ -89,9 +90,9 @@ body {
     /* class for play button tag */
     .play-button {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 270%;
+        font-size: 37px;
         background-color: #E0E1DD;
-        border: 6px solid #0D1B2A;
+        border: 5px solid #0D1B2A;
         width: 100%;
         height: 100%;
         border-radius: 10px;
@@ -110,9 +111,9 @@ body {
 
     .howToPlay-button {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 180%;
+        font-size: 25px;
         background-color: #E0E1DD;
-        border: 6px solid #0D1B2A;
+        border: 5px solid #0D1B2A;
         width: 100%;
         height: 100%;
         border-radius: 10px;
@@ -144,7 +145,7 @@ body {
     /* first upper image */
     .first-upper {
         background-color: rgb(255, 57, 57);
-        font-size: 285%;
+        font-size: 10vw;
         height: 50%;
         width: 25%;
         border: 3px solid black;
@@ -163,14 +164,14 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 45%;
+        font-size: 5vw;
         font-weight: 600;
     }
 
     /* second upper image */
     .second-upper {
         background-color: rgb(251, 255, 0);
-        font-size: 285%;
+        font-size: 10vw;
         height: 50%;
         width: 25%;
         border: 3px solid black;
@@ -188,14 +189,14 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 45%;
+        font-size: 5vw;
         font-weight: 600;
     }
 
     /* third upper image */
     .third-upper {
         background-color: #00eeff;
-        font-size: 285%;
+        font-size: 10vw;
         height: 50%;
         width: 25%;
         border: 3px solid black;
@@ -213,14 +214,14 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 45%;
+        font-size: 5vw;
         font-weight: 600;
     }
 
     /* fourth upper image */
     .fourth-upper {
         background-color: rgb(255, 57, 57);
-        font-size: 285%;
+        font-size: 10vw;
         height: 50%;
         width: 25%;
         border: 3px solid black;
@@ -239,14 +240,14 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 45%;
+        font-size: 5vw;
         font-weight: 600;
     }
 
     /* fifth upper image */
     .fifth-upper {
         background-color: rgb(251, 255, 0);
-        font-size: 285%;
+        font-size: 10vw;
         height: 50%;
         width: 25%;
         border: 3px solid black;
@@ -264,14 +265,14 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 45%;
+        font-size: 5vw;
         font-weight: 600;
     }
 
     /* sixth upper image */
     .sixth-upper {
         background-color: #00eeff;
-        font-size: 285%;
+        font-size: 10vw;
         height: 50%;
         width: 25%;
         border: 3px solid black;
@@ -288,14 +289,14 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 45%;
+        font-size: 5vw;
         font-weight: 600;
     }
 
     /* seventh upper image */
     .seventh-upper {
         background-color: rgb(255, 57, 57);
-        font-size: 285%;
+        font-size: 10vw;
         height: 50%;
         width: 25%;
         border: 3px solid black;
@@ -312,14 +313,14 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 45%;
+        font-size: 5vw;
         font-weight: 600;
     }
 
     /* eight upper image */
     .eigth-upper {
         background-color: rgb(251, 255, 0);
-        font-size: 285%;
+        font-size: 10vw;
         height: 50%;
         width: 25%;
         border: 3px solid black;
@@ -337,14 +338,14 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 45%;
+        font-size: 5vw;
         font-weight: 600;
     }
 
     /* lower first image */
     .first-lower {
         background-color: rgb(251, 255, 0);
-        font-size: 285%;
+        font-size: 10vw;
         height: 50%;
         width: 25%;
         border: 3px solid black;
@@ -362,14 +363,14 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 45%;
+        font-size: 5vw;
         font-weight: 600;
     }
 
     /* lower second image */
     .second-lower {
         background-color: #00eeff;
-        font-size: 285%;
+        font-size: 10vw;
         height: 50%;
         width: 25%;
         border: 3px solid black;
@@ -386,14 +387,14 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 45%;
+        font-size: 5vw;
         font-weight: 600;
     }
 
     /* third lower image */
     .third-lower {
         background-color: rgb(255, 57, 57);
-        font-size: 285%;
+        font-size: 10vw;
         height: 50%;
         width: 25%;
         border: 3px solid black;
@@ -410,14 +411,14 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 45%;
+        font-size: 5vw;
         font-weight: 600;
     }
 
     /* fourth lower image */
     .fourth-lower {
         background-color: rgb(251, 255, 0);
-        font-size: 285%;
+        font-size: 10vw;
         height: 50%;
         width: 25%;
         border: 3px solid black;
@@ -435,14 +436,14 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 45%;
+        font-size: 5vw;
         font-weight: 600;
     }
 
     /* lower fifth image */
     .fifth-lower {
         background-color: #00eeff;
-        font-size: 285%;
+        font-size: 10vw;
         height: 50%;
         width: 25%;
         border: 3px solid black;
@@ -461,14 +462,14 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 45%;
+        font-size: 5vw;
         font-weight: 600;
     }
 
     /* lower sixth image */
     .sixth-lower {
         background-color: rgb(255, 57, 57);
-        font-size: 285%;
+        font-size: 10vw;
         height: 50%;
         width: 25%;
         border: 3px solid black;
@@ -486,14 +487,14 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 45%;
+        font-size: 5vw;
         font-weight: 600;
     }
 
     /* lower seventh image */
     .seventh-lower {
         background-color: rgb(251, 255, 0);
-        font-size: 285%;
+        font-size: 10vw;
         height: 50%;
         width: 25%;
         border: 3px solid black;
@@ -511,14 +512,14 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 45%;
+        font-size: 5vw;
         font-weight: 600;
     }
 
     /* lower eigth image */
     .eigth-lower {
         background-color: #00eeff;
-        font-size: 285%;
+        font-size: 10vw;
         height: 50%;
         width: 25%;
         border: 3px solid black;
@@ -537,7 +538,7 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 45%;
+        font-size: 5vw;
         font-weight: 600;
     }
 
@@ -576,7 +577,7 @@ body {
         align-items: center;
         background-color: #415A77;
         color: black;
-        font-size: 78%;
+        font-size: 2.8vw;
         height: 20%;
         width: 90%;
         position: relative;
@@ -598,7 +599,7 @@ body {
         align-items: center;
         background-color: #415A77;
         position: relative;
-        font-size: 68%;
+        font-size: 2.2vw;
         left: 0;
         color: black;
         height: 15%;
@@ -628,7 +629,7 @@ body {
 
     .second-info-img {
         height: 100%;
-        width: 34%;
+        width: 25%;
         background-color: rgb(255, 57, 57);
         margin-right: 4%;
         border: 3px solid black;
@@ -641,14 +642,14 @@ body {
     }
 
     .second-info-img-symbol {
-        font-size: 500%;
+        font-size: 7vw;
     }
 
     .second-info-img-name {
-        font-size: 210%;
+        font-size: 2.8vw;
         font-weight: 600;
         width: 100%;
-        margin-top: 2px;
+        margin-top: 4px;
     }
 
     .third-info {
@@ -657,7 +658,7 @@ body {
         background-color: #415A77;
         color: black;
         position: relative;
-        font-size: 68%;
+        font-size: 2vw;
         left: 0;
         height: 15%;
         width: 90%;
@@ -699,21 +700,21 @@ body {
     }
 
     .third-info-img-symbol {
-        font-size: 500%;
+        font-size: 7vw;
     }
 
     .third-info-img-name {
-        font-size: 210%;
+        font-size: 2.8vw;
         font-weight: 600;
         width: 100%;
-        margin-top: 3px;
+        margin-top: 4px;
     }
 
 
     /* fourth info button  */
     .button-fourth-info {
         height: 25%;
-        margin-top: 2%;
+        margin-top: 1.3%;
         display: flex;
         position: relative;
         left: 2%;
@@ -721,7 +722,6 @@ body {
         justify-content: center;
         flex-wrap: wrap;
         align-content: center;
-        /* margin-right: 30px; */
         width: 100%;
     }
 
@@ -731,9 +731,9 @@ body {
 
     .close-btn-media {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 150%;
+        font-size: 5.2vw;
         background-color: #E0E1DD;
-        border: 8px solid #0D1B2A;
+        border: 5px solid #0D1B2A;
         width: 50%;
         height: 30%;
         margin-top: 3%;
@@ -746,7 +746,7 @@ body {
         display: flex;
         align-items: center;
         background-color: #415A77;
-        font-size: 68%;
+        font-size: 2.1vw;
         color: black;
         position: relative;
         left: 0;
@@ -790,82 +790,72 @@ body {
     }
 
     .fourth-info-img-symbol {
-        font-size: 500%;
+        font-size: 7vw;
     }
 
     .fourth-info-img-name {
-        font-size: 210%;
+        font-size: 2.8vw;
         font-weight: 600;
         width: 100%;
-        margin-top: 3px;
+        margin-top: 4px;
     }
 }
 
-
-/* /////////////////////////////////////////////////////////////////////////////////////////////////////// */
-/* media query for ipad */
-@media (min-width:701px) and (max-width:1024px) {
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media (min-width:475px) and (max-width:640px) {
 
     /* class fot he div containing both headings */
     .heading-layout {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
         align-content: center;
+        flex-wrap: wrap;
         align-items: center;
         border-bottom: 4px solid #E0E1DD;
         padding-bottom: 8px;
         padding-top: 8px;
-        height: 30%;
         width: 100%;
+        height: 15%;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .background-div {
-        height: 70%;
-        width: 100%;
-        opacity: 1;
-    }
-
     /* class for p tag of first heading */
     .game-heading1 {
-        width: 100%;
+        font-size: 10vw;
         text-align: center;
-        font-size: 700%;
         color: #E0E1DD;
         display: inline-block;
     }
 
     /* class for p tag of second heading */
     .game-heading2 {
-        font-size: 400%;
+        font-size: 6vw;
         color: #E0E1DD;
         display: inline-block;
         align-self: flex-end;
-        margin-bottom: 0px;
-        margin-left: 0px;
+        margin-bottom: 5px;
+        margin-left: 10px;
     }
 
     /* class for div containing play and info buttons */
     .button-layout {
         display: flex;
         position: absolute;
-        margin-top: 0;
-        top: 57%;
+        top: 48%;
         justify-content: center;
         align-items: center;
         align-content: center;
         flex-wrap: wrap;
-        height: 18%;
-        width: 100%;
+        height: 21.5%;
+        width: 100vw;
         z-index: 2;
     }
 
     /* class for div of play button */
     .play-div {
         display: flex;
-        width: 100%;
+        width: 90%;
         justify-content: center;
         align-items: center;
         height: 50%;
@@ -874,10 +864,10 @@ body {
     /* class for play button tag */
     .play-button {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 370%;
+        font-size: 8.5vw;
         background-color: #E0E1DD;
-        border: 8px solid #0D1B2A;
-        width: 70%;
+        border: 5px solid #0D1B2A;
+        width: 100%;
         height: 100%;
         border-radius: 10px;
         transition: all 0.4s ease-in-out;
@@ -885,9 +875,9 @@ body {
 
     /* class for div of info button */
     .info-div {
-        margin-top: 1%;
+        margin-top: 10px;
         display: flex;
-        width: 100%;
+        width: 60%;
         height: 40%;
         justify-content: center;
         align-items: center;
@@ -895,17 +885,32 @@ body {
 
     .howToPlay-button {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 200%;
+        font-size: 5vw;
         background-color: #E0E1DD;
-        border: 8px solid #0D1B2A;
-        width: 50%;
+        border: 5px solid #0D1B2A;
+        width: 100%;
         height: 100%;
         border-radius: 10px;
         transition: all 0.4s ease-in-out;
     }
 
+    .background-div {
+        height: 85%;
+        width: 100%;
+        opacity: 1;
+    }
+
     .upper {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+    }
+
+    .lower {
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         height: 50%;
@@ -914,9 +919,9 @@ body {
     /* first upper image */
     .first-upper {
         background-color: rgb(255, 57, 57);
-        font-size: 410%;
-        height: 100%;
-        width: 20%;
+        font-size: 9vw;
+        height: 50%;
+        width: 25%;
         border: 3px solid black;
         border-top: 6px solid black;
         border-left: 6px solid black;
@@ -931,18 +936,18 @@ body {
 
     .firstup-name {
         width: 100%;
-        margin-top: 5px;
-        font-size: 45%;
         text-align: center;
+        margin-top: 5px;
+        font-size: 4vw;
         font-weight: 600;
     }
 
     /* second upper image */
     .second-upper {
         background-color: rgb(251, 255, 0);
-        font-size: 410%;
-        height: 100%;
-        width: 20%;
+        font-size: 9vw;
+        height: 50%;
+        width: 25%;
         border: 3px solid black;
         border-top: 6px solid black;
         opacity: 0.7;
@@ -956,18 +961,18 @@ body {
 
     .secondup-name {
         width: 100%;
-        margin-top: 5px;
-        font-size: 45%;
         text-align: center;
+        margin-top: 5px;
+        font-size: 4vw;
         font-weight: 600;
     }
 
     /* third upper image */
     .third-upper {
         background-color: #00eeff;
-        font-size: 410%;
-        height: 100%;
-        width: 20%;
+        font-size: 9vw;
+        height: 50%;
+        width: 25%;
         border: 3px solid black;
         border-top: 6px solid black;
         opacity: 0.7;
@@ -981,20 +986,21 @@ body {
 
     .thirdup-name {
         width: 100%;
-        margin-top: 5px;
-        font-size: 45%;
         text-align: center;
+        margin-top: 5px;
+        font-size: 4vw;
         font-weight: 600;
     }
 
     /* fourth upper image */
     .fourth-upper {
         background-color: rgb(255, 57, 57);
-        font-size: 410%;
-        height: 100%;
-        width: 20%;
+        font-size: 9vw;
+        height: 50%;
+        width: 25%;
         border: 3px solid black;
         border-top: 6px solid black;
+        border-right: 6px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
         display: flex;
@@ -1006,20 +1012,20 @@ body {
 
     .fourthup-name {
         width: 100%;
-        margin-top: 5px;
-        font-size: 45%;
         text-align: center;
+        margin-top: 5px;
+        font-size: 4vw;
         font-weight: 600;
     }
 
     /* fifth upper image */
     .fifth-upper {
         background-color: rgb(251, 255, 0);
-        font-size: 410%;
-        height: 100%;
-        width: 20%;
+        font-size: 9vw;
+        height: 50%;
+        width: 25%;
         border: 3px solid black;
-        border-top: 6px solid black;
+        border-left: 6px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
         display: flex;
@@ -1031,23 +1037,22 @@ body {
 
     .fifthup-name {
         width: 100%;
-        margin-top: 5px;
-        font-size: 45%;
         text-align: center;
+        margin-top: 5px;
+        font-size: 4vw;
         font-weight: 600;
     }
 
     /* sixth upper image */
     .sixth-upper {
         background-color: #00eeff;
-        font-size: 65px;
-        height: 100%;
-        width: 12.5%;
+        font-size: 9vw;
+        height: 50%;
+        width: 25%;
         border: 3px solid black;
-        border-top: 6px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
-        display: none;
+        display: flex;
         flex-wrap: wrap;
         align-content: center;
         justify-content: center;
@@ -1055,24 +1060,23 @@ body {
     }
 
     .sixthup-name {
-        margin-left: 30px;
-        margin-right: 30px;
+        width: 100%;
+        text-align: center;
         margin-top: 5px;
-        font-size: 25px;
+        font-size: 4vw;
         font-weight: 600;
     }
 
     /* seventh upper image */
     .seventh-upper {
         background-color: rgb(255, 57, 57);
-        font-size: 65px;
-        height: 100%;
-        width: 12.5%;
+        font-size: 9vw;
+        height: 50%;
+        width: 25%;
         border: 3px solid black;
-        border-top: 6px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
-        display: none;
+        display: flex;
         flex-wrap: wrap;
         align-content: center;
         justify-content: center;
@@ -1080,25 +1084,24 @@ body {
     }
 
     .seventhup-name {
-        margin-left: 30px;
-        margin-right: 30px;
+        width: 100%;
+        text-align: center;
         margin-top: 5px;
-        font-size: 25px;
+        font-size: 4vw;
         font-weight: 600;
     }
 
     /* eight upper image */
     .eigth-upper {
         background-color: rgb(251, 255, 0);
-        font-size: 65px;
-        height: 100%;
-        width: 12.5%;
+        font-size: 9vw;
+        height: 50%;
+        width: 25%;
         border: 3px solid black;
-        border-top: 6px solid black;
         border-right: 6px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
-        display: none;
+        display: flex;
         flex-wrap: wrap;
         align-content: center;
         justify-content: center;
@@ -1106,28 +1109,20 @@ body {
     }
 
     .eigthup-name {
-        margin-left: 30px;
-        margin-right: 30px;
+        width: 100%;
+        text-align: center;
         margin-top: 5px;
-        font-size: 25px;
+        font-size: 4vw;
         font-weight: 600;
-    }
-
-    .lower {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50%;
     }
 
     /* lower first image */
     .first-lower {
         background-color: rgb(251, 255, 0);
-        font-size: 410%;
-        height: 100%;
-        width: 20%;
+        font-size: 9vw;
+        height: 50%;
+        width: 25%;
         border: 3px solid black;
-        border-bottom: 6px solid black;
         border-left: 6px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
@@ -1140,20 +1135,19 @@ body {
 
     .firstlw-name {
         width: 100%;
-        margin-top: 5px;
-        font-size: 45%;
         text-align: center;
+        margin-top: 5px;
+        font-size: 4vw;
         font-weight: 600;
     }
 
     /* lower second image */
     .second-lower {
         background-color: #00eeff;
-        font-size: 410%;
-        height: 100%;
-        width: 20%;
+        font-size: 9vw;
+        height: 50%;
+        width: 25%;
         border: 3px solid black;
-        border-bottom: 6px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
         display: flex;
@@ -1165,20 +1159,19 @@ body {
 
     .secondlw-name {
         width: 100%;
-        margin-top: 5px;
-        font-size: 45%;
         text-align: center;
+        margin-top: 5px;
+        font-size: 4vw;
         font-weight: 600;
     }
 
     /* third lower image */
     .third-lower {
         background-color: rgb(255, 57, 57);
-        font-size: 410%;
-        height: 100%;
-        width: 20%;
+        font-size: 9vw;
+        height: 50%;
+        width: 25%;
         border: 3px solid black;
-        border-bottom: 6px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
         display: flex;
@@ -1190,20 +1183,20 @@ body {
 
     .thirdlw-name {
         width: 100%;
-        margin-top: 5px;
-        font-size: 45%;
         text-align: center;
+        margin-top: 5px;
+        font-size: 4vw;
         font-weight: 600;
     }
 
     /* fourth lower image */
     .fourth-lower {
         background-color: rgb(251, 255, 0);
-        font-size: 410%;
-        height: 100%;
-        width: 20%;
+        font-size: 9vw;
+        height: 50%;
+        width: 25%;
         border: 3px solid black;
-        border-bottom: 6px solid black;
+        border-right: 6px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
         display: flex;
@@ -1215,20 +1208,21 @@ body {
 
     .fourthlw-name {
         width: 100%;
-        margin-top: 5px;
-        font-size: 45%;
         text-align: center;
+        margin-top: 5px;
+        font-size: 4vw;
         font-weight: 600;
     }
 
     /* lower fifth image */
     .fifth-lower {
         background-color: #00eeff;
-        font-size: 410%;
-        height: 100%;
-        width: 20%;
+        font-size: 9vw;
+        height: 50%;
+        width: 25%;
         border: 3px solid black;
         border-bottom: 6px solid black;
+        border-left: 6px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
         display: flex;
@@ -1240,23 +1234,23 @@ body {
 
     .fifthlw-name {
         width: 100%;
-        margin-top: 5px;
-        font-size: 45%;
         text-align: center;
+        margin-top: 5px;
+        font-size: 4vw;
         font-weight: 600;
     }
 
     /* lower sixth image */
     .sixth-lower {
         background-color: rgb(255, 57, 57);
-        font-size: 65px;
-        height: 100%;
-        width: 12rem;
+        font-size: 9vw;
+        height: 50%;
+        width: 25%;
         border: 3px solid black;
         border-bottom: 6px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
-        display: none;
+        display: flex;
         flex-wrap: wrap;
         align-content: center;
         justify-content: center;
@@ -1264,24 +1258,24 @@ body {
     }
 
     .sixthlw-name {
-        margin-left: 30px;
-        margin-right: 30px;
+        width: 100%;
+        text-align: center;
         margin-top: 5px;
-        font-size: 25px;
+        font-size: 4vw;
         font-weight: 600;
     }
 
     /* lower seventh image */
     .seventh-lower {
         background-color: rgb(251, 255, 0);
-        font-size: 65px;
-        height: 100%;
-        width: 12rem;
+        font-size: 9vw;
+        height: 50%;
+        width: 25%;
         border: 3px solid black;
         border-bottom: 6px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
-        display: none;
+        display: flex;
         flex-wrap: wrap;
         align-content: center;
         justify-content: center;
@@ -1289,25 +1283,25 @@ body {
     }
 
     .seventhlw-name {
-        margin-left: 30px;
-        margin-right: 30px;
+        width: 100%;
+        text-align: center;
         margin-top: 5px;
-        font-size: 25px;
+        font-size: 4vw;
         font-weight: 600;
     }
 
     /* lower eigth image */
     .eigth-lower {
         background-color: #00eeff;
-        font-size: 65px;
-        height: 100%;
-        width: 12rem;
+        font-size: 9vw;
+        height: 50%;
+        width: 25%;
         border: 3px solid black;
         border-bottom: 6px solid black;
         border-right: 6px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
-        display: none;
+        display: flex;
         flex-wrap: wrap;
         align-content: center;
         justify-content: center;
@@ -1315,10 +1309,10 @@ body {
     }
 
     .eigthlw-name {
-        margin-left: 30px;
-        margin-right: 30px;
+        width: 100%;
+        text-align: center;
         margin-top: 5px;
-        font-size: 25px;
+        font-size: 4vw;
         font-weight: 600;
     }
 
@@ -1338,6 +1332,12 @@ body {
         height: 100%;
         width: 100%;
         position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        align-content: center;
         z-index: 3;
         transition: opacity 0.8s ease, visibility 0.8s ease;
         visibility: hidden;
@@ -1351,16 +1351,20 @@ body {
         align-items: center;
         background-color: #415A77;
         color: black;
-        font-size: 60%;
-        height: 16%;
-        left: 2.5%;
-        width: 95%;
+        font-size: 2.4vw;
+        height: 20%;
+        width: 90%;
         position: relative;
-        margin-top: 3%;
+        left: 0;
+        margin-top: 2%;
         text-align: left;
-        padding: 2%;
+        padding: 4%;
         border: 5px solid lightgrey;
         border-radius: 20px;
+    }
+
+    .first-info-txt {
+        font-size: 1em;
     }
 
     /* second info image */
@@ -1368,15 +1372,15 @@ body {
         display: flex;
         align-items: center;
         background-color: #415A77;
-        color: black;
-        font-size: 60%;
-        height: 13%;
-        width: 95%;
         position: relative;
-        left: 2.5%;
+        font-size: 2vw;
+        left: 0;
+        color: black;
+        height: 15%;
+        width: 90%;
         margin-top: 2%;
         text-align: center;
-        padding: 1.5%;
+        padding: 2%;
         border: 5px solid lightgrey;
         border-radius: 20px;
     }
@@ -1384,12 +1388,13 @@ body {
     .second-info-content {
         display: flex;
         align-items: center;
-        height: 90%;
+        height: 100%;
         width: 100%;
+        font-size: 58%;
     }
 
     .second-info-txt {
-        width: 88.5%;
+        width: 100%;
         text-align: left;
         height: 100%;
         display: flex;
@@ -1397,10 +1402,10 @@ body {
     }
 
     .second-info-img {
-        height: 100%;
-        width: 11%;
+        height: 110%;
+        width: 25%;
         background-color: rgb(255, 57, 57);
-        margin-right: 3%;
+        margin-right: 4%;
         border: 3px solid black;
         border-radius: 10px;
         display: flex;
@@ -1411,14 +1416,13 @@ body {
     }
 
     .second-info-img-symbol {
-        font-size: 310%;
+        font-size: 5.2vw;
     }
 
     .second-info-img-name {
-        font-size: 170%;
+        font-size: 2.2vw;
         font-weight: 600;
         width: 100%;
-        margin-top: 2%;
     }
 
     .third-info {
@@ -1426,16 +1430,14 @@ body {
         align-items: center;
         background-color: #415A77;
         color: black;
-        font-size: 60%;
-        height: 13%;
-        width: 95%;
         position: relative;
+        font-size: 1.9vw;
         left: 0;
-        margin-left: auto;
-        margin-right: auto;
+        height: 15%;
+        width: 90%;
         margin-top: 2%;
         text-align: center;
-        padding: 1.5%;
+        padding: 2%;
         border: 5px solid lightgrey;
         border-radius: 20px;
     }
@@ -1443,12 +1445,13 @@ body {
     .third-info-content {
         display: flex;
         align-items: center;
-        height: 90%;
+        height: 100%;
         width: 100%;
+        font-size: 58%;
     }
 
     .third-info-txt {
-        width: 88.5%;
+        width: 100%;
         text-align: left;
         height: 100%;
         display: flex;
@@ -1456,10 +1459,10 @@ body {
     }
 
     .third-info-img {
+        height: 110%;
+        width: 25%;
         background-color: rgb(251, 255, 0);
-        height: 100%;
-        width: 11%;
-        margin-right: 3%;
+        margin-right: 4%;
         border: 3px solid black;
         border-radius: 10px;
         display: flex;
@@ -1470,50 +1473,42 @@ body {
     }
 
     .third-info-img-symbol {
-        font-size: 310%;
+        font-size: 5.2vw;
     }
 
     .third-info-img-name {
-        font-size: 170%;
+        font-size: 2.2vw;
         font-weight: 600;
         width: 100%;
-        margin-top: 2%;
     }
 
 
     /* fourth info button  */
     .button-fourth-info {
-        height: 20%;
-        width: 100%;
-        margin-top: 2%;
+        height: 25%;
+        margin-top: 1.6%;
         display: flex;
-        align-items: flex-start;
+        position: relative;
+        left: 2%;
+        align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+        align-content: center;
         width: 100%;
-        justify-content: center;
     }
 
     .close-btn {
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 30px;
-        background-color: #E0E1DD;
-        border: 8px solid #0D1B2A;
-        width: 250px;
         display: none;
-        height: 70px;
-        border-radius: 10px;
-        transition: all 0.4s ease-in-out;
     }
 
     .close-btn-media {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 170%;
+        font-size: 3.8vw;
         background-color: #E0E1DD;
-        border: 8px solid #0D1B2A;
+        border: 5px solid #0D1B2A;
         width: 50%;
         height: 30%;
-        margin-top: 1%;
+        margin-top: 2.1%;
         border-radius: 10px;
         transition: all 0.4s ease-in-out;
     }
@@ -1523,16 +1518,15 @@ body {
         display: flex;
         align-items: center;
         background-color: #415A77;
+        font-size: 1.95vw;
         color: black;
-        font-size: 60%;
-        height: 65%;
-        width: 95%;
         position: relative;
         left: 0;
-        margin-left: auto;
-        margin-right: auto;
+        height: 59%;
+        width: 90%;
+        margin-right: 4%;
         text-align: center;
-        padding: 1.5%;
+        padding: 2%;
         border: 5px solid lightgrey;
         border-radius: 20px;
     }
@@ -1540,12 +1534,13 @@ body {
     .fourth-info-content {
         display: flex;
         align-items: center;
-        height: 90%;
+        height: 100%;
         width: 100%;
+        font-size: 58%;
     }
 
     .fourth-info-txt {
-        width: 88.5%;
+        width: 100%;
         text-align: left;
         height: 100%;
         display: flex;
@@ -1553,10 +1548,10 @@ body {
     }
 
     .fourth-info-img {
+        height: 110%;
+        width: 25%;
         background-color: #00eeff;
-        height: 100%;
-        width: 11%;
-        margin-right: 3%;
+        margin-right: 4%;
         border: 3px solid black;
         border-radius: 10px;
         display: flex;
@@ -1567,82 +1562,83 @@ body {
     }
 
     .fourth-info-img-symbol {
-        font-size: 310%;
+        font-size: 5.2vw;
     }
 
     .fourth-info-img-name {
-        font-size: 170%;
+        font-size: 2.2vw;
         font-weight: 600;
         width: 100%;
-        margin-top: 2%;
     }
-
 }
 
-@media (min-width:1024px) {
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media (min-width:640px) and (max-width:768px) {
 
     /* class fot he div containing both headings */
     .heading-layout {
         display: flex;
         justify-content: center;
+        align-content: center;
         flex-wrap: wrap;
         align-items: center;
         border-bottom: 4px solid #E0E1DD;
         padding-bottom: 8px;
         padding-top: 8px;
         width: 100%;
-        height: 20%;
+        height: 15%;
         margin-left: auto;
         margin-right: auto;
     }
 
     /* class for p tag of first heading */
     .game-heading1 {
-        font-size: 500%;
+        font-size: 10vw;
+        text-align: center;
         color: #E0E1DD;
         display: inline-block;
     }
 
     /* class for p tag of second heading */
     .game-heading2 {
-        font-size: 270%;
+        font-size: 6vw;
         color: #E0E1DD;
         display: inline-block;
         align-self: flex-end;
-        margin-bottom: 15px;
-        margin-left: 15px;
+        margin-bottom: 5px;
+        margin-left: 10px;
     }
 
     /* class for div containing play and info buttons */
     .button-layout {
         display: flex;
         position: absolute;
-        margin-top: 13.4%;
+        top: 49%;
         justify-content: center;
         align-items: center;
         align-content: center;
         flex-wrap: wrap;
-        height: 32%;
-        width: 100%;
+        height: 21.5%;
+        width: 100vw;
         z-index: 2;
     }
 
     /* class for div of play button */
     .play-div {
         display: flex;
-        width: 100%;
-        height: 46%;
+        width: 90%;
         justify-content: center;
         align-items: center;
+        height: 50%;
     }
 
     /* class for play button tag */
     .play-button {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 330%;
+        font-size: 7.5vw;
         background-color: #E0E1DD;
-        border: 8px solid #0D1B2A;
-        width: 40%;
+        border: 5px solid #0D1B2A;
+        width: 100%;
         height: 100%;
         border-radius: 10px;
         transition: all 0.4s ease-in-out;
@@ -1650,34 +1646,43 @@ body {
 
     /* class for div of info button */
     .info-div {
-        margin-top: 1%;
+        margin-top: 10px;
         display: flex;
-        width: 100%;
-        height: 34%;
+        width: 60%;
+        height: 40%;
         justify-content: center;
         align-items: center;
     }
 
     .howToPlay-button {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 200%;
+        font-size: 4.5vw;
         background-color: #E0E1DD;
-        border: 8px solid #0D1B2A;
-        width: 30%;
+        border: 5px solid #0D1B2A;
+        width: 100%;
         height: 100%;
         border-radius: 10px;
         transition: all 0.4s ease-in-out;
     }
 
     .background-div {
-        height: 80%;
+        height: 85%;
         width: 100%;
         opacity: 1;
     }
 
     .upper {
         display: flex;
-        justify-content: flex-start;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+    }
+
+    .lower {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
         height: 50%;
     }
@@ -1685,7 +1690,2884 @@ body {
     /* first upper image */
     .first-upper {
         background-color: rgb(255, 57, 57);
-        font-size: 400%;
+        font-size: 7.5vw;
+        height: 50%;
+        width: 25%;
+        border: 3px solid black;
+        border-top: 6px solid black;
+        border-left: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .firstup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* second upper image */
+    .second-upper {
+        background-color: rgb(251, 255, 0);
+        font-size: 7.5vw;
+        height: 50%;
+        width: 25%;
+        border: 3px solid black;
+        border-top: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .secondup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* third upper image */
+    .third-upper {
+        background-color: #00eeff;
+        font-size: 7.5vw;
+        height: 50%;
+        width: 25%;
+        border: 3px solid black;
+        border-top: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .thirdup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* fourth upper image */
+    .fourth-upper {
+        background-color: rgb(255, 57, 57);
+        font-size: 7.5vw;
+        height: 50%;
+        width: 25%;
+        border: 3px solid black;
+        border-top: 6px solid black;
+        border-right: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fourthup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* fifth upper image */
+    .fifth-upper {
+        background-color: rgb(251, 255, 0);
+        font-size: 7.5vw;
+        height: 50%;
+        width: 25%;
+        border: 3px solid black;
+        border-left: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fifthup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* sixth upper image */
+    .sixth-upper {
+        background-color: #00eeff;
+        font-size: 7.5vw;
+        height: 50%;
+        width: 25%;
+        border: 3px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sixthup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* seventh upper image */
+    .seventh-upper {
+        background-color: rgb(255, 57, 57);
+        font-size: 7.5vw;
+        height: 50%;
+        width: 25%;
+        border: 3px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .seventhup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* eight upper image */
+    .eigth-upper {
+        background-color: rgb(251, 255, 0);
+        font-size: 7.5vw;
+        height: 50%;
+        width: 25%;
+        border: 3px solid black;
+        border-right: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .eigthup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* lower first image */
+    .first-lower {
+        background-color: rgb(251, 255, 0);
+        font-size: 7.5vw;
+        height: 50%;
+        width: 25%;
+        border: 3px solid black;
+        border-left: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .firstlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* lower second image */
+    .second-lower {
+        background-color: #00eeff;
+        font-size: 7.5vw;
+        height: 50%;
+        width: 25%;
+        border: 3px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .secondlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* third lower image */
+    .third-lower {
+        background-color: rgb(255, 57, 57);
+        font-size: 7.5vw;
+        height: 50%;
+        width: 25%;
+        border: 3px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .thirdlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* fourth lower image */
+    .fourth-lower {
+        background-color: rgb(251, 255, 0);
+        font-size: 7.5vw;
+        height: 50%;
+        width: 25%;
+        border: 3px solid black;
+        border-right: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fourthlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* lower fifth image */
+    .fifth-lower {
+        background-color: #00eeff;
+        font-size: 7.5vw;
+        height: 50%;
+        width: 25%;
+        border: 3px solid black;
+        border-bottom: 6px solid black;
+        border-left: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fifthlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* lower sixth image */
+    .sixth-lower {
+        background-color: rgb(255, 57, 57);
+        font-size: 7.5vw;
+        height: 50%;
+        width: 25%;
+        border: 3px solid black;
+        border-bottom: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sixthlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* lower seventh image */
+    .seventh-lower {
+        background-color: rgb(251, 255, 0);
+        font-size: 7.5vw;
+        height: 50%;
+        width: 25%;
+        border: 3px solid black;
+        border-bottom: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .seventhlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* lower eigth image */
+    .eigth-lower {
+        background-color: #00eeff;
+        font-size: 7.5vw;
+        height: 50%;
+        width: 25%;
+        border: 3px solid black;
+        border-bottom: 6px solid black;
+        border-right: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .eigthlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    .information {
+        background-color: #0D1B2A;
+        opacity: 0.9;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 3;
+        visibility: hidden;
+        transition: opacity 0.8s ease, visibility 0.8s ease;
+        opacity: 0;
+    }
+
+    .all-info-text {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        align-content: center;
+        z-index: 3;
+        transition: opacity 0.8s ease, visibility 0.8s ease;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    /* first info image */
+    .first-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #415A77;
+        color: black;
+        font-size: 2.4vw;
+        height: 20%;
+        width: 90%;
+        position: relative;
+        left: 0;
+        margin-top: 12px;
+        text-align: left;
+        padding: 4%;
+        border: 5px solid lightgrey;
+        border-radius: 20px;
+    }
+
+    .first-info-txt {
+        font-size: 1em;
+    }
+
+    /* second info image */
+    .second-info {
+        display: flex;
+        align-items: center;
+        background-color: #415A77;
+        position: relative;
+        font-size: 1.9vw;
+        left: 0;
+        color: black;
+        height: 15%;
+        width: 90%;
+        margin-top: 12px;
+        text-align: center;
+        padding: 2%;
+        border: 5px solid lightgrey;
+        border-radius: 20px;
+    }
+
+    .second-info-content {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        font-size: 58%;
+    }
+
+    .second-info-txt {
+        width: 100%;
+        text-align: left;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .second-info-img {
+        height: 110%;
+        width: 25%;
+        background-color: rgb(255, 57, 57);
+        margin-right: 4%;
+        border: 3px solid black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .second-info-img-symbol {
+        font-size: 5.2vw;
+    }
+
+    .second-info-img-name {
+        font-size: 2.2vw;
+        font-weight: 600;
+        width: 100%;
+    }
+
+    .third-info {
+        display: flex;
+        align-items: center;
+        background-color: #415A77;
+        color: black;
+        position: relative;
+        font-size: 1.8vw;
+        left: 0;
+        height: 15%;
+        width: 90%;
+        margin-top: 12px;
+        text-align: center;
+        padding: 2%;
+        border: 5px solid lightgrey;
+        border-radius: 20px;
+    }
+
+    .third-info-content {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        font-size: 58%;
+    }
+
+    .third-info-txt {
+        width: 100%;
+        text-align: left;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .third-info-img {
+        height: 110%;
+        width: 25%;
+        background-color: rgb(251, 255, 0);
+        margin-right: 4%;
+        border: 3px solid black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .third-info-img-symbol {
+        font-size: 5.2vw;
+    }
+
+    .third-info-img-name {
+        font-size: 2.2vw;
+        font-weight: 600;
+        width: 100%;
+    }
+
+
+    /* fourth info button  */
+    .button-fourth-info {
+        height: 25%;
+        margin-top: 7px;
+        display: flex;
+        position: relative;
+        left: 2%;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
+        width: 100%;
+    }
+
+    .close-btn {
+        display: none;
+    }
+
+    .close-btn-media {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 3.8vw;
+        background-color: #E0E1DD;
+        border: 8px solid #0D1B2A;
+        width: 50%;
+        height: 30%;
+        margin-top: 12px;
+        border-radius: 10px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    /* fourth info image */
+    .fourth-info {
+        display: flex;
+        align-items: center;
+        background-color: #415A77;
+        font-size: 1.8vw;
+        color: black;
+        position: relative;
+        left: 0;
+        height: 59%;
+        width: 90%;
+        margin-right: 4%;
+        text-align: center;
+        padding: 2%;
+        border: 5px solid lightgrey;
+        border-radius: 20px;
+    }
+
+    .fourth-info-content {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        font-size: 58%;
+    }
+
+    .fourth-info-txt {
+        width: 100%;
+        text-align: left;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .fourth-info-img {
+        height: 110%;
+        width: 25%;
+        background-color: #00eeff;
+        margin-right: 4%;
+        border: 3px solid black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .fourth-info-img-symbol {
+        font-size: 5.2vw;
+    }
+
+    .fourth-info-img-name {
+        font-size: 2.2vw;
+        font-weight: 600;
+        width: 100%;
+    }
+}
+
+@media (min-width:768px) and (max-width:1100px) {
+
+    /* class fot he div containing both headings */
+    .heading-layout {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        border-bottom: 4px solid #E0E1DD;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        width: 100%;
+        height: 18%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* class for p tag of first heading */
+    .game-heading1 {
+        font-size: 9vw;
+        text-align: center;
+        color: #E0E1DD;
+        display: inline-block;
+    }
+
+    /* class for p tag of second heading */
+    .game-heading2 {
+        font-size: 5vw;
+        color: #E0E1DD;
+        display: inline-block;
+        align-self: flex-end;
+        margin-bottom: 5px;
+        margin-left: 10px;
+    }
+
+    /* class for div containing play and info buttons */
+    .button-layout {
+        display: flex;
+        position: absolute;
+        top: 49%;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        height: 25.5%;
+        width: 100vw;
+        z-index: 2;
+    }
+
+    /* class for div of play button */
+    .play-div {
+        display: flex;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+    }
+
+    /* class for play button tag */
+    .play-button {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 6.4vw;
+        background-color: #E0E1DD;
+        border: 5px solid #0D1B2A;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    /* class for div of info button */
+    .info-div {
+        margin-top: 10px;
+        display: flex;
+        width: 60%;
+        height: 40%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .howToPlay-button {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 3.6vw;
+        background-color: #E0E1DD;
+        border: 5px solid #0D1B2A;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .background-div {
+        height: 82%;
+        width: 100%;
+        opacity: 1;
+    }
+
+    .upper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+    }
+
+    .lower {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+    }
+
+    /* first upper image */
+    .first-upper {
+        background-color: rgb(255, 57, 57);
+        font-size: 7.5vw;
+        height: 100%;
+        width: 20%;
+        border: 3px solid black;
+        border-top: 6px solid black;
+        border-left: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .firstup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* second upper image */
+    .second-upper {
+        background-color: rgb(251, 255, 0);
+        font-size: 7.5vw;
+        height: 100%;
+        width: 20%;
+        border: 3px solid black;
+        border-top: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .secondup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* third upper image */
+    .third-upper {
+        background-color: #00eeff;
+        font-size: 7.5vw;
+        height: 100%;
+        width: 20%;
+        border: 3px solid black;
+        border-top: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .thirdup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* fourth upper image */
+    .fourth-upper {
+        background-color: rgb(255, 57, 57);
+        font-size: 7.5vw;
+        height: 100%;
+        width: 20%;
+        border: 3px solid black;
+        border-top: 6px solid black;
+        border-right: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fourthup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* fifth upper image */
+    .fifth-upper {
+        background-color: rgb(251, 255, 0);
+        font-size: 7.5vw;
+        height: 100%;
+        width: 20%;
+        border: 3px solid black;
+        border-top: 6px solid black;
+        border-left: 0px solid black;
+        border-right: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fifthup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* sixth upper image */
+    .sixth-upper {
+        display: none;
+    }
+
+    /* seventh upper image */
+    .seventh-upper {
+        display: none;
+    }
+
+    /* eight upper image */
+    .eigth-upper {
+        display: none;
+    }
+
+    /* lower first image */
+    .first-lower {
+        background-color: rgb(251, 255, 0);
+        font-size: 7.5vw;
+        height: 100%;
+        width: 20%;
+        border: 3px solid black;
+        border-left: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .firstlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* lower second image */
+    .second-lower {
+        background-color: #00eeff;
+        font-size: 7.5vw;
+        height: 100%;
+        width: 20%;
+        border: 3px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .secondlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* third lower image */
+    .third-lower {
+        background-color: rgb(255, 57, 57);
+        font-size: 7.5vw;
+        height: 100%;
+        width: 20%;
+        border: 3px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .thirdlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* fourth lower image */
+    .fourth-lower {
+        background-color: rgb(251, 255, 0);
+        font-size: 7.5vw;
+        height: 100%;
+        width: 20%;
+        border: 3px solid black;
+        border-right: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fourthlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* lower fifth image */
+    .fifth-lower {
+        background-color: #00eeff;
+        font-size: 7.5vw;
+        height: 100%;
+        width: 20%;
+        border: 3px solid black;
+        border-right: 6px solid black;
+        border-left: 0px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fifthlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    /* lower sixth image */
+    .sixth-lower {
+        display: none;
+    }
+
+    /* lower seventh image */
+    .seventh-lower {
+        display: none;
+    }
+
+    /* lower eigth image */
+    .eigth-lower {
+        display: none;
+    }
+
+    .information {
+        background-color: #0D1B2A;
+        opacity: 0.9;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 3;
+        visibility: hidden;
+        transition: opacity 0.8s ease, visibility 0.8s ease;
+        opacity: 0;
+    }
+
+    .all-info-text {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        align-content: center;
+        z-index: 3;
+        transition: opacity 0.8s ease, visibility 0.8s ease;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    /* first info image */
+    .first-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #415A77;
+        color: black;
+        font-size: 1.76vw;
+        height: 17%;
+        width: 90%;
+        position: relative;
+        left: 0;
+        margin-top: 12px;
+        text-align: left;
+        padding: 4%;
+        border: 5px solid lightgrey;
+        border-radius: 20px;
+    }
+
+    .first-info-txt {
+        font-size: 1em;
+    }
+
+    /* second info image */
+    .second-info {
+        display: flex;
+        align-items: center;
+        background-color: #415A77;
+        position: relative;
+        font-size: 1.6vw;
+        left: 0;
+        color: black;
+        height: 16%;
+        width: 90%;
+        margin-top: 12px;
+        text-align: center;
+        padding: 6px;
+        padding-left: 20px;
+        border: 5px solid lightgrey;
+        border-radius: 20px;
+    }
+
+    .second-info-content {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        font-size: 58%;
+    }
+
+    .second-info-txt {
+        width: 100%;
+        text-align: left;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .second-info-img {
+        height: 100%;
+        width: 14%;
+        background-color: rgb(255, 57, 57);
+        margin-right: 20px;
+        border: 3px solid black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .second-info-img-symbol {
+        font-size: 4.2vw;
+    }
+
+    .second-info-img-name {
+        font-size: 1.7vw;
+        font-weight: 600;
+        width: 100%;
+        margin-top: 2px;
+    }
+
+    .third-info {
+        display: flex;
+        align-items: center;
+        background-color: #415A77;
+        color: black;
+        position: relative;
+        font-size: 1.56vw;
+        left: 0;
+        height: 16%;
+        width: 90%;
+        margin-top: 12px;
+        text-align: center;
+        padding: 6px;
+        padding-left: 20px;
+        border: 5px solid lightgrey;
+        border-radius: 20px;
+    }
+
+    .third-info-content {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        font-size: 58%;
+    }
+
+    .third-info-txt {
+        width: 100%;
+        text-align: left;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .third-info-img {
+        height: 100%;
+        width: 14%;
+        background-color: rgb(251, 255, 0);
+        margin-right: 20px;
+        border: 3px solid black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .third-info-img-symbol {
+        font-size: 4.2vw;
+    }
+
+    .third-info-img-name {
+        font-size: 1.7vw;
+        font-weight: 600;
+        width: 100%;
+        margin-top: 2px;
+    }
+
+
+    /* fourth info button  */
+    .button-fourth-info {
+        height: 26%;
+        margin-top: 9px;
+        display: flex;
+        position: relative;
+        left: 2%;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
+        width: 100%;
+    }
+
+    .close-btn {
+        display: none;
+    }
+
+    .close-btn-media {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 3.3vw;
+        background-color: #E0E1DD;
+        border: 8px solid #0D1B2A;
+        width: 50%;
+        height: 30%;
+        margin-top: 12px;
+        border-radius: 10px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    /* fourth info image */
+    .fourth-info {
+        display: flex;
+        align-items: center;
+        background-color: #415A77;
+        font-size: 1.56vw;
+        color: black;
+        position: relative;
+        left: 0;
+        height: 61%;
+        width: 90%;
+        margin-right: 4%;
+        text-align: center;
+        padding: 6px;
+        padding-left: 20px;
+        border: 5px solid lightgrey;
+        border-radius: 20px;
+    }
+
+    .fourth-info-content {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        font-size: 58%;
+    }
+
+    .fourth-info-txt {
+        width: 100%;
+        text-align: left;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .fourth-info-img {
+        height: 100%;
+        width: 14%;
+        background-color: #00eeff;
+        margin-right: 20px;
+        border: 3px solid black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .fourth-info-img-symbol {
+        font-size: 4.2vw;
+    }
+
+    .fourth-info-img-name {
+        font-size: 1.7vw;
+        font-weight: 600;
+        width: 100%;
+        margin-top: 2px;
+    }
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////// */
+@media (min-width:1100px) and (max-width:1280px) {
+
+    /* class fot he div containing both headings */
+    .heading-layout {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        border-bottom: 4px solid #E0E1DD;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        width: 100%;
+        height: 18%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* class for p tag of first heading */
+    .game-heading1 {
+        font-size: 8vw;
+        text-align: center;
+        color: #E0E1DD;
+        display: inline-block;
+    }
+
+    /* class for p tag of second heading */
+    .game-heading2 {
+        font-size: 4vw;
+        color: #E0E1DD;
+        display: inline-block;
+        align-self: flex-end;
+        margin-bottom: 5px;
+        margin-left: 10px;
+    }
+
+    /* class for div containing play and info buttons */
+    .button-layout {
+        display: flex;
+        position: absolute;
+        top: 49%;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        height: 27.5%;
+        width: 100vw;
+        z-index: 2;
+    }
+
+    /* class for div of play button */
+    .play-div {
+        display: flex;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+    }
+
+    /* class for play button tag */
+    .play-button {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 5.8vw;
+        background-color: #E0E1DD;
+        border: 5px solid #0D1B2A;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    /* class for div of info button */
+    .info-div {
+        margin-top: 10px;
+        display: flex;
+        width: 60%;
+        height: 40%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .howToPlay-button {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 3vw;
+        background-color: #E0E1DD;
+        border: 5px solid #0D1B2A;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .background-div {
+        height: 82%;
+        width: 100%;
+        opacity: 1;
+    }
+
+    .upper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+    }
+
+    .lower {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+    }
+
+    /* first upper image */
+    .first-upper {
+        background-color: rgb(255, 57, 57);
+        font-size: 6.5vw;
+        height: 100%;
+        width: 16.67%;
+        border: 3px solid black;
+        border-top: 6px solid black;
+        border-left: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .firstup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.5vw;
+        font-weight: 600;
+    }
+
+    /* second upper image */
+    .second-upper {
+        background-color: rgb(251, 255, 0);
+        font-size: 6.5vw;
+        height: 100%;
+        width: 16.67%;
+        border: 3px solid black;
+        border-top: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .secondup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.5vw;
+        font-weight: 600;
+    }
+
+    /* third upper image */
+    .third-upper {
+        background-color: #00eeff;
+        font-size: 6.5vw;
+        height: 100%;
+        width: 16.67%;
+        border: 3px solid black;
+        border-top: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .thirdup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.5vw;
+        font-weight: 600;
+    }
+
+    /* fourth upper image */
+    .fourth-upper {
+        background-color: rgb(255, 57, 57);
+        font-size: 6.5vw;
+        height: 100%;
+        width: 16.67%;
+        border: 3px solid black;
+        border-top: 6px solid black;
+        border-right: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fourthup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.5vw;
+        font-weight: 600;
+    }
+
+    /* fifth upper image */
+    .fifth-upper {
+        background-color: rgb(251, 255, 0);
+        font-size: 6.5vw;
+        height: 100%;
+        width: 16.67%;
+        border: 3px solid black;
+        border-top: 6px solid black;
+        border-left: 0px solid black;
+        border-right: 3px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fifthup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.5vw;
+        font-weight: 600;
+    }
+
+    /* sixth upper image */
+    .sixth-upper {
+        background-color: #00eeff;
+        font-size: 6.5vw;
+        height: 100%;
+        width: 16%;
+        border: 3px solid black;
+        border-top: 6px solid black;
+        border-left: 3px solid black;
+        border-right: 3px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sixthup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.5vw;
+        font-weight: 600;
+    }
+
+    /* seventh upper image */
+    .seventh-upper {
+        display: none;
+    }
+
+    /* eight upper image */
+    .eigth-upper {
+        display: none;
+    }
+
+    /* lower first image */
+    .first-lower {
+        background-color: rgb(251, 255, 0);
+        font-size: 6.5vw;
+        height: 100%;
+        width: 16.67%;
+        border: 3px solid black;
+        border-left: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .firstlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.5vw;
+        font-weight: 600;
+    }
+
+    /* lower second image */
+    .second-lower {
+        background-color: #00eeff;
+        font-size: 6.5vw;
+        height: 100%;
+        width: 16.67%;
+        border: 3px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .secondlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.5vw;
+        font-weight: 600;
+    }
+
+    /* third lower image */
+    .third-lower {
+        background-color: rgb(255, 57, 57);
+        font-size: 6.5vw;
+        height: 100%;
+        width: 16.67%;
+        border: 3px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .thirdlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.5vw;
+        font-weight: 600;
+    }
+
+    /* fourth lower image */
+    .fourth-lower {
+        background-color: rgb(251, 255, 0);
+        font-size: 6.5vw;
+        height: 100%;
+        width: 16.67%;
+        border: 3px solid black;
+        border-right: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fourthlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.5vw;
+        font-weight: 600;
+    }
+
+    /* lower fifth image */
+    .fifth-lower {
+        background-color: #00eeff;
+        font-size: 6.5vw;
+        height: 100%;
+        width: 16.67%;
+        border: 3px solid black;
+        border-right: 6px solid black;
+        border-left: 0px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fifthlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.5vw;
+        font-weight: 600;
+    }
+
+    /* lower sixth image */
+    .sixth-lower {
+        background-color: rgb(255, 57, 57);
+        font-size: 6.5vw;
+        height: 100%;
+        width: 16%;
+        border: 3px solid black;
+        border-bottom: 0px solid black;
+        border-left: 0px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sixthlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.5vw;
+        font-weight: 600;
+    }
+
+    /* lower seventh image */
+    .seventh-lower {
+        display: none;
+    }
+
+    /* lower eigth image */
+    .eigth-lower {
+        display: none;
+    }
+
+    .information {
+        background-color: #0D1B2A;
+        opacity: 0.9;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 3;
+        visibility: hidden;
+        transition: opacity 0.8s ease, visibility 0.8s ease;
+        opacity: 0;
+    }
+
+    .all-info-text {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: flex-start;
+        align-content: center;
+        z-index: 3;
+        transition: opacity 0.8s ease, visibility 0.8s ease;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    /* first info image */
+    .first-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #415A77;
+        color: black;
+        font-size: 1.59vw;
+        height: 18%;
+        width: 78%;
+        position: relative;
+        left: 3%;
+        margin-top: 12px;
+        text-align: left;
+        padding: 15px;
+        border: 5px solid lightgrey;
+        border-radius: 20px;
+    }
+
+    .first-info-txt {
+        font-size: 1em;
+    }
+
+    /* second info image */
+    .second-info {
+        display: flex;
+        align-items: center;
+        background-color: #415A77;
+        position: relative;
+        font-size: 1.39vw;
+        left: 19%;
+        color: black;
+        height: 18%;
+        width: 78%;
+        margin-top: 12px;
+        text-align: center;
+        padding: 6px;
+        padding-left: 20px;
+        border: 5px solid lightgrey;
+        border-radius: 20px;
+    }
+
+    .second-info-content {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        font-size: 58%;
+    }
+
+    .second-info-txt {
+        width: 100%;
+        text-align: left;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .second-info-img {
+        height: 100%;
+        width: 12%;
+        background-color: rgb(255, 57, 57);
+        margin-right: 20px;
+        border: 3px solid black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .second-info-img-symbol {
+        font-size: 3.6vw;
+    }
+
+    .second-info-img-name {
+        font-size: 1.4vw;
+        font-weight: 600;
+        width: 100%;
+        margin-top: 2px;
+    }
+
+    .third-info {
+        display: flex;
+        align-items: center;
+        background-color: #415A77;
+        color: black;
+        position: relative;
+        font-size: 1.34vw;
+        left: 3%;
+        height: 18%;
+        width: 78%;
+        margin-top: 12px;
+        text-align: center;
+        padding: 6px;
+        padding-left: 20px;
+        border: 5px solid lightgrey;
+        border-radius: 20px;
+    }
+
+    .third-info-content {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        font-size: 58%;
+    }
+
+    .third-info-txt {
+        width: 100%;
+        text-align: left;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .third-info-img {
+        height: 100%;
+        width: 12%;
+        background-color: rgb(251, 255, 0);
+        margin-right: 20px;
+        border: 3px solid black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .third-info-img-symbol {
+        font-size: 3.6vw;
+    }
+
+    .third-info-img-name {
+        font-size: 1.4vw;
+        font-weight: 600;
+        width: 100%;
+        margin-top: 2px;
+    }
+
+
+    /* fourth info button  */
+    .button-fourth-info {
+        height: 18%;
+        margin-top: 13px;
+        display: flex;
+        position: relative;
+        left: 2%;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-content: center;
+        width: 100%;
+    }
+
+    .close-btn {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 2.5vw;
+        background-color: #E0E1DD;
+        border: 5px solid #0D1B2A;
+        width: 15.4%;
+        height: 50%;
+        margin-right: 5px;
+        border-radius: 10px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .close-btn-media {
+        display: none;
+    }
+
+    /* fourth info image */
+    .fourth-info {
+        display: flex;
+        align-items: center;
+        background-color: #415A77;
+        font-size: 1.36vw;
+        color: black;
+        position: relative;
+        left: 1%;
+        height: 100%;
+        width: 78%;
+        /* margin-right: 4%; */
+        text-align: center;
+        padding: 6px;
+        padding-left: 20px;
+        border: 5px solid lightgrey;
+        border-radius: 20px;
+    }
+
+    .fourth-info-content {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        font-size: 58%;
+    }
+
+    .fourth-info-txt {
+        width: 100%;
+        text-align: left;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .fourth-info-img {
+        height: 100%;
+        width: 14%;
+        background-color: #00eeff;
+        margin-right: 20px;
+        border: 3px solid black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .fourth-info-img-symbol {
+        font-size: 3.6vw;
+    }
+
+    .fourth-info-img-name {
+        font-size: 1.4vw;
+        font-weight: 600;
+        width: 100%;
+        margin-top: 2px;
+    }
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////// */
+@media (min-width:1280px) and (max-width:1400px) {
+
+    /* class fot he div containing both headings */
+    .heading-layout {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        border-bottom: 4px solid #E0E1DD;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        width: 100%;
+        height: 18%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* class for p tag of first heading */
+    .game-heading1 {
+        font-size: 7.4vw;
+        text-align: center;
+        color: #E0E1DD;
+        display: inline-block;
+    }
+
+    /* class for p tag of second heading */
+    .game-heading2 {
+        font-size: 3.5vw;
+        color: #E0E1DD;
+        display: inline-block;
+        align-self: flex-end;
+        margin-bottom: 5px;
+        margin-left: 10px;
+    }
+
+    /* class for div containing play and info buttons */
+    .button-layout {
+        display: flex;
+        position: absolute;
+        top: 49%;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        height: 28.5%;
+        width: 100vw;
+        z-index: 2;
+    }
+
+    /* class for div of play button */
+    .play-div {
+        display: flex;
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+    }
+
+    /* class for play button tag */
+    .play-button {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 4.8vw;
+        background-color: #E0E1DD;
+        border: 5px solid #0D1B2A;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    /* class for div of info button */
+    .info-div {
+        margin-top: 10px;
+        display: flex;
+        width: 50%;
+        height: 40%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .howToPlay-button {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 2.8vw;
+        background-color: #E0E1DD;
+        border: 5px solid #0D1B2A;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .background-div {
+        height: 82%;
+        width: 100%;
+        opacity: 1;
+    }
+
+    .upper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+    }
+
+    .lower {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+    }
+
+    /* first upper image */
+    .first-upper {
+        background-color: rgb(255, 57, 57);
+        font-size: 5.8vw;
+        height: 100%;
+        width: 14.2%;
+        border: 3px solid black;
+        border-top: 6px solid black;
+        border-left: 0px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .firstup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.1vw;
+        font-weight: 600;
+    }
+
+    /* second upper image */
+    .second-upper {
+        background-color: rgb(251, 255, 0);
+        font-size: 5.8vw;
+        height: 100%;
+        width: 14.2%;
+        border: 3px solid black;
+        border-top: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .secondup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.1vw;
+        font-weight: 600;
+    }
+
+    /* third upper image */
+    .third-upper {
+        background-color: #00eeff;
+        font-size: 5.8vw;
+        height: 100%;
+        width: 14.2%;
+        border: 3px solid black;
+        border-top: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .thirdup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.1vw;
+        font-weight: 600;
+    }
+
+    /* fourth upper image */
+    .fourth-upper {
+        background-color: rgb(255, 57, 57);
+        font-size: 5.8vw;
+        height: 100%;
+        width: 14.2%;
+        border: 3px solid black;
+        border-top: 6px solid black;
+        border-right: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fourthup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.1vw;
+        font-weight: 600;
+    }
+
+    /* fifth upper image */
+    .fifth-upper {
+        background-color: rgb(251, 255, 0);
+        font-size: 5.8vw;
+        height: 100%;
+        width: 14.2%;
+        border: 3px solid black;
+        border-top: 6px solid black;
+        border-left: 0px solid black;
+        border-right: 3px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fifthup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.1vw;
+        font-weight: 600;
+    }
+
+    /* sixth upper image */
+    .sixth-upper {
+        background-color: #00eeff;
+        font-size: 5.8vw;
+        height: 100%;
+        width: 14.2%;
+        border: 3px solid black;
+        border-top: 6px solid black;
+        border-left: 3px solid black;
+        border-right: 3px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sixthup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.1vw;
+        font-weight: 600;
+    }
+
+    /* seventh upper image */
+    .seventh-upper {
+        background-color: rgb(255, 57, 57);
+        font-size: 5.8vw;
+        height: 100%;
+        width: 14.2%;
+        border: 3px solid black;
+        border-top: 6px solid black;
+        border-right: 0px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .seventhup-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.1vw;
+        font-weight: 600;
+    }
+
+    /* eight upper image */
+    .eigth-upper {
+        display: none;
+    }
+
+    /* lower first image */
+    .first-lower {
+        background-color: rgb(251, 255, 0);
+        font-size: 5.8vw;
+        height: 100%;
+        width: 14.2%;
+        border: 3px solid black;
+        border-left: 0px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .firstlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.1vw;
+        font-weight: 600;
+    }
+
+    /* lower second image */
+    .second-lower {
+        background-color: #00eeff;
+        font-size: 5.8vw;
+        height: 100%;
+        width: 14.2%;
+        border: 3px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .secondlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.1vw;
+        font-weight: 600;
+    }
+
+    /* third lower image */
+    .third-lower {
+        background-color: rgb(255, 57, 57);
+        font-size: 5.8vw;
+        height: 100%;
+        width: 14.2%;
+        border: 3px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .thirdlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.1vw;
+        font-weight: 600;
+    }
+
+    /* fourth lower image */
+    .fourth-lower {
+        background-color: rgb(251, 255, 0);
+        font-size: 5.8vw;
+        height: 100%;
+        width: 14.2%;
+        border: 3px solid black;
+        border-right: 6px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fourthlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.1vw;
+        font-weight: 600;
+    }
+
+    /* lower fifth image */
+    .fifth-lower {
+        background-color: #00eeff;
+        font-size: 5.8vw;
+        height: 100%;
+        width: 14.2%;
+        border: 3px solid black;
+        border-right: 6px solid black;
+        border-left: 0px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fifthlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.1vw;
+        font-weight: 600;
+    }
+
+    /* lower sixth image */
+    .sixth-lower {
+        background-color: rgb(255, 57, 57);
+        font-size: 5.8vw;
+        height: 100%;
+        width: 14.2%;
+        border: 3px solid black;
+        border-bottom: 3px solid black;
+        border-left: 0px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sixthlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.1vw;
+        font-weight: 600;
+    }
+
+    /* lower seventh image */
+    .seventh-lower {
+        background-color: rgb(251, 255, 0);
+        font-size: 5.8vw;
+        height: 100%;
+        width: 14.2%;
+        border: 3px solid black;
+        border-right: 0px solid black;
+        opacity: 0.7;
+        transition: all 0.8s ease;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .seventhlw-name {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 2.1vw;
+        font-weight: 600;
+    }
+
+    /* lower eigth image */
+    .eigth-lower {
+        display: none;
+    }
+
+    .information {
+        background-color: #0D1B2A;
+        opacity: 0.9;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 3;
+        visibility: hidden;
+        transition: opacity 0.8s ease, visibility 0.8s ease;
+        opacity: 0;
+    }
+
+    .all-info-text {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: flex-start;
+        align-content: center;
+        z-index: 3;
+        transition: opacity 0.8s ease, visibility 0.8s ease;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    /* first info image */
+    .first-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #415A77;
+        color: black;
+        font-size: 1.59vw;
+        height: 18%;
+        width: 78%;
+        position: relative;
+        left: 3%;
+        margin-top: 12px;
+        text-align: left;
+        padding: 15px;
+        border: 5px solid lightgrey;
+        border-radius: 20px;
+    }
+
+    .first-info-txt {
+        font-size: 1em;
+    }
+
+    /* second info image */
+    .second-info {
+        display: flex;
+        align-items: center;
+        background-color: #415A77;
+        position: relative;
+        font-size: 1.39vw;
+        left: 19%;
+        color: black;
+        height: 18%;
+        width: 78%;
+        margin-top: 12px;
+        text-align: center;
+        padding: 6px;
+        padding-left: 20px;
+        border: 5px solid lightgrey;
+        border-radius: 20px;
+    }
+
+    .second-info-content {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        font-size: 58%;
+    }
+
+    .second-info-txt {
+        width: 100%;
+        text-align: left;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .second-info-img {
+        height: 100%;
+        width: 12%;
+        background-color: rgb(255, 57, 57);
+        margin-right: 20px;
+        border: 3px solid black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .second-info-img-symbol {
+        font-size: 3.6vw;
+    }
+
+    .second-info-img-name {
+        font-size: 1.4vw;
+        font-weight: 600;
+        width: 100%;
+        margin-top: 2px;
+    }
+
+    .third-info {
+        display: flex;
+        align-items: center;
+        background-color: #415A77;
+        color: black;
+        position: relative;
+        font-size: 1.34vw;
+        left: 3%;
+        height: 18%;
+        width: 78%;
+        margin-top: 12px;
+        text-align: center;
+        padding: 6px;
+        padding-left: 20px;
+        border: 5px solid lightgrey;
+        border-radius: 20px;
+    }
+
+    .third-info-content {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        font-size: 58%;
+    }
+
+    .third-info-txt {
+        width: 100%;
+        text-align: left;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .third-info-img {
+        height: 100%;
+        width: 12%;
+        background-color: rgb(251, 255, 0);
+        margin-right: 20px;
+        border: 3px solid black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .third-info-img-symbol {
+        font-size: 3.6vw;
+    }
+
+    .third-info-img-name {
+        font-size: 1.4vw;
+        font-weight: 600;
+        width: 100%;
+        margin-top: 2px;
+    }
+
+
+    /* fourth info button  */
+    .button-fourth-info {
+        height: 18%;
+        margin-top: 13px;
+        display: flex;
+        position: relative;
+        left: 2%;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-content: center;
+        width: 100%;
+    }
+
+    .close-btn {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 2.5vw;
+        background-color: #E0E1DD;
+        border: 5px solid #0D1B2A;
+        width: 15.4%;
+        height: 50%;
+        margin-right: 5px;
+        border-radius: 10px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .close-btn-media {
+        display: none;
+    }
+
+    /* fourth info image */
+    .fourth-info {
+        display: flex;
+        align-items: center;
+        background-color: #415A77;
+        font-size: 1.36vw;
+        color: black;
+        position: relative;
+        left: 1%;
+        height: 100%;
+        width: 78%;
+        /* margin-right: 4%; */
+        text-align: center;
+        padding: 6px;
+        padding-left: 20px;
+        border: 5px solid lightgrey;
+        border-radius: 20px;
+    }
+
+    .fourth-info-content {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        font-size: 58%;
+    }
+
+    .fourth-info-txt {
+        width: 100%;
+        text-align: left;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .fourth-info-img {
+        height: 100%;
+        width: 14%;
+        background-color: #00eeff;
+        margin-right: 20px;
+        border: 3px solid black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .fourth-info-img-symbol {
+        font-size: 3.6vw;
+    }
+
+    .fourth-info-img-name {
+        font-size: 1.4vw;
+        font-weight: 600;
+        width: 100%;
+        margin-top: 2px;
+    }
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////// */
+@media (min-width:1400px) and (max-width:1536px) {
+
+    /* class fot he div containing both headings */
+    .heading-layout {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        border-bottom: 4px solid #E0E1DD;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        width: 100%;
+        height: 18%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* class for p tag of first heading */
+    .game-heading1 {
+        font-size: 7vw;
+        text-align: center;
+        color: #E0E1DD;
+        display: inline-block;
+    }
+
+    /* class for p tag of second heading */
+    .game-heading2 {
+        font-size: 3.4vw;
+        color: #E0E1DD;
+        display: inline-block;
+        align-self: flex-end;
+        margin-bottom: 5px;
+        margin-left: 10px;
+    }
+
+    /* class for div containing play and info buttons */
+    .button-layout {
+        display: flex;
+        position: absolute;
+        top: 49%;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        height: 28.5%;
+        width: 100vw;
+        z-index: 2;
+    }
+
+    /* class for div of play button */
+    .play-div {
+        display: flex;
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+    }
+
+    /* class for play button tag */
+    .play-button {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 4.6vw;
+        background-color: #E0E1DD;
+        border: 5px solid #0D1B2A;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    /* class for div of info button */
+    .info-div {
+        margin-top: 10px;
+        display: flex;
+        width: 50%;
+        height: 40%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .howToPlay-button {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 2.6vw;
+        background-color: #E0E1DD;
+        border: 5px solid #0D1B2A;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .background-div {
+        height: 82%;
+        width: 100%;
+        opacity: 1;
+    }
+
+    .upper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+    }
+
+    .lower {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+    }
+
+    /* first upper image */
+    .first-upper {
+        background-color: rgb(255, 57, 57);
+        font-size: 5.4vw;
         height: 100%;
         width: 12.5%;
         border: 3px solid black;
@@ -1704,14 +4586,14 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 40%;
+        font-size: 1.9vw;
         font-weight: 600;
     }
 
     /* second upper image */
     .second-upper {
         background-color: rgb(251, 255, 0);
-        font-size: 400%;
+        font-size: 5.4vw;
         height: 100%;
         width: 12.5%;
         border: 3px solid black;
@@ -1729,14 +4611,14 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 40%;
+        font-size: 1.9vw;
         font-weight: 600;
     }
 
     /* third upper image */
     .third-upper {
         background-color: #00eeff;
-        font-size: 400%;
+        font-size: 5.4vw;
         height: 100%;
         width: 12.5%;
         border: 3px solid black;
@@ -1754,18 +4636,19 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 40%;
+        font-size: 1.9vw;
         font-weight: 600;
     }
 
     /* fourth upper image */
     .fourth-upper {
         background-color: rgb(255, 57, 57);
-        font-size: 400%;
+        font-size: 5.4vw;
         height: 100%;
         width: 12.5%;
         border: 3px solid black;
         border-top: 6px solid black;
+        border-right: 6px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
         display: flex;
@@ -1779,18 +4662,20 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 40%;
+        font-size: 1.9vw;
         font-weight: 600;
     }
 
     /* fifth upper image */
     .fifth-upper {
         background-color: rgb(251, 255, 0);
-        font-size: 400%;
+        font-size: 5.4vw;
         height: 100%;
         width: 12.5%;
         border: 3px solid black;
         border-top: 6px solid black;
+        border-left: 0px solid black;
+        border-right: 3px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
         display: flex;
@@ -1804,18 +4689,20 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 40%;
+        font-size: 1.9vw;
         font-weight: 600;
     }
 
     /* sixth upper image */
     .sixth-upper {
         background-color: #00eeff;
-        font-size: 400%;
+        font-size: 5.4vw;
         height: 100%;
         width: 12.5%;
         border: 3px solid black;
         border-top: 6px solid black;
+        border-left: 3px solid black;
+        border-right: 3px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
         display: flex;
@@ -1829,18 +4716,19 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 40%;
+        font-size: 1.9vw;
         font-weight: 600;
     }
 
     /* seventh upper image */
     .seventh-upper {
         background-color: rgb(255, 57, 57);
-        font-size: 400%;
+        font-size: 5.4vw;
         height: 100%;
         width: 12.5%;
         border: 3px solid black;
         border-top: 6px solid black;
+        border-right: 3px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
         display: flex;
@@ -1854,19 +4742,20 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 40%;
+        font-size: 1.9vw;
         font-weight: 600;
     }
 
     /* eight upper image */
     .eigth-upper {
         background-color: rgb(251, 255, 0);
-        border-right: 6px solid black;
-        font-size: 400%;
+        font-size: 5.4vw;
         height: 100%;
         width: 12.5%;
         border: 3px solid black;
         border-top: 6px solid black;
+        border-left: 3px solid black;
+        border-right: 6px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
         display: flex;
@@ -1880,26 +4769,18 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 40%;
+        font-size: 1.9vw;
         font-weight: 600;
-    }
-
-    .lower {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        height: 50%;
-        width: 100%;
     }
 
     /* lower first image */
     .first-lower {
         background-color: rgb(251, 255, 0);
-        border-left: 6px solid black;
-        font-size: 400%;
+        font-size: 5.4vw;
         height: 100%;
         width: 12.5%;
         border: 3px solid black;
+        border-left: 6px solid black;
         border-bottom: 6px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
@@ -1914,14 +4795,14 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 40%;
+        font-size: 1.9vw;
         font-weight: 600;
     }
 
     /* lower second image */
     .second-lower {
         background-color: #00eeff;
-        font-size: 400%;
+        font-size: 5.4vw;
         height: 100%;
         width: 12.5%;
         border: 3px solid black;
@@ -1939,14 +4820,14 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 40%;
+        font-size: 1.9vw;
         font-weight: 600;
     }
 
     /* third lower image */
     .third-lower {
         background-color: rgb(255, 57, 57);
-        font-size: 400%;
+        font-size: 5.4vw;
         height: 100%;
         width: 12.5%;
         border: 3px solid black;
@@ -1964,17 +4845,18 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 40%;
+        font-size: 1.9vw;
         font-weight: 600;
     }
 
     /* fourth lower image */
     .fourth-lower {
         background-color: rgb(251, 255, 0);
-        font-size: 400%;
+        font-size: 5.4vw;
         height: 100%;
         width: 12.5%;
         border: 3px solid black;
+        border-right: 3px solid black;
         border-bottom: 6px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
@@ -1989,17 +4871,19 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 40%;
+        font-size: 1.9vw;
         font-weight: 600;
     }
 
     /* lower fifth image */
     .fifth-lower {
         background-color: #00eeff;
-        font-size: 400%;
+        font-size: 5.4vw;
         height: 100%;
         width: 12.5%;
         border: 3px solid black;
+        border-right: 3px solid black;
+        border-left: 3px solid black;
         border-bottom: 6px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
@@ -2014,18 +4898,19 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 40%;
+        font-size: 1.9vw;
         font-weight: 600;
     }
 
     /* lower sixth image */
     .sixth-lower {
         background-color: rgb(255, 57, 57);
-        font-size: 400%;
+        font-size: 5.4vw;
         height: 100%;
         width: 12.5%;
         border: 3px solid black;
         border-bottom: 6px solid black;
+        border-left: 3px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
         display: flex;
@@ -2039,18 +4924,19 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 40%;
+        font-size: 1.9vw;
         font-weight: 600;
     }
 
     /* lower seventh image */
     .seventh-lower {
         background-color: rgb(251, 255, 0);
-        font-size: 400%;
+        font-size: 5.4vw;
         height: 100%;
         width: 12.5%;
         border: 3px solid black;
         border-bottom: 6px solid black;
+        border-right: 3px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
         display: flex;
@@ -2064,40 +4950,41 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 40%;
+        font-size: 1.9vw;
         font-weight: 600;
     }
 
     /* lower eigth image */
     .eigth-lower {
         background-color: #00eeff;
-        border-right: 6px solid black;
-        font-size: 400%;
+        font-size: 5.4vw;
         height: 100%;
         width: 12.5%;
         border: 3px solid black;
+        border-right: 6px solid black;
         border-bottom: 6px solid black;
+        border-left: 3px solid black;
         opacity: 0.7;
         transition: all 0.8s ease;
         display: flex;
         flex-wrap: wrap;
         align-content: center;
         justify-content: center;
-        align-items: center;
+        align-items: center;    
     }
 
     .eigthlw-name {
         width: 100%;
         text-align: center;
         margin-top: 5px;
-        font-size: 40%;
+        font-size: 1.9vw;
         font-weight: 600;
     }
 
     .information {
         background-color: #0D1B2A;
         opacity: 0.9;
-        height: 80%;
+        height: 100%;
         width: 100%;
         position: absolute;
         z-index: 3;
@@ -2107,9 +4994,15 @@ body {
     }
 
     .all-info-text {
-        height: 80%;
+        height: 100%;
         width: 100%;
         position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: flex-start;
+        align-content: center;
         z-index: 3;
         transition: opacity 0.8s ease, visibility 0.8s ease;
         visibility: hidden;
@@ -2123,16 +5016,20 @@ body {
         align-items: center;
         background-color: #415A77;
         color: black;
-        font-size: 61%;
-        height: 20%;
-        left: 2%;
-        width: 72.6%;
+        font-size: 1.59vw;
+        height: 18%;
+        width: 78%;
         position: relative;
-        margin-top: 1.5%;
+        left: 3%;
+        margin-top: 12px;
         text-align: left;
-        padding: 1.5%;
+        padding: 15px;
         border: 5px solid lightgrey;
         border-radius: 20px;
+    }
+
+    .first-info-txt {
+        font-size: 1em;
     }
 
     /* second info image */
@@ -2140,15 +5037,16 @@ body {
         display: flex;
         align-items: center;
         background-color: #415A77;
-        color: black;
-        font-size: 61%;
-        height: 20%;
-        width: 72.6%;
         position: relative;
-        left: 25.4%;
-        margin-top: 1.2%;
+        font-size: 1.39vw;
+        left: 19%;
+        color: black;
+        height: 18%;
+        width: 78%;
+        margin-top: 12px;
         text-align: center;
-        padding: 1%;
+        padding: 6px;
+        padding-left: 20px;
         border: 5px solid lightgrey;
         border-radius: 20px;
     }
@@ -2158,10 +5056,11 @@ body {
         align-items: center;
         height: 100%;
         width: 100%;
+        font-size: 58%;
     }
 
     .second-info-txt {
-        width: 93.5%;
+        width: 100%;
         text-align: left;
         height: 100%;
         display: flex;
@@ -2169,10 +5068,10 @@ body {
     }
 
     .second-info-img {
-        height: 110%;
-        width: 6.7%;
+        height: 100%;
+        width: 10%;
         background-color: rgb(255, 57, 57);
-        margin-right: 2%;
+        margin-right: 20px;
         border: 3px solid black;
         border-radius: 10px;
         display: flex;
@@ -2183,14 +5082,13 @@ body {
     }
 
     .second-info-img-symbol {
-        font-size: 300%;
+        font-size: 3vw;
     }
 
     .second-info-img-name {
-        font-size: 130%;
+        font-size: 1.2vw;
         font-weight: 600;
         width: 100%;
-        text-align: center;
         margin-top: 2px;
     }
 
@@ -2199,14 +5097,15 @@ body {
         align-items: center;
         background-color: #415A77;
         color: black;
-        font-size: 61%;
-        height: 20%;
-        left: 2%;
-        width: 72.6%;
         position: relative;
-        margin-top: 1.2%;
-        text-align: left;
-        padding: 1%;
+        font-size: 1.34vw;
+        left: 3%;
+        height: 18%;
+        width: 78%;
+        margin-top: 12px;
+        text-align: center;
+        padding: 6px;
+        padding-left: 20px;
         border: 5px solid lightgrey;
         border-radius: 20px;
     }
@@ -2216,10 +5115,11 @@ body {
         align-items: center;
         height: 100%;
         width: 100%;
+        font-size: 58%;
     }
 
     .third-info-txt {
-        width: 93.5%;
+        width: 100%;
         text-align: left;
         height: 100%;
         display: flex;
@@ -2227,10 +5127,10 @@ body {
     }
 
     .third-info-img {
-        height: 110%;
-        width: 6.7%;
+        height: 100%;
+        width: 10%;
         background-color: rgb(251, 255, 0);
-        margin-right: 2%;
+        margin-right: 20px;
         border: 3px solid black;
         border-radius: 10px;
         display: flex;
@@ -2241,52 +5141,45 @@ body {
     }
 
     .third-info-img-symbol {
-        font-size: 300%;
+        font-size: 3vw;
     }
 
     .third-info-img-name {
-        font-size: 130%;
+        font-size: 1.2vw;
         font-weight: 600;
         width: 100%;
-        text-align: center;
         margin-top: 2px;
     }
 
 
     /* fourth info button  */
     .button-fourth-info {
-        height: 20%;
-        margin-top: 1.5%;
+        height: 18%;
+        margin-top: 13px;
         display: flex;
+        position: relative;
+        left: 2%;
         align-items: center;
         justify-content: flex-start;
-        margin-right: 0;
+        flex-wrap: wrap;
+        align-content: center;
         width: 100%;
-        justify-content: center;
     }
 
     .close-btn {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 200%;
+        font-size: 2.5vw;
         background-color: #E0E1DD;
-        border: 8px solid #0D1B2A;
-        width: 20%;
-        height: 55%;
+        border: 5px solid #0D1B2A;
+        width: 15.4%;
+        height: 50%;
+        margin-right: 5px;
         border-radius: 10px;
         transition: all 0.4s ease-in-out;
     }
 
     .close-btn-media {
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 150%;
         display: none;
-        background-color: #E0E1DD;
-        border: 8px solid #0D1B2A;
-        width: 50%;
-        height: 30%;
-        margin-top: 3%;
-        border-radius: 10px;
-        transition: all 0.4s ease-in-out;
     }
 
     /* fourth info image */
@@ -2294,15 +5187,16 @@ body {
         display: flex;
         align-items: center;
         background-color: #415A77;
+        font-size: 1.36vw;
         color: black;
-        font-size: 61%;
-        height: 100%;
-        width: 70%;
         position: relative;
-        margin-right:2.2%;
-        left: 4%;
+        left: 1%;
+        height: 100%;
+        width: 78%;
+        /* margin-right: 4%; */
         text-align: center;
-        padding: 1%;
+        padding: 6px;
+        padding-left: 20px;
         border: 5px solid lightgrey;
         border-radius: 20px;
     }
@@ -2312,10 +5206,11 @@ body {
         align-items: center;
         height: 100%;
         width: 100%;
+        font-size: 58%;
     }
 
     .fourth-info-txt {
-        width: 93.5%;
+        width: 100%;
         text-align: left;
         height: 100%;
         display: flex;
@@ -2323,10 +5218,10 @@ body {
     }
 
     .fourth-info-img {
-        height: 110%;
-        width: 6.7%;
+        height: 100%;
+        width: 11%;
         background-color: #00eeff;
-        margin-right: 2%;
+        margin-right: 20px;
         border: 3px solid black;
         border-radius: 10px;
         display: flex;
@@ -2337,15 +5232,13 @@ body {
     }
 
     .fourth-info-img-symbol {
-        font-size: 300%;
+        font-size: 3vw;
     }
 
     .fourth-info-img-name {
-        font-size: 130%;
+        font-size: 1.2vw;
         font-weight: 600;
         width: 100%;
-        text-align: center;
         margin-top: 2px;
     }
-
 }

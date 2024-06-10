@@ -72,7 +72,7 @@ let eigthlw=document.querySelector(".eigth-lower");
 
 playBtn.addEventListener("mouseover",()=>{
     playBtn.style.backgroundColor="#0D1B2A";
-    playBtn.style.border="8px solid #E0E1DD";
+    playBtn.style.border="6px solid #E0E1DD";
     playBtn.style.color="#E0E1DD";
 });
 
@@ -82,43 +82,43 @@ playBtn.addEventListener("click",()=>{
 
 playBtn.addEventListener("mouseout",()=>{
     playBtn.style.backgroundColor="#E0E1DD";
-    playBtn.style.border="8px solid #0D1B2A";
+    playBtn.style.border="6px solid #0D1B2A";
     playBtn.style.color="#0D1B2A";
 });
 
 closeBtn.addEventListener("mouseover",()=>{
     closeBtn.style.backgroundColor="#0D1B2A";
-    closeBtn.style.border="8px solid #E0E1DD";
+    closeBtn.style.border="5px solid #E0E1DD";
     closeBtn.style.color="#E0E1DD";
 });
 
 closeBtn.addEventListener("mouseout",()=>{
     closeBtn.style.backgroundColor="#E0E1DD";
-    closeBtn.style.border="8px solid #0D1B2A";
+    closeBtn.style.border="5px solid #0D1B2A";
     closeBtn.style.color="#0D1B2A";
 });
 
 closeBtnMedia.addEventListener("mouseover",()=>{
     closeBtnMedia.style.backgroundColor="#0D1B2A";
-    closeBtnMedia.style.border="8px solid #E0E1DD";
+    closeBtnMedia.style.border="5px solid #E0E1DD";
     closeBtnMedia.style.color="#E0E1DD";
 });
 
 closeBtnMedia.addEventListener("mouseout",()=>{
     closeBtnMedia.style.backgroundColor="#E0E1DD";
-    closeBtnMedia.style.border="8px solid #0D1B2A";
+    closeBtnMedia.style.border="5px solid #0D1B2A";
     closeBtnMedia.style.color="#0D1B2A";
 });
 
 infoBtn.addEventListener("mouseover",()=>{
     infoBtn.style.backgroundColor="#0D1B2A";
-    infoBtn.style.border="8px solid #E0E1DD";
+    infoBtn.style.border="6px solid #E0E1DD";
     infoBtn.style.color="#E0E1DD";
 });
 
 infoBtn.addEventListener("mouseout",()=>{
     infoBtn.style.backgroundColor="#E0E1DD";
-    infoBtn.style.border="8px solid #0D1B2A";
+    infoBtn.style.border="6px solid #0D1B2A";
     infoBtn.style.color="#0D1B2A";
 });
 
