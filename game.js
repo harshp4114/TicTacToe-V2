@@ -2,19 +2,23 @@
 let allBtn = document.querySelectorAll(".game-button");     //selecting all the buttons of game
 let resetBtn = document.querySelector(".reset-btn");        //selecting the reset button
 let powerPlayerO = document.querySelector(".playerO-power");        //selecting the power div element containing symbol and background for player-O
+let powerPlayerOMedia = document.querySelector(".playerO-power-media");
 let powerPlayerX = document.querySelector(".playerX-power");        //selecting the power div element containing symbol and background for player-X
 let powerOBtn = document.querySelector(".powerO-button");       //selecting the powerbutton for player-O
+let powerOBtnMedia = document.querySelector(".powerO-button-media");
 let powerXBtn = document.querySelector(".powerX-button");       //selecting the powerbutton for player-X
 let powerOSymbol = document.querySelector(".powerO-symbol");        //selecting the p tag for power symbol of player-O
+let powerOSymbolMedia = document.querySelector(".powerO-symbol-media");
 let powerXSymbol = document.querySelector(".powerX-symbol");        //selecting the p tag for power symbol of player-X
 let powerOName = document.querySelector(".powerO-Name");      //selecting power name p tag of player-O
+let powerONameMedia = document.querySelector(".powerO-Name-media");
 let powerXName = document.querySelector(".powerX-Name");      //selecting power name p tag of player-X
 let drawCountdown = document.querySelector(".draw-countdown"); //selecting p tag countdown heading
 let result = document.querySelector(".result");       //selecting p tag for result 
 let gameDraw = document.querySelector(".game-draw");    //selecting div containg all the game buttons
-let overlay=document.querySelector(".overlay");         //selecting div responsible for overlay in result
-let gameHeading=document.querySelector(".game-heading");       //selecting div containg result and countdown headings
-let homeBtn=document.querySelector(".home-btn");
+let overlay = document.querySelector(".overlay");         //selecting div responsible for overlay in result
+let gameHeading = document.querySelector(".game-heading");       //selecting div containg result and countdown headings
+let homeBtn = document.querySelector(".home-btn");
 let turnO = true;
 let first = 0, second = 1, third = 2, fourth = 3;
 let powers = ['<i class="fa-solid fa-shield-halved"></i>', '<i class="fa-solid fa-ban"></i>', '<i class="fa-solid fa-circle-minus"></i>'];
@@ -28,24 +32,31 @@ let num2 = 0;
 let powerO = false;
 let powerX = false;
 let powerONotAlloted = true;
+let powerONotAllotedMedia = true;
 let powerXNotAlloted = true;
 let playerOSkipInterval = 0;
 let playerXSkipInterval = 0;
 let skipRedPlayerO = true;
+let skipRedPlayerOMedia = true;
 let skipRedPlayerX = true;
 let shieldBluePlayerO = true;
+let shieldBluePlayerOMedia = true;
 let shieldBluePlayerX = true;
 let playerOShieldInterval = 0;
 let playerXShieldInterval = 0;
 let deleteYellowPlayerO = true;
+let deleteYellowPlayerOMedia = true;
 let deleteYellowPlayerX = true;
 let playerODeleteInterval = 0;
 let playerXDeleteInterval = 0;
 let playerOSkipUse = false;
+let playerOSkipUseMedia = false;
 let playerXSkipUse = false;
 let playerODeleteUse = false;
+let playerODeleteUseMedia = false;
 let playerXDeleteUse = false;
 let playerOShieldUse = false;
+let playerOShieldUseMedia = false;
 let playerXShieldUse = false;
 let time = 0;
 const startingSec = 10;
@@ -112,6 +123,18 @@ powerOBtn.addEventListener("mouseout", () => {
     powerOBtn.style.borderColor = "#E0E1DD";
 });
 
+powerOBtnMedia.addEventListener("mouseover", () => {
+    powerOBtnMedia.style.backgroundColor = "#E0E1DD";
+    powerOBtnMedia.style.color = "black";
+    powerOBtnMedia.style.borderColor = "black";
+});
+
+powerOBtnMedia.addEventListener("mouseout", () => {
+    powerOBtnMedia.style.backgroundColor = "#334057";
+    powerOBtnMedia.style.color = "#E0E1DD";
+    powerOBtnMedia.style.borderColor = "#E0E1DD";
+});
+
 resetBtn.addEventListener("mouseover", () => {
     resetBtn.style.backgroundColor = "#E0E1DD";
     resetBtn.style.color = "black";
@@ -136,18 +159,22 @@ homeBtn.addEventListener("mouseout", () => {
     homeBtn.style.borderColor = "#E0E1DD";
 });
 
-homeBtn.addEventListener("click",()=>{
-    window.location.href="index.html";
+homeBtn.addEventListener("click", () => {
+    window.location.href = "index.html";
 });
 
 //function to change background color when skip power is obtained player-O
 function callSkipRedPlayerO() {
-    if (skipRedPlayerO) {
+    if (skipRedPlayerO || skipRedPlayerOMedia) {
         skipRedPlayerO = false;
+        skipRedPlayerOMedia = false;
         powerPlayerO.style.backgroundColor = "rgb(255, 57, 57)";
+        powerPlayerOMedia.style.backgroundColor = "rgb(255, 57, 57)";
     } else {
         skipRedPlayerO = true;
+        skipRedPlayerOMedia = true;
         powerPlayerO.style.backgroundColor = "#778DA9";
+        powerPlayerOMedia.style.backgroundColor = "#778DA9";
     }
 }
 
@@ -164,12 +191,16 @@ function callSkipRedPlayerX() {
 
 //function to change background color when shield power is obtained player-O
 function callShieldBluePlayerO() {
-    if (shieldBluePlayerO) {
+    if (shieldBluePlayerO || shieldBluePlayerOMedia) {
         shieldBluePlayerO = false;
-        powerPlayerO.style.backgroundColor = "#00eeff"
+        shieldBluePlayerOMedia = false;
+        powerPlayerO.style.backgroundColor = "#00eeff";
+        powerPlayerOMedia.style.backgroundColor = "#00eeff";
     } else {
         shieldBluePlayerO = true;
+        shieldBluePlayerOMedia = true;
         powerPlayerO.style.backgroundColor = "#778DA9";
+        powerPlayerOMedia.style.backgroundColor = "#778DA9";
     }
 }
 
@@ -177,7 +208,7 @@ function callShieldBluePlayerO() {
 function callShieldBluePlayerX() {
     if (shieldBluePlayerX) {
         shieldBluePlayerX = false;
-        powerPlayerX.style.backgroundColor = "#00eeff"
+        powerPlayerX.style.backgroundColor = "#00eeff";
     } else {
         shieldBluePlayerX = true;
         powerPlayerX.style.backgroundColor = "#778DA9";
@@ -186,12 +217,16 @@ function callShieldBluePlayerX() {
 
 //function to change background color when delete power is obtained player-O
 function callDeleteYellowPlayerO() {
-    if (deleteYellowPlayerO) {
+    if (deleteYellowPlayerO || deleteYellowPlayerOMedia) {
         deleteYellowPlayerO = false;
-        powerPlayerO.style.backgroundColor = "rgb(251, 255, 0)"
+        deleteYellowPlayerOMedia = false;
+        powerPlayerO.style.backgroundColor = "rgb(251, 255, 0)";
+        powerPlayerOMedia.style.backgroundColor = "rgb(251, 255, 0)";
     } else {
         deleteYellowPlayerO = true;
+        deleteYellowPlayerOMedia = true;
         powerPlayerO.style.backgroundColor = "#778DA9";
+        powerPlayerOMedia.style.backgroundColor = "#778DA9";
     }
 }
 
@@ -221,39 +256,51 @@ resetBtn.addEventListener("click", () => {
     powerO = false;
     powerX = false;
     powerONotAlloted = true;
+    powerONotAllotedMedia = true;
     powerXNotAlloted = true;
     playerOSkipInterval = 0;
     playerXSkipInterval = 0;
     skipRedPlayerO = true;
+    skipRedPlayerOMedia = true;
     skipRedPlayerX = true;
     shieldBluePlayerO = true;
+    shieldBluePlayerOMedia = true;
     shieldBluePlayerX = true;
     playerOShieldInterval = 0;
     playerXShieldInterval = 0;
     deleteYellowPlayerO = true;
+    deleteYellowPlayerOMedia = true;
     deleteYellowPlayerX = true;
     playerODeleteInterval = 0;
     playerXDeleteInterval = 0;
     playerOSkipUse = false;
+    playerOSkipUseMedia = false;
     playerXSkipUse = false;
     playerODeleteUse = false;
+    playerODeleteUseMedia = false;
     playerXDeleteUse = false;
     playerOShieldUse = false;
+    playerOShieldUseMedia = false;
     playerXShieldUse = false;
     time = 0;
     countDownIntervalID = 0;
     checkResultIntervalID = 0;
-    homeBtn.style.display="inline-block";
+    homeBtn.style.display = "inline-block";
     powerOSymbol.innerText = "Score a point to gain a power-up";
+    powerOSymbolMedia.innerText = "Score a point to gain a power-up";
     powerXSymbol.innerText = "Score a point to gain a power-up";
     powerOSymbol.style.margin = "0px";
+    powerOSymbolMedia.style.margin = "0px";
     powerXSymbol.style.margin = "0px";
-    powerOSymbol.style.fontSize = "32px";
-    powerXSymbol.style.fontSize = "32px";
+    powerOSymbol.style.fontSize = "20px";
+    powerOSymbolMedia.style.fontSize = "20px";
+    powerXSymbol.style.fontSize = "20px";
     powerOName.innerText = "";
+    powerONameMedia.innerText = "";
     powerXName.innerText = "";
     powerPlayerX.style.backgroundColor = "#778DA9";
     powerPlayerO.style.backgroundColor = "#778DA9";
+    powerPlayerOMedia.style.backgroundColor = "#778DA9";
     turnO = true;
     for (let btn of allBtn) {       //reserting all the game buttons
         btn.innerText = "";
@@ -267,6 +314,7 @@ resetBtn.addEventListener("click", () => {
 //implementing power button of player-O 
 powerOBtn.addEventListener("click", () => {
     powerONotAlloted = true;    //to prevent new power allocation when previous one is not used
+    powerONotAllotedMedia = true;
     let currentPower = powerOName.innerText;
 
     if (currentPower == "SKIP") {
@@ -275,7 +323,7 @@ powerOBtn.addEventListener("click", () => {
         powerOName.innerText = "";
         powerOSymbol.innerText = "Score a point to gain a power-up";
         powerOSymbol.style.margin = "0px";
-        powerOSymbol.style.fontSize = "32px";
+        powerOSymbol.style.fontSize = "20px";
         powerPlayerO.style.backgroundColor = "#778DA9";
     } else if (currentPower == "DELETE") {
         let num = 0;
@@ -290,7 +338,7 @@ powerOBtn.addEventListener("click", () => {
             powerOName.innerText = "";
             powerOSymbol.innerText = "Score a point to gain a power-up";
             powerOSymbol.style.margin = "0px";
-            powerOSymbol.style.fontSize = "32px";
+            powerOSymbol.style.fontSize = "20px";
             powerPlayerO.style.backgroundColor = "#778DA9";
             for (let singleBtn of allBtn) {
                 singleBtn.disabled = false;
@@ -325,7 +373,7 @@ powerOBtn.addEventListener("click", () => {
             powerOName.innerText = "";
             powerOSymbol.innerText = "Score a point to gain a power-up";
             powerOSymbol.style.margin = "0px";
-            powerOSymbol.style.fontSize = "32px";
+            powerOSymbol.style.fontSize = "20px";
             powerPlayerO.style.backgroundColor = "#778DA9";
             for (let singleBtn of allBtn) {
                 singleBtn.disabled = false;
@@ -351,6 +399,95 @@ powerOBtn.addEventListener("click", () => {
 
 });
 
+powerOBtnMedia.addEventListener("click", () => {
+    powerONotAlloted = true;    //to prevent new power allocation when previous one is not used
+    powerONotAllotedMedia = true;
+    let currentPower = powerONameMedia.innerText;
+
+    if (currentPower == "SKIP") {
+        clearInterval(playerOSkipInterval);
+        playerOSkipUse = true;
+        playerOSkipUseMedia = true;
+        powerONameMedia.innerText = "";
+        powerOSymbolMedia.innerText = "Score a point to gain a power-up";
+        powerOSymbolMedia.style.margin = "0px";
+        powerOSymbolMedia.style.fontSize = "20px";
+        powerPlayerOMedia.style.backgroundColor = "#778DA9";
+    } else if (currentPower == "DELETE") {
+        let num = 0;
+        for (let a of allBtn) {
+            if (a.innerText == "X") {
+                num++;
+            }
+        }
+        if (num) {
+            clearInterval(playerODeleteInterval);
+            playerODeleteUseMedia = true;
+            powerONameMedia.innerText = "";
+            powerOSymbolMedia.innerText = "Score a point to gain a power-up";
+            powerOSymbolMedia.style.margin = "0px";
+            powerOSymbolMedia.style.fontSize = "20px";
+            powerPlayerOMedia.style.backgroundColor = "#778DA9";
+            for (let singleBtn of allBtn) {
+                singleBtn.disabled = false;
+            }
+        } else {
+            for (let all of allBtn) {
+                if (all.innerText == "" || all.innerText == "O") {
+                    all.style.transition = "all 1s ease-in-out";
+                    all.style.backgroundColor = "red";
+                }
+            }
+            setTimeout(() => {
+                for (let all of allBtn) {
+                    if (all.innerText == "" || all.innerText == "O") {
+                        all.style.transition = "none";
+                        all.style.backgroundColor = "#E0E1DD";
+                    }
+                }
+            }, 1000);
+        }
+
+    } else if (currentPower == "SHIELD") {
+        let num = 0;
+        for (let all of allBtn) {
+            if (all.innerText == "O") {
+                num++;
+            }
+        }
+        if (num) {
+            clearInterval(playerOShieldInterval);
+            playerOShieldUseMedia = true;
+            powerONameMedia.innerText = "";
+            powerOSymbolMedia.innerText = "Score a point to gain a power-up";
+            powerOSymbolMedia.style.margin = "0px";
+            powerOSymbolMedia.style.fontSize = "20px";
+            powerPlayerOMedia.style.backgroundColor = "#778DA9";
+            for (let singleBtn of allBtn) {
+                singleBtn.disabled = false;
+            }
+        } else {
+            for (let all of allBtn) {
+                if (all.innerText == "" || all.innerText == "X") {
+                    all.style.transition = "all 1s ease-in-out";
+                    all.style.backgroundColor = "red";
+                }
+            }
+            setTimeout(() => {
+                for (let all of allBtn) {
+                    if (all.innerText == "" || all.innerText == "X") {
+                        all.style.transition = "none";
+                        all.style.backgroundColor = "#E0E1DD";
+                    }
+                }
+            }, 1000);
+        }
+
+    }
+
+});
+
+
 //implementing power button of player-X
 powerXBtn.addEventListener("click", () => {
     powerXNotAlloted = true;    //to prevent new power allocation when previous one is not used
@@ -362,7 +499,7 @@ powerXBtn.addEventListener("click", () => {
         powerXName.innerText = "";
         powerXSymbol.innerText = "Score a point to gain a power-up";
         powerXSymbol.style.margin = "0px";
-        powerXSymbol.style.fontSize = "32px";
+        powerXSymbol.style.fontSize = "20px";
         powerPlayerX.style.backgroundColor = "#778DA9";
     } else if (currentPower == "DELETE") {
         let num = 0;
@@ -377,7 +514,7 @@ powerXBtn.addEventListener("click", () => {
             powerXName.innerText = "";
             powerXSymbol.innerText = "Score a point to gain a power-up";
             powerXSymbol.style.margin = "0px";
-            powerXSymbol.style.fontSize = "32px";
+            powerXSymbol.style.fontSize = "20px";
             powerPlayerX.style.backgroundColor = "#778DA9";
             for (let singleBtn of allBtn) {
                 singleBtn.disabled = false;
@@ -412,7 +549,7 @@ powerXBtn.addEventListener("click", () => {
             powerXName.innerText = "";
             powerXSymbol.innerText = "Score a point to gain a power-up";
             powerXSymbol.style.margin = "0px";
-            powerXSymbol.style.fontSize = "32px";
+            powerXSymbol.style.fontSize = "20px";
             powerPlayerX.style.backgroundColor = "#778DA9";
             for (let singleBtn of allBtn) {
                 singleBtn.disabled = false;
@@ -464,26 +601,34 @@ function countDown() {
         powerO = false;
         powerX = false;
         powerONotAlloted = true;
+        powerONotAllotedMedia = true;
         powerXNotAlloted = true;
         playerOSkipInterval = 0;
         playerXSkipInterval = 0;
         skipRedPlayerO = true;
+        skipRedPlayerOMedia = true;
         skipRedPlayerX = true;
         shieldBluePlayerO = true;
+        shieldBluePlayerOMedia = true;
         shieldBluePlayerX = true;
         playerOShieldInterval = 0;
         playerXShieldInterval = 0;
         deleteYellowPlayerO = true;
+        deleteYellowPlayerOMedia = true;
         deleteYellowPlayerX = true;
         powerOBtn.disabled = false;
+        powerOBtnMedia.disabled = false;
         powerXBtn.disabled = false;
         playerODeleteInterval = 0;
         playerXDeleteInterval = 0;
         playerOSkipUse = false;
+        playerOSkipUseMedia = false;
         playerXSkipUse = false;
         playerODeleteUse = false;
+        playerODeleteUseMedia = false;
         playerXDeleteUse = false;
         playerOShieldUse = false;
+        playerOShieldUseMedia = false;
         playerXShieldUse = false;
         time = 0;
         countDownIntervalID = 0;
@@ -491,28 +636,33 @@ function countDown() {
         gameDraw.style.marginTop = "1%";
         gameDraw.style.marginBottom = "0.7%";
         powerOSymbol.innerText = "Score a point to gain a power-up";
+        powerOSymbolMedia.innerText = "Score a point to gain a power-up";
         powerXSymbol.innerText = "Score a point to gain a power-up";
+        powerOSymbolMedia.style.margin = "0px";
         powerOSymbol.style.margin = "0px";
         powerXSymbol.style.margin = "0px";
-        powerOSymbol.style.fontSize = "32px";
-        powerXSymbol.style.fontSize = "32px";
+        powerOSymbolMedia.style.fontSize = "20px";
+        powerOSymbol.style.fontSize = "20px";
+        powerXSymbol.style.fontSize = "20px";
         powerOName.innerText = "";
+        powerONameMedia.innerText = "";
         powerXName.innerText = "";
         powerPlayerX.style.backgroundColor = "#778DA9";
         powerPlayerO.style.backgroundColor = "#778DA9";
+        powerPlayerOMedia.style.backgroundColor = "#778DA9";
         turnO = true;
         result.innerText = "";
         drawCountdown.innerText = "";
         resetBtn.style.display = "inline-block";
-        overlay.style.visibility="hidden";
-        gameHeading.style.visibility="hidden";
-        drawCountdown.style.visibility="hidden";
-        result.style.visibility="hidden";
-        overlay.style.opacity="0";
-        gameHeading.style.opacity="0";
-        drawCountdown.style.opacity="0";
-        result.style.opacity="0";
-        homeBtn.style.display="inline-block";
+        overlay.style.visibility = "hidden";
+        gameHeading.style.visibility = "hidden";
+        drawCountdown.style.visibility = "hidden";
+        result.style.visibility = "hidden";
+        overlay.style.opacity = "0";
+        gameHeading.style.opacity = "0";
+        drawCountdown.style.opacity = "0";
+        result.style.opacity = "0";
+        homeBtn.style.display = "inline-block";
         for (let btn of allBtn) {
             btn.innerText = "";
             btn.style.backgroundColor = "#E0E1DD";
@@ -534,14 +684,14 @@ function checkDraw() {
         resetBtn.style.display = "none";
         gameDraw.style.marginTop = "10px";
         gameDraw.style.marginBottom = "0%";
-        overlay.style.visibility="visible";
-        gameHeading.style.visibility="visible";
-        drawCountdown.style.visibility="visible";
-        result.style.visibility="visible";
-        overlay.style.opacity="0.7";
-        gameHeading.style.opacity="1";
-        drawCountdown.style.opacity="1";
-        result.style.opacity="1";
+        overlay.style.visibility = "visible";
+        gameHeading.style.visibility = "visible";
+        drawCountdown.style.visibility = "visible";
+        result.style.visibility = "visible";
+        overlay.style.opacity = "0.7";
+        gameHeading.style.opacity = "1";
+        drawCountdown.style.opacity = "1";
+        result.style.opacity = "1";
         result.innerText = "Game resulted in a draw";
         drawCountdown.innerText = `Game restarts in 10 seconds`;
     } else if (pointO > pointX) {
@@ -549,14 +699,14 @@ function checkDraw() {
         countDownIntervalID = setInterval(countDown, 1000);
         resetBtn.style.display = "none";
         gameDraw.style.marginTop = "10px";
-        overlay.style.visibility="visible";
-        gameHeading.style.visibility="visible";
-        drawCountdown.style.visibility="visible";
-        result.style.visibility="visible";
-        overlay.style.opacity="0.7";
-        gameHeading.style.opacity="1";
-        drawCountdown.style.opacity="1";
-        result.style.opacity="1";
+        overlay.style.visibility = "visible";
+        gameHeading.style.visibility = "visible";
+        drawCountdown.style.visibility = "visible";
+        result.style.visibility = "visible";
+        overlay.style.opacity = "0.7";
+        gameHeading.style.opacity = "1";
+        drawCountdown.style.opacity = "1";
+        result.style.opacity = "1";
         gameDraw.style.marginBottom = "0%";
         result.innerText = `Player-1 wins the game by ${pointO - pointX} points`;
         drawCountdown.innerText = `Game restarts in 10 seconds`;
@@ -565,27 +715,29 @@ function checkDraw() {
         countDownIntervalID = setInterval(countDown, 1000);
         resetBtn.style.display = "none";
         gameDraw.style.marginBottom = "0%";
-        overlay.style.visibility="visible";
-        gameHeading.style.visibility="visible";
-        drawCountdown.style.visibility="visible";
-        result.style.visibility="visible";
-        overlay.style.opacity="0.7";
-        gameHeading.style.opacity="1";
-        drawCountdown.style.opacity="1";
-        result.style.opacity="1";
+        overlay.style.visibility = "visible";
+        gameHeading.style.visibility = "visible";
+        drawCountdown.style.visibility = "visible";
+        result.style.visibility = "visible";
+        overlay.style.opacity = "0.7";
+        gameHeading.style.opacity = "1";
+        drawCountdown.style.opacity = "1";
+        result.style.opacity = "1";
         gameDraw.style.marginTop = "10px";
         result.innerText = `Player-2 wins the game by ${pointX - pointO} points`;
         drawCountdown.innerText = `Game restarts in 10 seconds`;
     }
 }
 
-
 //displaying O and X when a button is clicked
 for (let btn of allBtn) {
+    btn.addEventListener('dblclick', function (event) {
+        event.preventDefault(); // Prevent the default action of double-click
+    });
     btn.addEventListener("click", () => {
-        homeBtn.style.display="none";
+        homeBtn.style.display = "none";
         if (turnO) {
-            if (playerODeleteUse) {
+            if (playerODeleteUse || playerODeleteUseMedia) {
                 let txt = btn.innerText;
                 if (btn.innerHTML == `<span class="shield">${txt}</span>`) {
                     shieldAlert(btn);
@@ -593,6 +745,7 @@ for (let btn of allBtn) {
                     redAlert(btn);
                 } else if (btn.innerText == "X") {
                     playerODeleteUse = false;
+                    playerODeleteUseMedia = false;
                     btn.style.transition = "all 0.5s ease-in-out";
                     btn.style.color = "#E0E1DD";
                     setTimeout(() => {
@@ -612,7 +765,7 @@ for (let btn of allBtn) {
                 btn.innerText = "X";
                 playerXSkipUse = false;
                 btn.disabled = true;
-            } else if (playerOShieldUse) {
+            } else if (playerOShieldUse || playerOShieldUseMedia) {
                 if (btn.innerText != "O") {
                     redAlert(btn);
                 } else if (btn.innerText == "O") {
@@ -620,6 +773,7 @@ for (let btn of allBtn) {
                     btn.innerHTML = `<span class="shield">${html}</span>`;
                     btn.disabled = true;
                     playerOShieldUse = false;
+                    playerOShieldUseMedia = false;
                     for (let singleBtn of allBtn) {
                         if (singleBtn.innerText != "") {
                             singleBtn.disabled = true;
@@ -654,10 +808,11 @@ for (let btn of allBtn) {
                         }
                     }
                 }
-            } else if (playerOSkipUse) {   //adding skip functionality
+            } else if (playerOSkipUse || playerOSkipUseMedia) {   //adding skip functionality
                 turnO = false;
                 btn.innerText = "O";
                 playerOSkipUse = false;
+                playerOSkipUseMedia = false;
                 btn.disabled = true;
             } else if (playerXShieldUse) {
                 if (btn.innerText != "X") {
@@ -690,8 +845,9 @@ for (let btn of allBtn) {
 
         } else {
             powerOBtn.disabled = true;
+            powerOBtnMedia.disabled = true;
             powerXBtn.disabled = true;
-            
+
             checkDraw();
         }
     })
@@ -701,8 +857,9 @@ for (let btn of allBtn) {
 //initializing power when player scores a point
 function powerStore() {
 
-    if (powerO && powerONotAlloted) {
+    if (powerO && powerONotAlloted && powerONotAllotedMedia) {
         powerONotAlloted = false;
+        powerONotAllotedMedia = false;
         let randomPower = Math.floor(Math.random() * 3);
         while (num1 == randomPower && num2 == randomPower) {
             randomPower = Math.floor(Math.random() * 3);
@@ -710,18 +867,23 @@ function powerStore() {
         num1 = randomPower;
         let onePower = powers[randomPower];
         powerOSymbol.innerHTML = onePower;
-        powerOSymbol.style.fontSize = "90px";
-        powerOSymbol.style.marginLeft = "80px";
-        powerOSymbol.style.marginRight = "80px";
+        powerOSymbol.style.fontSize = "65px";
+        powerOSymbol.style.marginLeft = "auto";
+        powerOSymbol.style.marginRight = "auto";
+        powerOSymbolMedia.innerHTML = onePower;
+        powerOSymbolMedia.style.fontSize = "65px";
+        powerOSymbolMedia.style.marginLeft = "auto";
+        powerOSymbolMedia.style.marginRight = "auto";
         powerOName.innerText = powerNames[randomPower];
+        powerONameMedia.innerText = powerNames[randomPower];
         powerO = false;
-        if (powerOName.innerText == "SKIP") {
+        if (powerOName.innerText == "SKIP" || powerONameMedia.innerText == "SKIP") {
             callSkipRedPlayerO();
             playerOSkipInterval = setInterval(callSkipRedPlayerO, 1000);
-        } else if (powerOName.innerText == "SHIELD") {
+        } else if (powerOName.innerText == "SHIELD" || powerONameMedia.innerText == "SHIELD") {
             callShieldBluePlayerO();
             playerOShieldInterval = setInterval(callShieldBluePlayerO, 1000);
-        } else if (powerOName.innerText == "DELETE") {
+        } else if (powerOName.innerText == "DELETE" || powerONameMedia.innerText == "DELETE") {
             callDeleteYellowPlayerO();
             playerODeleteInterval = setInterval(callDeleteYellowPlayerO, 1000);
         }
@@ -734,7 +896,7 @@ function powerStore() {
         num2 = randomPower;
         let onePower = powers[randomPower];
         powerXSymbol.innerHTML = onePower;
-        powerXSymbol.style.fontSize = "90px";
+        powerXSymbol.style.fontSize = "65px";
         powerXSymbol.style.marginLeft = "80px";
         powerXSymbol.style.marginRight = "80px";
         powerXName.innerText = powerNames[randomPower];
@@ -777,10 +939,10 @@ function gameLogic() {
                         allBtn[patterns[i][third]].style.color = "#E0E1DD";
                         allBtn[patterns[i][fourth]].style.color = "#E0E1DD";
                         let colour = findColour(patterns[i][first]);
-                        allBtn[patterns[i][first]].style.border = `5px solid ${colour}`;
-                        allBtn[patterns[i][second]].style.border = `5px solid ${colour}`;
-                        allBtn[patterns[i][third]].style.border = `5px solid ${colour}`;
-                        allBtn[patterns[i][fourth]].style.border = `5px solid ${colour}`;
+                        allBtn[patterns[i][first]].style.border = `4px solid ${colour}`;
+                        allBtn[patterns[i][second]].style.border = `4px solid ${colour}`;
+                        allBtn[patterns[i][third]].style.border = `4px solid ${colour}`;
+                        allBtn[patterns[i][fourth]].style.border = `4px solid ${colour}`;
 
                     } else if (allBtn[patterns[i][first]].innerText == "X") {
                         powerX = true;
@@ -799,10 +961,10 @@ function gameLogic() {
                         allBtn[patterns[i][third]].style.color = "#E0E1DD";
                         allBtn[patterns[i][fourth]].style.color = "#E0E1DD";
                         let colour = findColour(patterns[i][first]);
-                        allBtn[patterns[i][first]].style.border = `5px solid ${colour}`;
-                        allBtn[patterns[i][second]].style.border = `5px solid ${colour}`;
-                        allBtn[patterns[i][third]].style.border = `5px solid ${colour}`;
-                        allBtn[patterns[i][fourth]].style.border = `5px solid ${colour}`;
+                        allBtn[patterns[i][first]].style.border = `4px solid ${colour}`;
+                        allBtn[patterns[i][second]].style.border = `4px solid ${colour}`;
+                        allBtn[patterns[i][third]].style.border = `4px solid ${colour}`;
+                        allBtn[patterns[i][fourth]].style.border = `4px solid ${colour}`;
                     }
                 } else {
 
@@ -812,35 +974,60 @@ function gameLogic() {
     }
 }
 
+function adjustHeight() {
+    const container = document.querySelector('.container-2');
+    const width = container.clientWidth; // Directly get the client width
+    container.style.height = `${width}px`; // Set height to be equal to the width
+    console.log(`width: ${width}px`);
+    console.log(`height: ${container.style.height}`);
+}
+
+// Adjust the height on load and when the window is resized
+window.addEventListener('load', adjustHeight);
+window.addEventListener('resize', adjustHeight);
+
+
 //function to show particular player's turn using borders around power grid
 function playerTurn() {
     if (turnO && playerXSkipUse) {
-        powerPlayerX.style.border = "10px solid white";
+        powerPlayerX.style.border = "6.5px solid white";
         powerPlayerX.style.borderRadius = "5px";
         powerPlayerO.style.border = "none";
         powerPlayerO.style.borderRadius = "0px";
+        powerPlayerOMedia.style.border = "none";
+        powerPlayerOMedia.style.borderRadius = "0px";
         powerOBtn.disabled = true;
+        powerOBtnMedia.disabled = true;
         powerXBtn.disabled = false;
     } else if (turnO && !playerXSkipUse) {
         powerPlayerX.style.border = "none";
         powerPlayerX.style.borderRadius = "0px";
-        powerPlayerO.style.border = "10px solid white";
+        powerPlayerO.style.border = "6.5px solid white";
         powerPlayerO.style.borderRadius = "5px";
+        powerPlayerOMedia.style.border = "6.5px solid white";
+        powerPlayerOMedia.style.borderRadius = "5px";
         powerOBtn.disabled = false;
+        powerOBtnMedia.disabled = false;
         powerXBtn.disabled = true;
-    } else if (!turnO && playerOSkipUse) {
+    } else if (!turnO && (playerOSkipUse || playerOSkipUseMedia)) {
         powerPlayerX.style.border = "none";
         powerPlayerX.style.borderRadius = "0px";
-        powerPlayerO.style.border = "10px solid white";
+        powerPlayerO.style.border = "6.5px solid white";
         powerPlayerO.style.borderRadius = "5px";
+        powerPlayerOMedia.style.border = "6.5px solid white";
+        powerPlayerOMedia.style.borderRadius = "5px";
         powerOBtn.disabled = false;
+        powerOBtnMedia.disabled = false;
         powerXBtn.disabled = true;
-    } else if (!turnO && !playerOSkipUse) {
-        powerPlayerX.style.border = "10px solid white";
+    } else if (!turnO && !(playerOSkipUse || playerOSkipUseMedia)) {
+        powerPlayerX.style.border = "6.5px solid white";
         powerPlayerX.style.borderRadius = "5px";
         powerPlayerO.style.border = "none";
         powerPlayerO.style.borderRadius = "0px";
+        powerPlayerOMedia.style.border = "none";
+        powerPlayerOMedia.style.borderRadius = "0px";
         powerOBtn.disabled = true;
+        powerOBtnMedia.disabled = true;
         powerXBtn.disabled = false;
     }
 }
@@ -851,14 +1038,23 @@ setInterval(playerTurn, 1);
 //function to show red alert tiles for delete and update powers
 function redAlert(btn) {
     btn.style.transition = "all 0.4s ease-in-out";
-    let bordr = btn.style.border;
-    let clr = btn.style.backgroundColor;
+    let bordr;
+    let clr;
+    if (btn.style.backgroundColor != "red" && btn.style.borderColor != "red") {
+        clr = btn.style.backgroundColor;
+        bordr = btn.style.border;
+    }
     btn.style.borderColor = "red";
     btn.style.backgroundColor = "red";
-    let temp = btn.innerText;
+    let temp;
+    if (btn.innerText != "") {
+        temp = btn.innerText;
+    }
     btn.innerText = "";
     setTimeout(() => {
-        btn.innerText = temp;
+        if(temp!=undefined){
+            btn.innerText = temp;
+        }
         btn.style.border = bordr;
         btn.style.backgroundColor = clr;
         btn.style.transition = "none";
