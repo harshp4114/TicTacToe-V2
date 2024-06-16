@@ -12,7 +12,7 @@ body {
     background-color: #0D1B2A;
     height: 100%;
     width: 100%;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 /* the outermost div of the game */
@@ -398,7 +398,7 @@ body {
         align-items: center;
         align-content: center;
         flex-wrap: wrap;
-        /* overflow: hidden; */
+        overflow: hidden;
     }
 
     /* the outermost div of the game */
@@ -407,7 +407,6 @@ body {
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: stretch;
-        background-color: yellow;
         align-items: center;
         align-content: center;
         width: 100%;
@@ -786,6 +785,7 @@ body {
         align-items: center;
         align-content: center;
         flex-wrap: wrap;
+        overflow: hidden;
     }
 
     /* the outermost div of the game */
