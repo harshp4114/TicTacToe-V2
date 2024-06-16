@@ -1,6 +1,7 @@
 //teleport,timetravel
 let allBtn = document.querySelectorAll(".game-button");     //selecting all the buttons of game
 let resetBtn = document.querySelector(".reset-btn");        //selecting the reset button
+let resetBtnMedia = document.querySelector(".reset-btn-media");
 let powerPlayerO = document.querySelector(".playerO-power");        //selecting the power div element containing symbol and background for player-O
 let powerPlayerOMedia = document.querySelector(".playerO-power-media");
 let powerPlayerX = document.querySelector(".playerX-power");        //selecting the power div element containing symbol and background for player-X
@@ -19,6 +20,7 @@ let gameDraw = document.querySelector(".game-draw");    //selecting div containg
 let overlay = document.querySelector(".overlay");         //selecting div responsible for overlay in result
 let gameHeading = document.querySelector(".game-heading");       //selecting div containg result and countdown headings
 let homeBtn = document.querySelector(".home-btn");
+let homeBtnMedia = document.querySelector(".home-btn-media");
 let turnO = true;
 let first = 0, second = 1, third = 2, fourth = 3;
 let powers = ['<i class="fa-solid fa-shield-halved"></i>', '<i class="fa-solid fa-ban"></i>', '<i class="fa-solid fa-circle-minus"></i>'];
@@ -97,7 +99,6 @@ function findColour(i) {
     }
 }
 
-
 //changing the color of button when hovered
 powerXBtn.addEventListener("mouseover", () => {
     powerXBtn.style.backgroundColor = "#E0E1DD";
@@ -160,6 +161,34 @@ homeBtn.addEventListener("mouseout", () => {
 });
 
 homeBtn.addEventListener("click", () => {
+    window.location.href = "index.html";
+});
+
+resetBtnMedia.addEventListener("mouseover", () => {
+    resetBtnMedia.style.backgroundColor = "#E0E1DD";
+    resetBtnMedia.style.color = "black";
+    resetBtnMedia.style.borderColor = "black";
+});
+
+resetBtnMedia.addEventListener("mouseout", () => {
+    resetBtnMedia.style.backgroundColor = "#334057";
+    resetBtnMedia.style.color = "#E0E1DD";
+    resetBtnMedia.style.borderColor = "#E0E1DD";
+});
+
+homeBtnMedia.addEventListener("mouseover", () => {
+    homeBtnMedia.style.backgroundColor = "#E0E1DD";
+    homeBtnMedia.style.color = "black";
+    homeBtnMedia.style.borderColor = "black";
+});
+
+homeBtnMedia.addEventListener("mouseout", () => {
+    homeBtnMedia.style.backgroundColor = "#334057";
+    homeBtnMedia.style.color = "#E0E1DD";
+    homeBtnMedia.style.borderColor = "#E0E1DD";
+});
+
+homeBtnMedia.addEventListener("click", () => {
     window.location.href = "index.html";
 });
 
@@ -311,6 +340,75 @@ resetBtn.addEventListener("click", () => {
     }
 });
 
+resetBtnMedia.addEventListener("click", () => {
+    pointO = 0;
+    pointX = 0;
+    num1 = 0;
+    num2 = 0;
+    clearInterval(playerOSkipInterval);         //stopping the blinking red, yellow, blue color shown for power-ups
+    clearInterval(playerOShieldInterval);       //stopping the blinking red, yellow, blue color shown for power-ups
+    clearInterval(playerODeleteInterval);       //stopping the blinking red, yellow, blue color shown for power-ups
+    clearInterval(playerXSkipInterval);         //stopping the blinking red, yellow, blue color shown for power-ups
+    clearInterval(playerXShieldInterval);       //stopping the blinking red, yellow, blue color shown for power-ups
+    clearInterval(playerXDeleteInterval);       //stopping the blinking red, yellow, blue color shown for power-ups
+    powerO = false;
+    powerX = false;
+    powerONotAlloted = true;
+    powerONotAllotedMedia = true;
+    powerXNotAlloted = true;
+    playerOSkipInterval = 0;
+    playerXSkipInterval = 0;
+    skipRedPlayerO = true;
+    skipRedPlayerOMedia = true;
+    skipRedPlayerX = true;
+    shieldBluePlayerO = true;
+    shieldBluePlayerOMedia = true;
+    shieldBluePlayerX = true;
+    playerOShieldInterval = 0;
+    playerXShieldInterval = 0;
+    deleteYellowPlayerO = true;
+    deleteYellowPlayerOMedia = true;
+    deleteYellowPlayerX = true;
+    playerODeleteInterval = 0;
+    playerXDeleteInterval = 0;
+    playerOSkipUse = false;
+    playerOSkipUseMedia = false;
+    playerXSkipUse = false;
+    playerODeleteUse = false;
+    playerODeleteUseMedia = false;
+    playerXDeleteUse = false;
+    playerOShieldUse = false;
+    playerOShieldUseMedia = false;
+    playerXShieldUse = false;
+    time = 0;
+    countDownIntervalID = 0;
+    checkResultIntervalID = 0;
+    homeBtn.style.display = "inline-block";
+    powerOSymbol.innerText = "Score a point to gain a power-up";
+    powerOSymbolMedia.innerText = "Score a point to gain a power-up";
+    powerXSymbol.innerText = "Score a point to gain a power-up";
+    powerOSymbol.style.margin = "0px";
+    powerOSymbolMedia.style.margin = "0px";
+    powerXSymbol.style.margin = "0px";
+    powerOSymbol.style.fontSize = "20px";
+    powerOSymbolMedia.style.fontSize = "20px";
+    powerXSymbol.style.fontSize = "20px";
+    powerOName.innerText = "";
+    powerONameMedia.innerText = "";
+    powerXName.innerText = "";
+    powerPlayerX.style.backgroundColor = "#778DA9";
+    powerPlayerO.style.backgroundColor = "#778DA9";
+    powerPlayerOMedia.style.backgroundColor = "#778DA9";
+    turnO = true;
+    for (let btn of allBtn) {       //reserting all the game buttons
+        btn.innerText = "";
+        btn.style.backgroundColor = "#E0E1DD";
+        btn.style.color = "black";
+        btn.style.border = "2px solid black";
+        btn.disabled = false;
+    }
+});
+
 //implementing power button of player-O 
 powerOBtn.addEventListener("click", () => {
     powerONotAlloted = true;    //to prevent new power allocation when previous one is not used
@@ -328,7 +426,7 @@ powerOBtn.addEventListener("click", () => {
     } else if (currentPower == "DELETE") {
         let num = 0;
         for (let a of allBtn) {
-            if (a.innerText == "X") {
+            if (a.innerHTML == "X") {
                 num++;
             }
         }
@@ -345,9 +443,11 @@ powerOBtn.addEventListener("click", () => {
             }
         } else {
             for (let all of allBtn) {
-                if (all.innerText == "" || all.innerText == "O") {
+                if (all.innerText == "" || all.innerHTML == "O") {
                     all.style.transition = "all 1s ease-in-out";
                     all.style.backgroundColor = "red";
+                }else if(all.innerHTML=='<span class="shield">X</span>' || all.innerHTML=='<span class="shield">O</span>'){
+                    shieldAlert(all);
                 }
             }
             setTimeout(() => {
@@ -358,6 +458,8 @@ powerOBtn.addEventListener("click", () => {
                     }
                 }
             }, 1000);
+            powerONotAlloted = false;
+            powerONotAllotedMedia = false;
         }
 
     } else if (currentPower == "SHIELD") {
@@ -393,6 +495,8 @@ powerOBtn.addEventListener("click", () => {
                     }
                 }
             }, 1000);
+            powerONotAlloted = false;
+            powerONotAllotedMedia = false;
         }
 
     }
@@ -416,7 +520,7 @@ powerOBtnMedia.addEventListener("click", () => {
     } else if (currentPower == "DELETE") {
         let num = 0;
         for (let a of allBtn) {
-            if (a.innerText == "X") {
+            if (a.innerHTML == "X") {
                 num++;
             }
         }
@@ -433,9 +537,11 @@ powerOBtnMedia.addEventListener("click", () => {
             }
         } else {
             for (let all of allBtn) {
-                if (all.innerText == "" || all.innerText == "O") {
+                if (all.innerText == "" || all.innerHTML == "O") {
                     all.style.transition = "all 1s ease-in-out";
                     all.style.backgroundColor = "red";
+                }else if(all.innerHTML=='<span class="shield">X</span>' || all.innerHTML=='<span class="shield">O</span>'){
+                    shieldAlert(all);
                 }
             }
             setTimeout(() => {
@@ -446,6 +552,8 @@ powerOBtnMedia.addEventListener("click", () => {
                     }
                 }
             }, 1000);
+            powerONotAlloted = false;
+            powerONotAllotedMedia = false;
         }
 
     } else if (currentPower == "SHIELD") {
@@ -481,6 +589,8 @@ powerOBtnMedia.addEventListener("click", () => {
                     }
                 }
             }, 1000);
+            powerONotAlloted = false;
+            powerONotAllotedMedia = false;
         }
 
     }
@@ -504,7 +614,7 @@ powerXBtn.addEventListener("click", () => {
     } else if (currentPower == "DELETE") {
         let num = 0;
         for (let a of allBtn) {
-            if (a.innerText == "O") {
+            if (a.innerHTML == "O") {
                 num++;
             }
         }
@@ -521,9 +631,11 @@ powerXBtn.addEventListener("click", () => {
             }
         } else {
             for (let all of allBtn) {
-                if (all.innerText == "" || all.innerText == "X") {
+                if (all.innerText == "" || all.innerHTML == "X") {
                     all.style.transition = "all 1s ease-in-out";
                     all.style.backgroundColor = "red";
+                }else if(all.innerHTML=='<span class="shield">O</span>' || all.innerHTML=='<span class="shield">X</span>'){
+                    shieldAlert(all);
                 }
             }
             setTimeout(() => {
@@ -534,6 +646,7 @@ powerXBtn.addEventListener("click", () => {
                     }
                 }
             }, 1000);
+            powerXNotAlloted = false;
         }
 
     } else if (currentPower == "SHIELD") {
@@ -569,6 +682,7 @@ powerXBtn.addEventListener("click", () => {
                     }
                 }
             }, 1000);
+            powerXNotAlloted = false;
         }
 
     }

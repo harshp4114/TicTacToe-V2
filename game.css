@@ -439,6 +439,7 @@ body {
         /* border: 1px solid red; */
         justify-content: center;
         align-items: center;
+        margin-top: 0;
         align-content: center;
         box-sizing: border-box;
     }
@@ -487,7 +488,7 @@ body {
     .game-button {
         margin: 2px;
         background-color: #E0E1DD;
-        font-size: 7.5vw;
+        font-size: 7vw;
         font-weight: 500;
         color: black;
         height: 11.15vw;
@@ -513,6 +514,13 @@ body {
         transition-duration: 0.3s;
         transition-timing-function: ease-in;
         display: inline-block;
+    }
+    .reset-btn-media {
+        display: none;
+    }
+
+    .home-btn-media {
+        display: none;
     }
 
     /* class for home button */
@@ -550,7 +558,7 @@ body {
         justify-content: center;
         align-content: center;
         position: absolute;
-        top: 44vh;
+        top: 41vh;
         background-color: #0D1B2A;
         width: 89%;
         box-sizing: border-box;
@@ -565,7 +573,7 @@ body {
     /* class for p tag of reset game countdown */
     .draw-countdown {
         width: 100%;
-        font-size: 120%;
+        font-size: clamp(20px,5vw,40px); 
         text-align: center;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         color: #E0E1DD;
@@ -580,7 +588,7 @@ body {
     /* class for p tag showing result of the game */
     .result {
         width: 100%;
-        font-size: 120%;
+        font-size: clamp(20px,5vw,40px);
         text-align: center;
         color: #E0E1DD;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -725,8 +733,8 @@ body {
     .shield {
         background-color: #00eeff;
         border-radius: 50%;
-        height: 30px;
-        width: 30px;
+        height: 7.5vw;
+        width: 7.5vw;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -766,7 +774,7 @@ body {
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-@media (min-width:510px) and (max-width:668px){
+@media (min-width:510px) and (max-width:900px){
     body {
         background-color: #0D1B2A;
         height: 100%;
@@ -797,8 +805,8 @@ body {
 
     .container-2 {
         box-sizing: border-box;
-        width: clamp(300px, 95%, 515px);
-        border: 1px solid red;
+        width: clamp(300px, 86%, 515px);
+        /* border: 1px solid red; */
         margin-top: 0;
         margin-bottom: 0.7%;
         display: flex;
@@ -811,9 +819,10 @@ body {
         height: calc(440px - 50vw);
         width: clamp(300px, 95%, 515px);
         display: flex;
-        flex: 1;
+        flex: 0.9;
         flex-wrap: wrap;
-        border: 1px solid red;
+        margin-top: 0;
+        /* border: 1px solid red; */
         justify-content: center;
         align-items: center;
         align-content: center;
@@ -866,7 +875,8 @@ body {
     .game-button {
         margin: 3.2px;
         background-color: #E0E1DD;
-        font-size: 7.5vw;
+        /* font-size: 40px; */
+        font-size: clamp(37px,6.8vw,40px);
         font-weight: 500;
         color: black;
         height: 12.5%;
@@ -938,8 +948,9 @@ body {
         justify-content: center;
         align-content: center;
         position: absolute;
-        top: 44vh;
+        top: 41vh;
         background-color: #0D1B2A;
+        height: auto;
         width: 89%;
         box-sizing: border-box;
         border: 4px solid #E0E1DD;
@@ -953,7 +964,8 @@ body {
     /* class for p tag of reset game countdown */
     .draw-countdown {
         width: 100%;
-        font-size: 120%;
+        height: 50%;
+        font-size: clamp(20px,5vw,40px);
         text-align: center;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         color: #E0E1DD;
@@ -968,7 +980,8 @@ body {
     /* class for p tag showing result of the game */
     .result {
         width: 100%;
-        font-size: 120%;
+        height: 50%;
+        font-size: clamp(20px,5vw,40px);
         text-align: center;
         color: #E0E1DD;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -1115,8 +1128,8 @@ body {
     .shield {
         background-color: #00eeff;
         border-radius: 50%;
-        height: 30px;
-        width: 30px;
+        height: 7.5vw;
+        width: 7.5vw;
         display: flex;
         justify-content: center;
         align-items: center;
