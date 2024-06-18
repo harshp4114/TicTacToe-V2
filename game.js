@@ -79,7 +79,10 @@ let patterns = [
     [10, 16, 22, 28], [26, 32, 38, 44], [11, 17, 23, 29], [17, 23, 29, 35], [19, 25, 31, 37], [25, 31, 37, 43], [12, 18, 24, 30],
     [18, 24, 30, 36], [24, 30, 36, 42]
 ];
-
+let viewportWidth = window.innerWidth;
+setInterval(() => {
+    viewportWidth = window.innerWidth;
+}, 100);
 
 // function to find different border color for every 4-X's or O's
 function findColour(i) {
@@ -321,9 +324,25 @@ resetBtn.addEventListener("click", () => {
     powerOSymbol.style.margin = "0px";
     powerOSymbolMedia.style.margin = "0px";
     powerXSymbol.style.margin = "0px";
-    powerOSymbol.style.fontSize = "20px";
-    powerOSymbolMedia.style.fontSize = "20px";
-    powerXSymbol.style.fontSize = "20px";
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    if (viewportWidth >= 300 && viewportWidth < 510) {
+        powerOSymbol.style.fontSize = "20px";
+        powerOSymbolMedia.style.fontSize = "20px";
+        powerXSymbol.style.fontSize = "20px";
+    } else if (viewportWidth >= 510 && viewportWidth < 1001) {
+        powerOSymbol.style.fontSize = "clamp(20px, 4vw, 26px)";
+        powerOSymbolMedia.style.fontSize = "clamp(20px, 4vw, 26px)";
+        powerXSymbol.style.fontSize = "clamp(20px, 4vw, 26px)";
+    } else if (viewportWidth >= 1001 && viewportWidth < 1400) {
+        powerOSymbol.style.fontSize = "33px";
+        powerOSymbolMedia.style.fontSize = "33px";
+        powerXSymbol.style.fontSize = "33px";
+    } else if (viewportWidth >= 1400 && viewportWidth < 1800) {
+        powerOSymbol.style.fontSize = "33px";
+        powerOSymbolMedia.style.fontSize = "33px";
+        powerXSymbol.style.fontSize = "33px";
+    }
+    ////////////////////////////////////////////////////////////////////////////////////////////
     powerOName.innerText = "";
     powerONameMedia.innerText = "";
     powerXName.innerText = "";
@@ -390,9 +409,25 @@ resetBtnMedia.addEventListener("click", () => {
     powerOSymbol.style.margin = "0px";
     powerOSymbolMedia.style.margin = "0px";
     powerXSymbol.style.margin = "0px";
-    powerOSymbol.style.fontSize = "20px";
-    powerOSymbolMedia.style.fontSize = "20px";
-    powerXSymbol.style.fontSize = "20px";
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    if (viewportWidth >= 300 && viewportWidth < 510) {
+        powerOSymbol.style.fontSize = "20px";
+        powerOSymbolMedia.style.fontSize = "20px";
+        powerXSymbol.style.fontSize = "20px";
+    } else if (viewportWidth >= 510 && viewportWidth < 1001) {
+        powerOSymbol.style.fontSize = "clamp(20px, 4vw, 26px)";
+        powerOSymbolMedia.style.fontSize = "clamp(20px, 4vw, 26px)";
+        powerXSymbol.style.fontSize = "clamp(20px, 4vw, 26px)";
+    } else if (viewportWidth >= 1001 && viewportWidth < 1400) {
+        powerOSymbol.style.fontSize = "33px";
+        powerOSymbolMedia.style.fontSize = "33px";
+        powerXSymbol.style.fontSize = "33px";
+    } else if (viewportWidth >= 1400 && viewportWidth < 1800) {
+        powerOSymbol.style.fontSize = "33px";
+        powerOSymbolMedia.style.fontSize = "33px";
+        powerXSymbol.style.fontSize = "33px";
+    }
+    ////////////////////////////////////////////////////////////////////////////////////////////
     powerOName.innerText = "";
     powerONameMedia.innerText = "";
     powerXName.innerText = "";
@@ -421,7 +456,17 @@ powerOBtn.addEventListener("click", () => {
         powerOName.innerText = "";
         powerOSymbol.innerText = "Score a point to gain a power-up";
         powerOSymbol.style.margin = "0px";
-        powerOSymbol.style.fontSize = "20px";
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        if (viewportWidth >= 300 && viewportWidth < 510) {
+            powerOSymbol.style.fontSize = "20px";
+        } else if (viewportWidth >= 510 && viewportWidth < 1001) {
+            powerOSymbol.style.fontSize = "clamp(20px, 4vw, 26px)";
+        } else if (viewportWidth >= 1001 && viewportWidth < 1400) {
+            powerOSymbol.style.fontSize = "33px";
+        } else if (viewportWidth >= 1400 && viewportWidth < 1800) {
+            powerOSymbol.style.fontSize = "33px";
+        }
+        ////////////////////////////////////////////////////////////////////////////////////////////
         powerPlayerO.style.backgroundColor = "#778DA9";
     } else if (currentPower == "DELETE") {
         let num = 0;
@@ -436,7 +481,17 @@ powerOBtn.addEventListener("click", () => {
             powerOName.innerText = "";
             powerOSymbol.innerText = "Score a point to gain a power-up";
             powerOSymbol.style.margin = "0px";
-            powerOSymbol.style.fontSize = "20px";
+            ////////////////////////////////////////////////////////////////////////////////////////////
+            if (viewportWidth >= 300 && viewportWidth < 510) {
+                powerOSymbol.style.fontSize = "20px";
+            } else if (viewportWidth >= 510 && viewportWidth < 1001) {
+                powerOSymbol.style.fontSize = "clamp(20px, 4vw, 26px)";
+            } else if (viewportWidth >= 1001 && viewportWidth < 1400) {
+                powerOSymbol.style.fontSize = "33px";
+            } else if (viewportWidth >= 1400 && viewportWidth < 1800) {
+                powerOSymbol.style.fontSize = "33px";
+            }
+            ////////////////////////////////////////////////////////////////////////////////////////////
             powerPlayerO.style.backgroundColor = "#778DA9";
             for (let singleBtn of allBtn) {
                 singleBtn.disabled = false;
@@ -446,7 +501,7 @@ powerOBtn.addEventListener("click", () => {
                 if (all.innerText == "" || all.innerHTML == "O") {
                     all.style.transition = "all 1s ease-in-out";
                     all.style.backgroundColor = "red";
-                }else if(all.innerHTML=='<span class="shield">X</span>' || all.innerHTML=='<span class="shield">O</span>'){
+                } else if (all.innerHTML == '<span class="shield">X</span>' || all.innerHTML == '<span class="shield">O</span>') {
                     shieldAlert(all);
                 }
             }
@@ -475,7 +530,17 @@ powerOBtn.addEventListener("click", () => {
             powerOName.innerText = "";
             powerOSymbol.innerText = "Score a point to gain a power-up";
             powerOSymbol.style.margin = "0px";
-            powerOSymbol.style.fontSize = "20px";
+            ////////////////////////////////////////////////////////////////////////////////////////////
+            if (viewportWidth >= 300 && viewportWidth < 510) {
+                powerOSymbol.style.fontSize = "20px";
+            } else if (viewportWidth >= 510 && viewportWidth < 1001) {
+                powerOSymbol.style.fontSize = "clamp(20px, 4vw, 26px)";
+            } else if (viewportWidth >= 1001 && viewportWidth < 1400) {
+                powerOSymbol.style.fontSize = "33px";
+            } else if (viewportWidth >= 1400 && viewportWidth < 1800) {
+                powerOSymbol.style.fontSize = "33px";
+            }
+            ////////////////////////////////////////////////////////////////////////////////////////////
             powerPlayerO.style.backgroundColor = "#778DA9";
             for (let singleBtn of allBtn) {
                 singleBtn.disabled = false;
@@ -515,7 +580,17 @@ powerOBtnMedia.addEventListener("click", () => {
         powerONameMedia.innerText = "";
         powerOSymbolMedia.innerText = "Score a point to gain a power-up";
         powerOSymbolMedia.style.margin = "0px";
-        powerOSymbolMedia.style.fontSize = "20px";
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        if (viewportWidth >= 300 && viewportWidth < 510) {
+            powerOSymbolMedia.style.fontSize = "20px";
+        } else if (viewportWidth >= 510 && viewportWidth < 1001) {
+            powerOSymbolMedia.style.fontSize = "clamp(20px, 4vw, 26px)";
+        } else if (viewportWidth >= 1001 && viewportWidth < 1400) {
+            powerOSymbolMedia.style.fontSize = "33px";
+        } else if (viewportWidth >= 1400 && viewportWidth < 1800) {
+            powerOSymbolMedia.style.fontSize = "33px";
+        }
+        ////////////////////////////////////////////////////////////////////////////////////////////
         powerPlayerOMedia.style.backgroundColor = "#778DA9";
     } else if (currentPower == "DELETE") {
         let num = 0;
@@ -530,7 +605,17 @@ powerOBtnMedia.addEventListener("click", () => {
             powerONameMedia.innerText = "";
             powerOSymbolMedia.innerText = "Score a point to gain a power-up";
             powerOSymbolMedia.style.margin = "0px";
-            powerOSymbolMedia.style.fontSize = "20px";
+            ////////////////////////////////////////////////////////////////////////////////////////////
+            if (viewportWidth >= 300 && viewportWidth < 510) {
+                powerOSymbolMedia.style.fontSize = "20px";
+            } else if (viewportWidth >= 510 && viewportWidth < 1001) {
+                powerOSymbolMedia.style.fontSize = "clamp(20px, 4vw, 26px)";
+            } else if (viewportWidth >= 1001 && viewportWidth < 1400) {
+                powerOSymbolMedia.style.fontSize = "33px";
+            } else if (viewportWidth >= 1400 && viewportWidth < 1800) {
+                powerOSymbolMedia.style.fontSize = "33px";
+            }
+            ////////////////////////////////////////////////////////////////////////////////////////////
             powerPlayerOMedia.style.backgroundColor = "#778DA9";
             for (let singleBtn of allBtn) {
                 singleBtn.disabled = false;
@@ -540,7 +625,7 @@ powerOBtnMedia.addEventListener("click", () => {
                 if (all.innerText == "" || all.innerHTML == "O") {
                     all.style.transition = "all 1s ease-in-out";
                     all.style.backgroundColor = "red";
-                }else if(all.innerHTML=='<span class="shield">X</span>' || all.innerHTML=='<span class="shield">O</span>'){
+                } else if (all.innerHTML == '<span class="shield">X</span>' || all.innerHTML == '<span class="shield">O</span>') {
                     shieldAlert(all);
                 }
             }
@@ -569,7 +654,17 @@ powerOBtnMedia.addEventListener("click", () => {
             powerONameMedia.innerText = "";
             powerOSymbolMedia.innerText = "Score a point to gain a power-up";
             powerOSymbolMedia.style.margin = "0px";
-            powerOSymbolMedia.style.fontSize = "20px";
+            ////////////////////////////////////////////////////////////////////////////////////////////
+            if (viewportWidth >= 300 && viewportWidth < 510) {
+                powerOSymbolMedia.style.fontSize = "20px";
+            } else if (viewportWidth >= 510 && viewportWidth < 1001) {
+                powerOSymbolMedia.style.fontSize = "clamp(20px, 4vw, 26px)";
+            } else if (viewportWidth >= 1001 && viewportWidth < 1400) {
+                powerOSymbolMedia.style.fontSize = "33px";
+            } else if (viewportWidth >= 1400 && viewportWidth < 1800) {
+                powerOSymbolMedia.style.fontSize = "33px";
+            }
+            ////////////////////////////////////////////////////////////////////////////////////////////
             powerPlayerOMedia.style.backgroundColor = "#778DA9";
             for (let singleBtn of allBtn) {
                 singleBtn.disabled = false;
@@ -609,7 +704,17 @@ powerXBtn.addEventListener("click", () => {
         powerXName.innerText = "";
         powerXSymbol.innerText = "Score a point to gain a power-up";
         powerXSymbol.style.margin = "0px";
-        powerXSymbol.style.fontSize = "20px";
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        if (viewportWidth >= 300 && viewportWidth < 510) {
+            powerXSymbol.style.fontSize = "20px";
+        } else if (viewportWidth >= 510 && viewportWidth < 1001) {
+            powerXSymbol.style.fontSize = "clamp(20px, 4vw, 26px)";
+        } else if (viewportWidth >= 1001 && viewportWidth < 1400) {
+            powerXSymbol.style.fontSize = "33px";
+        } else if (viewportWidth >= 1400 && viewportWidth < 1800) {
+            powerXSymbol.style.fontSize = "33px";
+        }
+        ////////////////////////////////////////////////////////////////////////////////////////////
         powerPlayerX.style.backgroundColor = "#778DA9";
     } else if (currentPower == "DELETE") {
         let num = 0;
@@ -623,8 +728,18 @@ powerXBtn.addEventListener("click", () => {
             playerXDeleteUse = true;
             powerXName.innerText = "";
             powerXSymbol.innerText = "Score a point to gain a power-up";
-            powerXSymbol.style.margin = "0px";
-            powerXSymbol.style.fontSize = "20px";
+            powerXSymbol.style.margin = "0px"; viewportWidth
+            ////////////////////////////////////////////////////////////////////////////////////////////
+            if (viewportWidth >= 300 && viewportWidth < 510) {
+                powerXSymbol.style.fontSize = "20px";
+            } else if (viewportWidth >= 510 && viewportWidth < 1001) {
+                powerXSymbol.style.fontSize = "clamp(20px, 4vw, 26px)";
+            } else if (viewportWidth >= 1001 && viewportWidth < 1400) {
+                powerXSymbol.style.fontSize = "33px";
+            } else if (viewportWidth >= 1400 && viewportWidth < 1800) {
+                powerXSymbol.style.fontSize = "33px";
+            }
+            ////////////////////////////////////////////////////////////////////////////////////////////
             powerPlayerX.style.backgroundColor = "#778DA9";
             for (let singleBtn of allBtn) {
                 singleBtn.disabled = false;
@@ -634,7 +749,7 @@ powerXBtn.addEventListener("click", () => {
                 if (all.innerText == "" || all.innerHTML == "X") {
                     all.style.transition = "all 1s ease-in-out";
                     all.style.backgroundColor = "red";
-                }else if(all.innerHTML=='<span class="shield">O</span>' || all.innerHTML=='<span class="shield">X</span>'){
+                } else if (all.innerHTML == '<span class="shield">O</span>' || all.innerHTML == '<span class="shield">X</span>') {
                     shieldAlert(all);
                 }
             }
@@ -662,7 +777,17 @@ powerXBtn.addEventListener("click", () => {
             powerXName.innerText = "";
             powerXSymbol.innerText = "Score a point to gain a power-up";
             powerXSymbol.style.margin = "0px";
-            powerXSymbol.style.fontSize = "20px";
+            ////////////////////////////////////////////////////////////////////////////////////////////
+            if (viewportWidth >= 300 && viewportWidth < 510) {
+                powerXSymbol.style.fontSize = "20px";
+            } else if (viewportWidth >= 510 && viewportWidth < 1001) {
+                powerXSymbol.style.fontSize = "clamp(20px, 4vw, 26px)";
+            } else if (viewportWidth >= 1001 && viewportWidth < 1400) {
+                powerXSymbol.style.fontSize = "33px";
+            } else if (viewportWidth >= 1400 && viewportWidth < 1800) {
+                powerXSymbol.style.fontSize = "33px";
+            } viewportWidth
+            ////////////////////////////////////////////////////////////////////////////////////////////
             powerPlayerX.style.backgroundColor = "#778DA9";
             for (let singleBtn of allBtn) {
                 singleBtn.disabled = false;
@@ -755,9 +880,25 @@ function countDown() {
         powerOSymbolMedia.style.margin = "0px";
         powerOSymbol.style.margin = "0px";
         powerXSymbol.style.margin = "0px";
-        powerOSymbolMedia.style.fontSize = "20px";
-        powerOSymbol.style.fontSize = "20px";
-        powerXSymbol.style.fontSize = "20px";
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        if (viewportWidth >= 300 && viewportWidth < 510) {
+            powerOSymbol.style.fontSize = "20px";
+            powerOSymbolMedia.style.fontSize = "20px";
+            powerXSymbol.style.fontSize = "20px";
+        } else if (viewportWidth >= 510 && viewportWidth < 1001) {
+            powerOSymbol.style.fontSize = "clamp(20px, 4vw, 26px)";
+            powerOSymbolMedia.style.fontSize = "clamp(20px, 4vw, 26px)";
+            powerXSymbol.style.fontSize = "clamp(20px, 4vw, 26px)";
+        } else if (viewportWidth >= 1001 && viewportWidth < 1400) {
+            powerOSymbol.style.fontSize = "33px";
+            powerOSymbolMedia.style.fontSize = "33px";
+            powerXSymbol.style.fontSize = "33px";
+        } else if (viewportWidth >= 1400 && viewportWidth < 1800) {
+            powerOSymbol.style.fontSize = "33px";
+            powerOSymbolMedia.style.fontSize = "33px";
+            powerXSymbol.style.fontSize = "33px";
+        }
+        ////////////////////////////////////////////////////////////////////////////////////////////
         powerOName.innerText = "";
         powerONameMedia.innerText = "";
         powerXName.innerText = "";
@@ -767,7 +908,21 @@ function countDown() {
         turnO = true;
         result.innerText = "";
         drawCountdown.innerText = "";
-        resetBtn.style.display = "inline-block";
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        if (viewportWidth >= 300 && viewportWidth < 510) {
+            resetBtn.style.display = "inline-block";
+            homeBtn.style.display = "inline-block";
+        } else if (viewportWidth >= 510 && viewportWidth < 1001) {
+            resetBtnMedia.style.display = "inline-block";
+            homeBtnMedia.style.display = "inline-block";
+        } else if (viewportWidth >= 1001 && viewportWidth < 1400) {
+            resetBtn.style.display = "inline-block";
+            homeBtn.style.display = "inline-block";
+        } else if (viewportWidth >= 1400 && viewportWidth < 1800) {
+            resetBtn.style.display = "inline-block";
+            homeBtn.style.display = "inline-block";
+        }
+        ////////////////////////////////////////////////////////////////////////////////////////////
         overlay.style.visibility = "hidden";
         gameHeading.style.visibility = "hidden";
         drawCountdown.style.visibility = "hidden";
@@ -776,7 +931,6 @@ function countDown() {
         gameHeading.style.opacity = "0";
         drawCountdown.style.opacity = "0";
         result.style.opacity = "0";
-        homeBtn.style.display = "inline-block";
         for (let btn of allBtn) {
             btn.innerText = "";
             btn.style.backgroundColor = "#E0E1DD";
@@ -981,11 +1135,24 @@ function powerStore() {
         num1 = randomPower;
         let onePower = powers[randomPower];
         powerOSymbol.innerHTML = onePower;
-        powerOSymbol.style.fontSize = "65px";
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        if (viewportWidth >= 300 && viewportWidth < 510) {
+            powerOSymbol.style.fontSize = "65px";
+            powerOSymbolMedia.style.fontSize = "65px";
+        } else if (viewportWidth >= 510 && viewportWidth < 1001) {
+            powerOSymbol.style.fontSize = "85px";
+            powerOSymbolMedia.style.fontSize = "85px";
+        } else if (viewportWidth >= 1001 && viewportWidth < 1400) {
+            powerOSymbol.style.fontSize = "85px";
+            powerOSymbolMedia.style.fontSize = "85px";
+        } else if (viewportWidth >= 1400 && viewportWidth < 1800) {
+            powerOSymbol.style.fontSize = "109px";
+            powerOSymbolMedia.style.fontSize = "109px";
+        }
+        ////////////////////////////////////////////////////////////////////////////////////////////
         powerOSymbol.style.marginLeft = "auto";
         powerOSymbol.style.marginRight = "auto";
         powerOSymbolMedia.innerHTML = onePower;
-        powerOSymbolMedia.style.fontSize = "65px";
         powerOSymbolMedia.style.marginLeft = "auto";
         powerOSymbolMedia.style.marginRight = "auto";
         powerOName.innerText = powerNames[randomPower];
@@ -1010,9 +1177,19 @@ function powerStore() {
         num2 = randomPower;
         let onePower = powers[randomPower];
         powerXSymbol.innerHTML = onePower;
-        powerXSymbol.style.fontSize = "65px";
-        powerXSymbol.style.marginLeft = "80px";
-        powerXSymbol.style.marginRight = "80px";
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        if (viewportWidth >= 300 && viewportWidth < 510) {
+            powerXSymbol.style.fontSize = "65px";
+        } else if (viewportWidth >= 510 && viewportWidth < 1001) {
+            powerXSymbol.style.fontSize = "85px";
+        } else if (viewportWidth >= 1001 && viewportWidth < 1400) {
+            powerXSymbol.style.fontSize = "85px";
+        } else if (viewportWidth >= 1400 && viewportWidth < 1800) {
+            powerXSymbol.style.fontSize = "99px";
+        }
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        powerXSymbol.style.marginLeft = "auto";
+        powerXSymbol.style.marginRight = "auto";
         powerXName.innerText = powerNames[randomPower];
         powerX = false;
         if (powerXName.innerText == "SKIP") {
@@ -1028,7 +1205,7 @@ function powerStore() {
     }
 }
 
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //implementing game logic
 function gameLogic() {
     for (let i = 0; i < 88; i++) {
@@ -1053,10 +1230,29 @@ function gameLogic() {
                         allBtn[patterns[i][third]].style.color = "#E0E1DD";
                         allBtn[patterns[i][fourth]].style.color = "#E0E1DD";
                         let colour = findColour(patterns[i][first]);
-                        allBtn[patterns[i][first]].style.border = `4px solid ${colour}`;
-                        allBtn[patterns[i][second]].style.border = `4px solid ${colour}`;
-                        allBtn[patterns[i][third]].style.border = `4px solid ${colour}`;
-                        allBtn[patterns[i][fourth]].style.border = `4px solid ${colour}`;
+                        ////////////////////////////////////////////////////////////////////////////////////////////
+                        if (viewportWidth >= 300 && viewportWidth < 510) {
+                            allBtn[patterns[i][first]].style.border = `4px solid ${colour}`;
+                            allBtn[patterns[i][second]].style.border = `4px solid ${colour}`;
+                            allBtn[patterns[i][third]].style.border = `4px solid ${colour}`;
+                            allBtn[patterns[i][fourth]].style.border = `4px solid ${colour}`;
+                        } else if (viewportWidth >= 510 && viewportWidth < 1001) {
+                            allBtn[patterns[i][first]].style.border = `5px solid ${colour}`;
+                            allBtn[patterns[i][second]].style.border = `5px solid ${colour}`;
+                            allBtn[patterns[i][third]].style.border = `5px solid ${colour}`;
+                            allBtn[patterns[i][fourth]].style.border = `5px solid ${colour}`;
+                        } else if (viewportWidth >= 1001 && viewportWidth < 1400) {
+                            allBtn[patterns[i][first]].style.border = `6px solid ${colour}`;
+                            allBtn[patterns[i][second]].style.border = `6px solid ${colour}`;
+                            allBtn[patterns[i][third]].style.border = `6px solid ${colour}`;
+                            allBtn[patterns[i][fourth]].style.border = `6px solid ${colour}`;
+                        } else if (viewportWidth >= 1400 && viewportWidth < 1800) {
+                            allBtn[patterns[i][first]].style.border = `7px solid ${colour}`;
+                            allBtn[patterns[i][second]].style.border = `7px solid ${colour}`;
+                            allBtn[patterns[i][third]].style.border = `7px solid ${colour}`;
+                            allBtn[patterns[i][fourth]].style.border = `7px solid ${colour}`;
+                        }
+                        ////////////////////////////////////////////////////////////////////////////////////////////
 
                     } else if (allBtn[patterns[i][first]].innerText == "X") {
                         powerX = true;
@@ -1075,10 +1271,29 @@ function gameLogic() {
                         allBtn[patterns[i][third]].style.color = "#E0E1DD";
                         allBtn[patterns[i][fourth]].style.color = "#E0E1DD";
                         let colour = findColour(patterns[i][first]);
-                        allBtn[patterns[i][first]].style.border = `4px solid ${colour}`;
-                        allBtn[patterns[i][second]].style.border = `4px solid ${colour}`;
-                        allBtn[patterns[i][third]].style.border = `4px solid ${colour}`;
-                        allBtn[patterns[i][fourth]].style.border = `4px solid ${colour}`;
+                        ////////////////////////////////////////////////////////////////////////////////////////////
+                        if (viewportWidth >= 300 && viewportWidth < 510) {
+                            allBtn[patterns[i][first]].style.border = `4px solid ${colour}`;
+                            allBtn[patterns[i][second]].style.border = `4px solid ${colour}`;
+                            allBtn[patterns[i][third]].style.border = `4px solid ${colour}`;
+                            allBtn[patterns[i][fourth]].style.border = `4px solid ${colour}`;
+                        } else if (viewportWidth >= 510 && viewportWidth < 1001) {
+                            allBtn[patterns[i][first]].style.border = `5px solid ${colour}`;
+                            allBtn[patterns[i][second]].style.border = `5px solid ${colour}`;
+                            allBtn[patterns[i][third]].style.border = `5px solid ${colour}`;
+                            allBtn[patterns[i][fourth]].style.border = `5px solid ${colour}`;
+                        } else if (viewportWidth >= 1001 && viewportWidth < 1400) {
+                            allBtn[patterns[i][first]].style.border = `6px solid ${colour}`;
+                            allBtn[patterns[i][second]].style.border = `6px solid ${colour}`;
+                            allBtn[patterns[i][third]].style.border = `6px solid ${colour}`;
+                            allBtn[patterns[i][fourth]].style.border = `6px solid ${colour}`;
+                        } else if (viewportWidth >= 1400 && viewportWidth < 1800) {
+                            allBtn[patterns[i][first]].style.border = `7px solid ${colour}`;
+                            allBtn[patterns[i][second]].style.border = `7px solid ${colour}`;
+                            allBtn[patterns[i][third]].style.border = `7px solid ${colour}`;
+                            allBtn[patterns[i][fourth]].style.border = `7px solid ${colour}`;
+                        }
+                        ////////////////////////////////////////////////////////////////////////////////////////////
                     }
                 } else {
 
@@ -1092,8 +1307,6 @@ function adjustHeight() {
     const container = document.querySelector('.container-2');
     const width = container.clientWidth; // Directly get the client width
     container.style.height = `${width}px`; // Set height to be equal to the width
-    console.log(`width: ${width}px`);
-    console.log(`height: ${container.style.height}`);
 }
 
 // Adjust the height on load and when the window is resized
@@ -1104,7 +1317,17 @@ window.addEventListener('resize', adjustHeight);
 //function to show particular player's turn using borders around power grid
 function playerTurn() {
     if (turnO && playerXSkipUse) {
-        powerPlayerX.style.border = "6.5px solid white";
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        if (viewportWidth >= 300 && viewportWidth < 510) {
+            powerPlayerX.style.border = "6.5px solid white";
+        } else if (viewportWidth >= 510 && viewportWidth < 1001) {
+            powerPlayerX.style.border = "9.5px solid white";
+        } else if (viewportWidth >= 1001 && viewportWidth < 1400) {
+            powerPlayerX.style.border = "10.5px solid white";
+        } else if (viewportWidth >= 1400 && viewportWidth < 1800) {
+            powerPlayerX.style.border = "11.5px solid white";
+        }
+        ////////////////////////////////////////////////////////////////////////////////////////////
         powerPlayerX.style.borderRadius = "5px";
         powerPlayerO.style.border = "none";
         powerPlayerO.style.borderRadius = "0px";
@@ -1114,11 +1337,24 @@ function playerTurn() {
         powerOBtnMedia.disabled = true;
         powerXBtn.disabled = false;
     } else if (turnO && !playerXSkipUse) {
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        if (viewportWidth >= 300 && viewportWidth < 510) {
+            powerPlayerO.style.border = "6.5px solid white";
+            powerPlayerOMedia.style.border = "6.5px solid white";
+        } else if (viewportWidth >= 510 && viewportWidth < 1001) {
+            powerPlayerO.style.border = "9.5px solid white";
+            powerPlayerOMedia.style.border = "9.5px solid white";
+        } else if (viewportWidth >= 1001 && viewportWidth < 1400) {
+            powerPlayerO.style.border = "10.5px solid white";
+            powerPlayerOMedia.style.border = "10.5px solid white";
+        } else if (viewportWidth >= 1400 && viewportWidth < 1800) {
+            powerPlayerO.style.border = "11.5px solid white";
+            powerPlayerOMedia.style.border = "11.5px solid white";
+        }
+        ////////////////////////////////////////////////////////////////////////////////////////////
         powerPlayerX.style.border = "none";
         powerPlayerX.style.borderRadius = "0px";
-        powerPlayerO.style.border = "6.5px solid white";
         powerPlayerO.style.borderRadius = "5px";
-        powerPlayerOMedia.style.border = "6.5px solid white";
         powerPlayerOMedia.style.borderRadius = "5px";
         powerOBtn.disabled = false;
         powerOBtnMedia.disabled = false;
@@ -1126,15 +1362,38 @@ function playerTurn() {
     } else if (!turnO && (playerOSkipUse || playerOSkipUseMedia)) {
         powerPlayerX.style.border = "none";
         powerPlayerX.style.borderRadius = "0px";
-        powerPlayerO.style.border = "6.5px solid white";
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        if (viewportWidth >= 300 && viewportWidth < 510) {
+            powerPlayerO.style.border = "6.5px solid white";
+            powerPlayerOMedia.style.border = "6.5px solid white";
+        } else if (viewportWidth >= 510 && viewportWidth < 1001) {
+            powerPlayerO.style.border = "9.5px solid white";
+            powerPlayerOMedia.style.border = "9.5px solid white";
+        } else if (viewportWidth >= 1001 && viewportWidth < 1400) {
+            powerPlayerO.style.border = "10.5px solid white";
+            powerPlayerOMedia.style.border = "10.5px solid white";
+        } else if (viewportWidth >= 1400 && viewportWidth < 1800) {
+            powerPlayerO.style.border = "11.5px solid white";
+            powerPlayerOMedia.style.border = "11.5px solid white";
+        }
+        ////////////////////////////////////////////////////////////////////////////////////////////
         powerPlayerO.style.borderRadius = "5px";
-        powerPlayerOMedia.style.border = "6.5px solid white";
         powerPlayerOMedia.style.borderRadius = "5px";
         powerOBtn.disabled = false;
         powerOBtnMedia.disabled = false;
         powerXBtn.disabled = true;
     } else if (!turnO && !(playerOSkipUse || playerOSkipUseMedia)) {
-        powerPlayerX.style.border = "6.5px solid white";
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        if (viewportWidth >= 300 && viewportWidth < 510) {
+            powerPlayerX.style.border = "6.5px solid white";
+        } else if (viewportWidth >= 510 && viewportWidth < 1001) {
+            powerPlayerX.style.border = "9.5px solid white";
+        } else if (viewportWidth >= 1001 && viewportWidth < 1400) {
+            powerPlayerX.style.border = "10.5px solid white";
+        } else if (viewportWidth >= 1400 && viewportWidth < 1800) {
+            powerPlayerX.style.border = "11.5px solid white";
+        }
+        ////////////////////////////////////////////////////////////////////////////////////////////
         powerPlayerX.style.borderRadius = "5px";
         powerPlayerO.style.border = "none";
         powerPlayerO.style.borderRadius = "0px";
@@ -1166,7 +1425,7 @@ function redAlert(btn) {
     }
     btn.innerText = "";
     setTimeout(() => {
-        if(temp!=undefined){
+        if (temp != undefined) {
             btn.innerText = temp;
         }
         btn.style.border = bordr;
