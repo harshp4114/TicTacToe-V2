@@ -1119,8 +1119,8 @@ body {
     .shield {
         background-color: #00eeff;
         border-radius: 50%;
-        height: 7.5vw;
-        width: 7.5vw;
+        height: clamp(40px,7.5vw,50px);
+        width: clamp(40px,7.5vw,50px);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1526,8 +1526,8 @@ body {
     .shield {
         background-color: #00eeff;
         border-radius: 50%;
-        height: clamp(55px,4.5vw,85px);
-        width: clamp(55px,4.5vw,85px);
+        height: clamp(55px,4.5vw,65px);
+        width: clamp(55px,4.5vw,65px);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1937,8 +1937,8 @@ body {
     .shield {
         background-color: #00eeff;
         border-radius: 50%;
-        height: clamp(55px,4.5vw,85px);
-        width: clamp(55px,4.5vw,85px);
+        height: clamp(55px,4.5vw,65px);
+        width: clamp(55px,4.5vw,65px);
         display: flex;
         justify-content: center;
         align-items: center;

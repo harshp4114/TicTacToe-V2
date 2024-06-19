@@ -1007,7 +1007,7 @@ for (let btn of allBtn) {
         if (turnO) {
             if (playerODeleteUse || playerODeleteUseMedia) {
                 let txt = btn.innerText;
-                if (btn.innerHTML == `<span class="shield">${txt}</span>`) {
+                if (btn.innerHTML == `<span class="shield">X</span>`) {
                     shieldAlert(btn);
                 } else if (btn.innerText != "X") {
                     redAlert(btn);
@@ -1037,7 +1037,7 @@ for (let btn of allBtn) {
                 if (btn.innerText != "O") {
                     redAlert(btn);
                 } else if (btn.innerText == "O") {
-                    let html = btn.innerHTML;
+                    let html = btn.innerText;
                     btn.innerHTML = `<span class="shield">${html}</span>`;
                     btn.disabled = true;
                     playerOShieldUse = false;
@@ -1056,7 +1056,7 @@ for (let btn of allBtn) {
         } else {
             if (playerXDeleteUse) {
                 let txt = btn.innerText;
-                if (btn.innerHTML == `<span class="shield">${txt}</span>`) {
+                if (btn.innerHTML == `<span class="shield">O</span>`) {
                     shieldAlert(btn);
                 } else if (btn.innerText != "O") {
                     redAlert(btn);
@@ -1086,7 +1086,7 @@ for (let btn of allBtn) {
                 if (btn.innerText != "X") {
                     redAlert(btn);
                 } else if (btn.innerText == "X") {
-                    let html = btn.innerHTML;
+                    let html = btn.innerText;
                     btn.innerHTML = `<span class="shield">${html}</span>`;
                     btn.disabled = true;
                     playerXShieldUse = false;
@@ -1210,9 +1210,11 @@ function powerStore() {
 function gameLogic() {
     for (let i = 0; i < 88; i++) {
         if (allBtn[patterns[i][first]].innerText != "" && allBtn[patterns[i][second]].innerText != "" && allBtn[patterns[i][third]].innerText != "" && allBtn[patterns[i][fourth]].innerText != "") {
+            console.log("first");
             if ((allBtn[patterns[i][first]].innerText == "O" || allBtn[patterns[i][first]].innerText == "X") && (allBtn[patterns[i][second]].innerText == "O" || allBtn[patterns[i][second]].innerText == "X") && (allBtn[patterns[i][third]].innerText == "O" || allBtn[patterns[i][third]].innerText == "X") && (allBtn[patterns[i][fourth]].innerText == "O" || allBtn[patterns[i][fourth]].innerText == "X")) {
-                if ((allBtn[patterns[i][first]].innerText == allBtn[patterns[i][second]].innerText) && (allBtn[patterns[i][second]].innerText == allBtn[patterns[i][third]].innerText) && (allBtn[patterns[i][third]].innerText == allBtn[patterns[i][fourth]].innerText)) {
-
+            console.log("second");
+            if ((allBtn[patterns[i][first]].innerText == allBtn[patterns[i][second]].innerText) && (allBtn[patterns[i][second]].innerText == allBtn[patterns[i][third]].innerText) && (allBtn[patterns[i][third]].innerText == allBtn[patterns[i][fourth]].innerText)) {
+                console.log("third");
                     if (allBtn[patterns[i][first]].innerText == "O") {
                         powerO = true;
                         powerStore();
