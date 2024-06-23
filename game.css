@@ -1,0 +1,1982 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #0D1B2A;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* the outermost div of the game */
+.main-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 93%;
+}
+
+/* div for the reset button */
+.button-layout {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.container-1 {
+    height: 600px;
+    width: 300px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.container-2 {
+    height: 50%;
+    width: 47%;
+    margin-top: 1%;
+    margin-bottom: 0.7%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.container-3 {
+    height: 600px;
+    width: 300px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.container-4 {
+    display: flex;
+    justify-content: center;
+    height: 7%;
+}
+
+/* div containing game-layout and draw-countdown */
+.game-draw {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+/* div containing all the ticTacToe buttons */
+.game-layout {
+    height: 100%;
+    width: 100%;
+    margin-top: 2.2%;
+    margin-bottom: 1.3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+/* class of all the ticTacToe buttons */
+.game-button {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    background-color: #E0E1DD;
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: black;
+    height: 80px;
+    width: 80px;
+    border-radius: 5px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* class for the reset button */
+.reset-btn {
+    height: 50px;
+    width: 200px;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: #334057;
+    color: #E0E1DD;
+    border: 3px solid #E0E1DD;
+    border-radius: 5px;
+    transition: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    display: inline-block;
+}
+
+/* class for home button */
+.home-btn {
+    height: 50px;
+    width: 200px;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: #334057;
+    color: #E0E1DD;
+    border: 3px solid #E0E1DD;
+    border-radius: 5px;
+    transition: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+/* class for overlay for result of the game */
+.overlay {
+    height: 110vh;
+    width: 100vw;
+    background-color: #0D1B2A;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s ease-in-out;
+}
+
+/* class for p tag of reset game countdown */
+.draw-countdown {
+    font-size: 57px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #E0E1DD;
+    font-weight: 500;
+    margin-left: 150px;
+    margin-right: 150px;
+    transition: all 0.7s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* class for p tag showing result of the game */
+.result {
+    font-size: 57px;
+    color: #E0E1DD;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    margin-left: 150px;
+    margin-right: 150px;
+    transition: all 0.7s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* class for div containing result and countdown */
+.game-heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    background-color: #0D1B2A;
+    width: 79%;
+    box-sizing: border-box;
+    border: 7px solid #E0E1DD;
+    border-radius: 15px;
+    padding: 20px;
+    transition: all 0.5s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* div containing the details and functionality of player-O */
+.player-O {
+    height: 100%;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.player-O-media {
+    height: 600px;
+    width: 300px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+/* div containing the details and functionality of player-X */
+.player-X {
+    height: 100%;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+
+/* class for h1 tag of player heading */
+.player-heading {
+    color: #E0E1DD;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+/* div containing the power symbol and background of player-O */
+.playerO-power {
+    height: 400px;
+    width: 250px;
+    background-color: #778DA9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    transition: background-color 1s ease-in-out, border 0.3s ease-in-out;
+}
+
+/* div containing the power symbol and background of player-X */
+.playerX-power {
+    height: 400px;
+    width: 250px;
+    background-color: #778DA9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    transition: background-color 1s ease-in-out, border 0.3s ease-in-out;
+}
+
+/* class for p tag for power symbol of player-O */
+.powerO-symbol {
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* class for p tag for power symbol of player-X */
+.powerX-symbol {
+    font-size: 32px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* class for p tag for power name player-O*/
+.powerO-Name {
+    font-size: 32px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+
+/* class for p tag for power name player-X*/
+.powerX-Name {
+    font-size: 32px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+
+/* class for power button of player-O */
+.powerO-button {
+    height: 50px;
+    width: 200px;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: #334057;
+    color: #E0E1DD;
+    border: 3px solid #E0E1DD;
+    border-radius: 5px;
+    transition: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    margin-top: 40px;
+}
+
+/* class for power button of player-X */
+.powerX-button {
+    height: 50px;
+    width: 200px;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: #334057;
+    color: #E0E1DD;
+    border: 3px solid #E0E1DD;
+    border-radius: 5px;
+    transition: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    margin-top: 40px;
+}
+
+/* class for span tag implementing shield */
+.shield {
+    background-color: #00eeff;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* class for div containing playerO heading and color */
+.playerO-hd-color {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+/* class for div of color of playerO */
+.playerO-color {
+    background-color: rgb(106, 0, 110);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+/* class for div containing playerX heading and color */
+.playerX-hd-color {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+/* class for div of color of playerO */
+.playerX-color {
+    background-color: #415A77;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media (min-width:300px) and (max-width:510px) {
+
+    body {
+        background-color: #0D1B2A;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+
+    /* the outermost div of the game */
+    .main-layout {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: stretch;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        height: 93%;
+        box-sizing: border-box;
+    }
+
+    .container-1 {
+        display: none;
+        box-sizing: border-box;
+    }
+
+    .container-2 {
+        box-sizing: border-box;
+        width: clamp(300px, 87vw, 455px);
+        margin-top: 0;
+        margin-bottom: 0.7%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .container-3 {
+        height: calc(440px - 50vw);
+        width: clamp(300px, 95%, 455px);
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        align-content: center;
+        box-sizing: border-box;
+    }
+
+    .container-4 {
+        display: flex;
+        justify-content: center;
+        width: clamp(300px, 95%, 455px);
+        height: 6%;
+        box-sizing: border-box;
+    }
+
+    /* div for the reset button */
+    .button-layout {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    /* div containing game-layout and draw-countdown */
+    .game-draw {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    /* div containing all the ticTacToe buttons */
+    .game-layout {
+        height: 100%;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    /* class of all the ticTacToe buttons */
+    .game-button {
+        margin: 2px;
+        background-color: #E0E1DD;
+        font-size: 7vw;
+        font-weight: 500;
+        color: black;
+        height: 11.15vw;
+        width: 11.15vw;
+        border-radius: 5px;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* class for the reset button */
+    .reset-btn {
+        height: 67%;
+        width: 35%;
+        font-size: 70%;
+        font-weight: 500;
+        background-color: #334057;
+        color: #E0E1DD;
+        border: 2px solid #E0E1DD;
+        border-radius: 5px;
+        transition: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        display: inline-block;
+    }
+
+    .reset-btn-media {
+        display: none;
+    }
+
+    .home-btn-media {
+        display: none;
+    }
+
+    /* class for home button */
+    .home-btn {
+        height: 67%;
+        width: 35%;
+        font-size: 70%;
+        font-weight: 500;
+        background-color: #334057;
+        color: #E0E1DD;
+        border: 2px solid #E0E1DD;
+        border-radius: 5px;
+        transition: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        display: inline-block;
+        margin-left: 0;
+    }
+
+    /* class for overlay for result of the game */
+    .overlay {
+        height: 100vh;
+        width: 100vw;
+        background-color: #0D1B2A;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 1s ease-in-out;
+    }
+
+    /* class for div containing result and countdown */
+    .game-heading {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        position: absolute;
+        top: 41vh;
+        background-color: #0D1B2A;
+        width: 89%;
+        box-sizing: border-box;
+        border: 4px solid #E0E1DD;
+        border-radius: 15px;
+        padding: 20px;
+        transition: all 0.5s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    /* class for p tag of reset game countdown */
+    .draw-countdown {
+        width: 100%;
+        font-size: clamp(20px, 5vw, 40px);
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #E0E1DD;
+        font-weight: 500;
+        margin-left: auto;
+        margin-right: auto;
+        transition: all 0.7s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    /* class for p tag showing result of the game */
+    .result {
+        width: 100%;
+        font-size: clamp(20px, 5vw, 40px);
+        text-align: center;
+        color: #E0E1DD;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 500;
+        margin-left: auto;
+        margin-right: auto;
+        transition: all 0.7s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    /* div containing the details and functionality of player-O */
+    .player-O-media {
+        height: 100%;
+        width: 50%;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    /* div containing the details and functionality of player-X */
+    .player-X {
+        height: 100%;
+        width: 50%;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+    }
+
+    /* class for h1 tag of player heading */
+    .player-heading {
+        color: #E0E1DD;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    /* div containing the power symbol and background of player-O */
+    .playerO-power-media {
+        height: 62.5%;
+        width: 53%;
+        background-color: #778DA9;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+        transition: background-color 1s ease-in-out, border 0.3s ease-in-out;
+        padding: 10px;
+    }
+
+    /* div containing the power symbol and background of player-X */
+    .playerX-power {
+        height: 62.5%;
+        width: 53%;
+        background-color: #778DA9;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+        transition: background-color 1s ease-in-out, border 0.3s ease-in-out;
+        padding: 10px;
+    }
+
+    /* class for p tag for power symbol of player-O */
+    .powerO-symbol-media {
+        font-size: 20px;
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    /* class for p tag for power symbol of player-X */
+    .powerX-symbol {
+        font-size: 20px;
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    /* class for p tag for power name player-O*/
+    .powerO-Name-media {
+        font-size: 18px;
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 600;
+    }
+
+    /* class for p tag for power name player-X*/
+    .powerX-Name {
+        font-size: 18px;
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 600;
+    }
+
+    /* class for power button of player-O */
+    .powerO-button-media {
+        height: 12%;
+        width: 70%;
+        font-size: 70%;
+        font-weight: 500;
+        background-color: #334057;
+        color: #E0E1DD;
+        border: 2px solid #E0E1DD;
+        border-radius: 5px;
+        transition: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        margin-top: 8px;
+    }
+
+    /* class for power button of player-X */
+    .powerX-button {
+        height: 12%;
+        width: 70%;
+        font-size: 70%;
+        font-weight: 500;
+        background-color: #334057;
+        color: #E0E1DD;
+        border: 2px solid #E0E1DD;
+        border-radius: 5px;
+        transition: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        margin-top: 8px;
+    }
+
+    /* class for span tag implementing shield */
+    .shield {
+        background-color: #00eeff;
+        border-radius: 50%;
+        height: 7.5vw;
+        width: 7.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* class for div containing playerO heading and color */
+    .playerO-hd-color-media {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* class for div of color of playerO */
+    .playerO-color-media {
+        background-color: rgb(106, 0, 110);
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        margin-left: 8px;
+    }
+
+    /* class for div containing playerX heading and color */
+    .playerX-hd-color {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* class for div of color of playerO */
+    .playerX-color {
+        background-color: #415A77;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        margin-left: 8px;
+    }
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media (min-width:510px) and (max-width:1001px) and (min-height:400px) {
+    body {
+        background-color: #0D1B2A;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+
+    /* the outermost div of the game */
+    .main-layout {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: stretch;
+        align-items: center;
+        align-content: center;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .container-1 {
+        display: none;
+        box-sizing: border-box;
+    }
+
+    .container-2 {
+        box-sizing: border-box;
+        width: clamp(300px, 86%, 515px);
+        margin-top: 0;
+        margin-bottom: 0.7%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .container-3 {
+        height: calc(440px - 50vw);
+        width: clamp(300px, 95%, 815px);
+        display: flex;
+        flex: 0.9;
+        flex-wrap: wrap;
+        margin-top: 0;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        box-sizing: border-box;
+    }
+
+    .container-4 {
+        display: none;
+    }
+
+    /* div for the reset button */
+    .button-layout {
+        display: none;
+    }
+
+    .button-layout-media {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 100%;
+        width: 20%;
+    }
+
+    /* div containing game-layout and draw-countdown */
+    .game-draw {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    /* div containing all the ticTacToe buttons */
+    .game-layout {
+        height: 100%;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    /* class of all the ticTacToe buttons */
+    .game-button {
+        margin: 2.2px;
+        background-color: #E0E1DD;
+        font-size: clamp(37px, 6.8vw, 40px);
+        font-weight: 500;
+        color: black;
+        height: 12.5%;
+        width: 12.5%;
+        border-radius: 5px;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* class for the reset button */
+    .reset-btn {
+        display: none;
+    }
+
+    .reset-btn-media {
+        height: 20%;
+        width: 100%;
+        font-size: 100%;
+        font-weight: 500;
+        background-color: #334057;
+        color: #E0E1DD;
+        border: 2px solid #E0E1DD;
+        border-radius: 5px;
+        transition: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        display: inline-block;
+    }
+
+    /* class for home button */
+    .home-btn {
+        display: none;
+    }
+
+    .home-btn-media {
+        height: 20%;
+        width: 100%;
+        font-size: 100%;
+        font-weight: 500;
+        background-color: #334057;
+        color: #E0E1DD;
+        border: 2px solid #E0E1DD;
+        border-radius: 5px;
+        transition: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        display: inline-block;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    /* class for overlay for result of the game */
+    .overlay {
+        height: 100vh;
+        width: 100vw;
+        background-color: #0D1B2A;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 1s ease-in-out;
+    }
+
+    /* class for div containing result and countdown */
+    .game-heading {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        position: absolute;
+        top: 41vh;
+        background-color: #0D1B2A;
+        height: auto;
+        width: 89%;
+        box-sizing: border-box;
+        border: 4px solid #E0E1DD;
+        border-radius: 15px;
+        padding: 20px;
+        transition: all 0.5s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    /* class for p tag of reset game countdown */
+    .draw-countdown {
+        width: 100%;
+        height: 50%;
+        font-size: clamp(20px, 5vw, 40px);
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #E0E1DD;
+        font-weight: 500;
+        margin-left: auto;
+        margin-right: auto;
+        transition: all 0.7s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    /* class for p tag showing result of the game */
+    .result {
+        width: 100%;
+        height: 50%;
+        font-size: clamp(20px, 5vw, 40px);
+        text-align: center;
+        color: #E0E1DD;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 500;
+        margin-left: auto;
+        margin-right: auto;
+        transition: all 0.7s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    /* div containing the details and functionality of player-O */
+    .player-O-media {
+        height: 100%;
+        width: 40%;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    /* div containing the details and functionality of player-X */
+    .player-X {
+        height: 100%;
+        width: 40%;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+    }
+
+    /* class for h1 tag of player heading */
+    .player-heading {
+        color: #E0E1DD;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    /* div containing the power symbol and background of player-O */
+    .playerO-power-media {
+        height: 62.5%;
+        width: 53%;
+        background-color: #778DA9;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+        transition: background-color 1s ease-in-out, border 0.3s ease-in-out;
+        padding: 10px;
+    }
+
+    /* div containing the power symbol and background of player-X */
+    .playerX-power {
+        height: 62.5%;
+        width: 53%;
+        background-color: #778DA9;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+        transition: background-color 1s ease-in-out, border 0.3s ease-in-out;
+        padding: 10px;
+    }
+
+    /* class for p tag for power symbol of player-O */
+    .powerO-symbol-media {
+        font-size: clamp(20px, 4vw, 26px);
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    /* class for p tag for power symbol of player-X */
+    .powerX-symbol {
+        font-size: clamp(20px, 4vw, 26px);
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    /* class for p tag for power name player-O*/
+    .powerO-Name-media {
+        font-size: 25px;
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 600;
+    }
+
+    /* class for p tag for power name player-X*/
+    .powerX-Name {
+        font-size: 25px;
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 600;
+    }
+
+    /* class for power button of player-O */
+    .powerO-button-media {
+        height: 12%;
+        width: 70%;
+        font-size: 100%;
+        font-weight: 500;
+        background-color: #334057;
+        color: #E0E1DD;
+        border: 2px solid #E0E1DD;
+        border-radius: 5px;
+        transition: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        margin-top: 8px;
+    }
+
+    /* class for power button of player-X */
+    .powerX-button {
+        height: 12%;
+        width: 70%;
+        font-size: 100%;
+        font-weight: 500;
+        background-color: #334057;
+        color: #E0E1DD;
+        border: 2px solid #E0E1DD;
+        border-radius: 5px;
+        transition: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        margin-top: 8px;
+    }
+
+
+
+    /* class for span tag implementing shield */
+    .shield {
+        background-color: #00eeff;
+        border-radius: 50%;
+        height: clamp(40px,7.5vw,50px);
+        width: clamp(40px,7.5vw,50px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* class for div containing playerO heading and color */
+    .playerO-hd-color-media {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* class for div of color of playerO */
+    .playerO-color-media {
+        background-color: rgb(106, 0, 110);
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        margin-left: 8px;
+    }
+
+    /* class for div containing playerX heading and color */
+    .playerX-hd-color {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* class for div of color of playerO */
+    .playerX-color {
+        background-color: #415A77;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        margin-left: 8px;
+    }
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media (min-width:1001px) and (max-width:1400px) {
+    body {
+        background-color: #0D1B2A;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+
+    /* the outermost div of the game */
+    .main-layout {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        height: auto;
+    }
+
+    .container-1 {
+        height: clamp(200px,80vh,750px);
+        width: 22vw;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        box-sizing: border-box;
+    }
+
+    .container-2 {
+        box-sizing: border-box;
+        width: clamp(515px, 56vw, 634px);
+        margin-top: 0;
+        margin-bottom: 0.7%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .container-3 {
+        height: clamp(200px,80vh,750px);
+        width: 22vw;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        box-sizing: border-box;
+    }
+
+    .container-4 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 7%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* div for the reset button */
+    .button-layout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .button-layout-media {
+        display: none;
+    }
+
+    /* div containing game-layout and draw-countdown */
+    .game-draw {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    /* div containing all the ticTacToe buttons */
+    .game-layout {
+        height: 100%;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    /* class of all the ticTacToe buttons */
+    .game-button {
+        margin: 3.8px;
+        background-color: #E0E1DD;
+        font-size: clamp(25px, 4.4vw, 49px);
+        font-weight: 500;
+        color: black;
+        height: 12.5%;
+        width: 12.5%;
+        border-radius: 5px;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* class for the reset button */
+    .reset-btn {
+        height: clamp(40px,100%,70px);
+        width: 15%;
+        font-size: 100%;
+        font-weight: 500;
+        background-color: #334057;
+        color: #E0E1DD;
+        border: 3px solid #E0E1DD;
+        border-radius: 5px;
+        transition: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        display: inline-block;
+    }
+
+    .reset-btn-media {
+        display: none;
+    }
+
+    /* class for home button */
+    .home-btn {
+        height: clamp(40px,100%,70px);
+        width: 15%;
+        font-size: 100%;
+        font-weight: 500;
+        background-color: #334057;
+        color: #E0E1DD;
+        border: 3px solid #E0E1DD;
+        border-radius: 5px;
+        transition: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        display: inline-block;
+        margin-top: 0;
+        margin-left: 20px;
+    }
+
+    .home-btn-media {
+        display: none;
+    }
+
+    /* class for overlay for result of the game */
+    .overlay {
+        height: 100vh;
+        width: 100vw;
+        background-color: #0D1B2A;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 1s ease-in-out;
+    }
+
+    /* class for div containing result and countdown */
+    .game-heading {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        position: absolute;
+        top: 41vh;
+        background-color: #0D1B2A;
+        height: auto;
+        width: 89%;
+        box-sizing: border-box;
+        border: 4px solid #E0E1DD;
+        border-radius: 15px;
+        padding: 20px;
+        transition: all 0.5s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    /* class for p tag of reset game countdown */
+    .draw-countdown {
+        width: 100%;
+        height: 50%;
+        font-size: clamp(20px, 5vw, 40px);
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #E0E1DD;
+        font-weight: 500;
+        margin-left: auto;
+        margin-right: auto;
+        transition: all 0.7s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    /* class for p tag showing result of the game */
+    .result {
+        width: 100%;
+        height: 50%;
+        font-size: clamp(20px, 5vw, 40px);
+        text-align: center;
+        color: #E0E1DD;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 500;
+        margin-left: auto;
+        margin-right: auto;
+        transition: all 0.7s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    /* div containing the details and functionality of player-O */
+    .player-O {
+        height: 100%;
+        width: 85%;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .player-O-media {
+        display: none;
+    }
+
+    /* div containing the details and functionality of player-X */
+    .player-X {
+        height: 100%;
+        width: 85%;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+    }
+
+    /* class for h1 tag of player heading */
+    .player-heading {
+        color: #E0E1DD;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 300;
+        font-size: clamp(20px, 2.5vw, 28px);
+        margin-bottom: 5px;
+    }
+
+    /* div containing the power symbol and background of player-O */
+    .playerO-power {
+        height: 69%;
+        width: 100%;
+        background-color: #778DA9;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        align-content: center;
+        transition: background-color 1s ease-in-out, border 0.3s ease-in-out;
+    }
+
+    .playerO-power-media {
+        display: none;
+    }
+
+    /* div containing the power symbol and background of player-X */
+    .playerX-power {
+        height: 69%;
+        width: 100%;
+        background-color: #778DA9;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+        transition: background-color 1s ease-in-out, border 0.3s ease-in-out;
+        padding: 10px;
+    }
+
+    /* class for p tag for power symbol of player-O */
+    .powerO-symbol {
+        font-size: 35px;
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    /* class for p tag for power symbol of player-X */
+    .powerX-symbol {
+        font-size: 35px;
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    /* class for p tag for power name player-O*/
+    .powerO-Name {
+        font-size: 30px;
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 600;
+    }
+
+    /* class for p tag for power name player-X*/
+    .powerX-Name {
+        font-size: 30px;
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 600;
+    }
+
+    /* class for power button of player-O */
+    .powerO-button {
+        height: 8%;
+        width: 80%;
+        font-size: 100%;
+        font-weight: 500;
+        background-color: #334057;
+        color: #E0E1DD;
+        border: 2px solid #E0E1DD;
+        border-radius: 5px;
+        transition: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        margin-top: 18px;
+    }
+
+    /* class for power button of player-X */
+    .powerX-button {
+        height: 8%;
+        width: 80%;
+        font-size: 100%;
+        font-weight: 500;
+        background-color: #334057;
+        color: #E0E1DD;
+        border: 2px solid #E0E1DD;
+        border-radius: 5px;
+        transition: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        margin-top: 18px;
+    }
+
+
+
+    /* class for span tag implementing shield */
+    .shield {
+        background-color: #00eeff;
+        border-radius: 50%;
+        height: clamp(55px,4.5vw,65px);
+        width: clamp(55px,4.5vw,65px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* class for div containing playerO heading and color */
+    .playerO-hd-color {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* class for div of color of playerO */
+    .playerO-color {
+        background-color: rgb(106, 0, 110);
+        height: clamp(30px,3vw,40px);
+        width: clamp(30px,3vw,40px);
+        border-radius: 50%;
+        margin-left: 8px;
+        margin-bottom: 8px;
+    }
+
+    /* class for div containing playerX heading and color */
+    .playerX-hd-color {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* class for div of color of playerO */
+    .playerX-color {
+        background-color: #415A77;
+        height: clamp(30px,3vw,40px);
+        width: clamp(30px,3vw,40px);
+        border-radius: 50%;
+        margin-left: 8px;
+        margin-bottom: 8px;
+    }
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media (min-width:1400px) and (max-width:1800px) {
+    body {
+        background-color: #0D1B2A;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+
+    /* the outermost div of the game */
+    .main-layout {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        height: auto;
+    }
+
+    .container-1 {
+        height: clamp(200px,80vh,750px);
+        width: 22vw;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        box-sizing: border-box;
+    }
+
+    .container-2 {
+        box-sizing: border-box;
+        width: clamp(515px, 56vw, 660px);
+        margin-top: 0;
+        margin-bottom: 0.7%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .container-3 {
+        height: clamp(200px,80vh,750px);
+        width: 22vw;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        box-sizing: border-box;
+    }
+
+    .container-4 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 7%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* div for the reset button */
+    .button-layout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .button-layout-media {
+        display: none;
+    }
+
+    /* div containing game-layout and draw-countdown */
+    .game-draw {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    /* div containing all the ticTacToe buttons */
+    .game-layout {
+        height: 100%;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    /* class of all the ticTacToe buttons */
+    .game-button {
+        margin: 3.8px;
+        background-color: #E0E1DD;
+        font-size: clamp(25px, 4.4vw, 49px);
+        font-weight: 500;
+        color: black;
+        height: 12.5%;
+        width: 12.5%;
+        border-radius: 6px;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* class for the reset button */
+    .reset-btn {
+        height: clamp(40px,100%,70px);
+        width: 15%;
+        font-size: 100%;
+        font-weight: 500;
+        background-color: #334057;
+        color: #E0E1DD;
+        border: 3px solid #E0E1DD;
+        border-radius: 5px;
+        transition: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        display: inline-block;
+    }
+
+    .reset-btn-media {
+        display: none;
+    }
+
+    /* class for home button */
+    .home-btn {
+        height: clamp(40px,100%,70px);
+        width: 15%;
+        font-size: 100%;
+        font-weight: 500;
+        background-color: #334057;
+        color: #E0E1DD;
+        border: 3px solid #E0E1DD;
+        border-radius: 5px;
+        transition: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        display: inline-block;
+        margin-top: 0;
+        margin-left: 20px;
+    }
+
+    .home-btn-media {
+        display: none;
+    }
+
+    /* class for overlay for result of the game */
+    .overlay {
+        height: 100vh;
+        width: 100vw;
+        background-color: #0D1B2A;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 1s ease-in-out;
+    }
+
+    /* class for div containing result and countdown */
+    .game-heading {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        position: absolute;
+        top: 41vh;
+        background-color: #0D1B2A;
+        height: auto;
+        width: 89%;
+        box-sizing: border-box;
+        border: 4px solid #E0E1DD;
+        border-radius: 15px;
+        padding: 20px;
+        transition: all 0.5s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    /* class for p tag of reset game countdown */
+    .draw-countdown {
+        width: 100%;
+        height: 50%;
+        font-size: clamp(20px, 5vw, 40px);
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #E0E1DD;
+        font-weight: 500;
+        margin-left: auto;
+        margin-right: auto;
+        transition: all 0.7s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    /* class for p tag showing result of the game */
+    .result {
+        width: 100%;
+        height: 50%;
+        font-size: clamp(20px, 5vw, 40px);
+        text-align: center;
+        color: #E0E1DD;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 500;
+        margin-left: auto;
+        margin-right: auto;
+        transition: all 0.7s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    /* div containing the details and functionality of player-O */
+    .player-O {
+        height: 100%;
+        width: 85%;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .player-O-media {
+        display: none;
+    }
+
+    /* div containing the details and functionality of player-X */
+    .player-X {
+        height: 100%;
+        width: 85%;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+    }
+
+    /* class for h1 tag of player heading */
+    .player-heading {
+        color: #E0E1DD;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 300;
+        font-size: clamp(20px, 2.5vw, 28px);
+        margin-bottom: 5px;
+    }
+
+    /* div containing the power symbol and background of player-O */
+    .playerO-power {
+        height: 69%;
+        width: 100%;
+        background-color: #778DA9;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        align-content: center;
+        transition: background-color 1s ease-in-out, border 0.3s ease-in-out;
+    }
+
+    .playerO-power-media {
+        display: none;
+    }
+
+    /* div containing the power symbol and background of player-X */
+    .playerX-power {
+        height: 69%;
+        width: 100%;
+        background-color: #778DA9;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+        transition: background-color 1s ease-in-out, border 0.3s ease-in-out;
+        padding: 10px;
+    }
+
+    /* class for p tag for power symbol of player-O */
+    .powerO-symbol {
+        font-size: 33px;
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    /* class for p tag for power symbol of player-X */
+    .powerX-symbol {
+        font-size: 33px;
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    /* class for p tag for power name player-O*/
+    .powerO-Name {
+        font-size: 37px;
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 600;
+    }
+
+    /* class for p tag for power name player-X*/
+    .powerX-Name {
+        font-size: 37px;
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 600;
+    }
+
+    /* class for power button of player-O */
+    .powerO-button {
+        height: 8%;
+        width: 80%;
+        font-size: 100%;
+        font-weight: 500;
+        background-color: #334057;
+        color: #E0E1DD;
+        border: 2px solid #E0E1DD;
+        border-radius: 5px;
+        transition: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        margin-top: 18px;
+    }
+
+    /* class for power button of player-X */
+    .powerX-button {
+        height: 8%;
+        width: 80%;
+        font-size: 100%;
+        font-weight: 500;
+        background-color: #334057;
+        color: #E0E1DD;
+        border: 2px solid #E0E1DD;
+        border-radius: 5px;
+        transition: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        margin-top: 18px;
+    }
+
+
+
+    /* class for span tag implementing shield */
+    .shield {
+        background-color: #00eeff;
+        border-radius: 50%;
+        height: clamp(55px,4.5vw,65px);
+        width: clamp(55px,4.5vw,65px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* class for div containing playerO heading and color */
+    .playerO-hd-color {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* class for div of color of playerO */
+    .playerO-color {
+        background-color: rgb(106, 0, 110);
+        height: clamp(30px,3vw,40px);
+        width: clamp(30px,3vw,40px);
+        border-radius: 50%;
+        margin-left: 8px;
+        margin-bottom: 8px;
+    }
+
+    /* class for div containing playerX heading and color */
+    .playerX-hd-color {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* class for div of color of playerO */
+    .playerX-color {
+        background-color: #415A77;
+        height: clamp(30px,3vw,40px);
+        width: clamp(30px,3vw,40px);
+        border-radius: 50%;
+        margin-left: 8px;
+        margin-bottom: 8px;
+    }
+}
