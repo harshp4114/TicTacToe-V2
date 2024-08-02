@@ -1,1 +1,1 @@
-https://github.com/harshp4114/TicTacToe-V2/settings/pages
+https://harshp4114.github.io/TicTacToe-V2/
